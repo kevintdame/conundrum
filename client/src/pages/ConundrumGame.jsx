@@ -1,0 +1,858 @@
+import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Send, ArrowRight, RefreshCw, AlertCircle, Sparkles, CheckCircle2, AlertTriangle, Star, Award, Lightbulb, ArrowLeft, Check, ChevronLeft, ChevronRight, Rocket, PartyPopper 
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { soundEffects } from "@/utils/audioEffects";
+import confetti from "canvas-confetti";
+
+// KIDS MODE CATEGORIES WITH CLEAN VIBRANT EMOJIS (NO GRAY BOXES)
+const KIDS_CATEGORIES = [
+  { label: "Food & Snacks", desc: "Ice Cream, Pizza, Lunchboxes, & Cartoons Cereal", emoji: "🍦", grad: "from-yellow-400 via-amber-400 to-orange-500", ring: "ring-yellow-300", glow: "rgba(250,204,21,0.5)" },
+  { label: "Pets & Animals", desc: "Dogs, Cats, Hamsters, & Chatty Parrots", emoji: "🐶", grad: "from-emerald-400 via-teal-500 to-cyan-600", ring: "ring-emerald-300", glow: "rgba(52,211,153,0.5)" },
+  { label: "Toys & Games", desc: "Video Games, Board Games, Lego, & Couch Forts", emoji: "🎮", grad: "from-fuchsia-500 via-purple-600 to-indigo-700", ring: "ring-fuchsia-300", glow: "rgba(217,70,239,0.5)" },
+  { label: "Arts & Crafts", desc: "Painting, Clay, Drawing, & Wild Costumes", emoji: "🎨", grad: "from-pink-400 via-rose-500 to-purple-600", ring: "ring-pink-300", glow: "rgba(244,114,182,0.5)" },
+  { label: "Outdoors & Playground", desc: "Treehouses, Bicycles, Recess, & Swings", emoji: "🌳", grad: "from-lime-400 via-green-500 to-emerald-600", ring: "ring-lime-300", glow: "rgba(163,230,53,0.5)" },
+  { label: "School & Cartoons", desc: "Backpacks, Pencils, & Saturday Cartoons", emoji: "🎒", grad: "from-cyan-400 via-sky-500 to-blue-600", ring: "ring-cyan-300", glow: "rgba(34,211,238,0.5)" },
+  { label: "Inventions & Gadgets", desc: "Kid Robots, Secret Devices, & Paper Airplanes", emoji: "🚀", grad: "from-orange-500 via-rose-500 to-red-600", ring: "ring-orange-300", glow: "rgba(249,115,22,0.5)" },
+  { label: "Music & Dancing", desc: "Instruments, Catchy Songs, & Funny Dance Moves", emoji: "🎵", grad: "from-violet-500 via-indigo-600 to-purple-800", ring: "ring-violet-300", glow: "rgba(139,92,246,0.5)" }
+];
+
+// ADULTS MODE CATEGORIES WITH CLEAN VIBRANT EMOJIS (NO GRAY BOXES)
+const ADULTS_CATEGORIES = [
+  { label: "Food & Cooking", desc: "Chefs, Bakers, Food Trucks, & Kitchen Hacks", emoji: "🍞", grad: "from-yellow-400 via-amber-400 to-orange-500", ring: "ring-yellow-300", glow: "rgba(250,204,21,0.5)" },
+  { label: "Health & Wellness", desc: "Sleep Quality, Posture, & Ergonomics", emoji: "🩺", grad: "from-emerald-400 via-teal-500 to-cyan-600", ring: "ring-emerald-300", glow: "rgba(52,211,153,0.5)" },
+  { label: "Entertainment & Gaming", desc: "Music, Shows, Indie Discovery, & Games", emoji: "🎮", grad: "from-fuchsia-500 via-purple-600 to-indigo-700", ring: "ring-fuchsia-300", glow: "rgba(217,70,239,0.5)" },
+  { label: "Education & Learning", desc: "Languages, Public Speaking, & Skill Building", emoji: "📚", grad: "from-cyan-400 via-sky-500 to-blue-600", ring: "ring-cyan-300", glow: "rgba(34,211,238,0.5)" },
+  { label: "Finance & Budgeting", desc: "Savings, Expenses, & Smart Financial Habits", emoji: "💰", grad: "from-lime-400 via-green-500 to-emerald-600", ring: "ring-lime-300", glow: "rgba(163,230,53,0.5)" },
+  { label: "Travel & Mobility", desc: "Commutes, Transit, & Travel Packing", emoji: "✈️", grad: "from-violet-500 via-indigo-600 to-purple-800", ring: "ring-violet-300", glow: "rgba(139,92,246,0.5)" },
+  { label: "Environment & Plants", desc: "Community Gardens, Nature, & Sustainability", emoji: "🌱", grad: "from-pink-400 via-rose-500 to-purple-600", ring: "ring-pink-300", glow: "rgba(244,114,182,0.5)" },
+  { label: "Work & Productivity", desc: "Home Offices, Remote Calls, & Workflows", emoji: "⚡", grad: "from-orange-500 via-rose-500 to-red-600", ring: "ring-orange-300", glow: "rgba(249,115,22,0.5)" }
+];
+
+// LARGER FOOTPRINT VECTOR JIGSAW PUZZLE PIECE WITH PERFECT 1-TO-1 INTERLOCKING SEAMS
+const JigsawGridPiece = ({ char, row, col }) => {
+  // True = male tab bump out, False = female cutout hole in, Null = flat outer edge
+  const config = [
+    // Row 0
+    [
+      { top: null, left: null, right: true, bottom: true },    // C
+      { top: null, left: false, right: false, bottom: false },  // O
+      { top: null, left: true, right: null, bottom: true }     // N
+    ],
+    // Row 1
+    [
+      { top: false, left: null, right: true, bottom: false },   // U
+      { top: true, left: false, right: true, bottom: false },   // N
+      { top: false, left: false, right: null, bottom: false }   // D
+    ],
+    // Row 2
+    [
+      { top: true, left: null, right: true, bottom: null },    // R
+      { top: true, left: false, right: false, bottom: null },   // U
+      { top: true, left: true, right: null, bottom: null }     // M
+    ]
+  ][row][col];
+
+  const getPath = () => {
+    const { top, right, bottom, left } = config;
+    let d = "";
+
+    // Start Top-Left
+    d += "M 14 0 ";
+
+    // TOP EDGE
+    if (top === null) {
+      d += "L 86 0 ";
+    } else if (top === true) {
+      d += "L 36 0 C 36 -16, 64 -16, 64 0 L 86 0 ";
+    } else {
+      d += "L 36 0 C 36 16, 64 16, 64 0 L 86 0 ";
+    }
+
+    // TOP-RIGHT CORNER
+    d += (col === 2 && row === 0) ? "A 14 14 0 0 1 100 14 " : "L 100 0 L 100 14 ";
+
+    // RIGHT EDGE
+    if (right === null) {
+      d += "L 100 86 ";
+    } else if (right === true) {
+      d += "L 100 36 C 116 36, 116 64, 100 64 L 100 86 ";
+    } else {
+      d += "L 100 36 C 84 36, 84 64, 100 64 L 100 86 ";
+    }
+
+    // BOTTOM-RIGHT CORNER
+    d += (col === 2 && row === 2) ? "A 14 14 0 0 1 86 100 " : "L 100 100 L 86 100 ";
+
+    // BOTTOM EDGE
+    if (bottom === null) {
+      d += "L 14 100 ";
+    } else if (bottom === true) {
+      d += "L 64 100 C 64 116, 36 116, 36 100 L 14 100 ";
+    } else {
+      d += "L 64 100 C 64 84, 36 84, 36 100 L 14 100 ";
+    }
+
+    // BOTTOM-LEFT CORNER
+    d += (col === 0 && row === 2) ? "A 14 14 0 0 1 0 86 " : "L 0 100 L 0 86 ";
+
+    // LEFT EDGE
+    if (left === null) {
+      d += "L 0 14 ";
+    } else if (left === true) {
+      d += "L 0 64 C -16 64, -16 36, 0 36 L 0 14 ";
+    } else {
+      d += "L 0 64 C 16 64, 16 36, 0 36 L 0 14 ";
+    }
+
+    // TOP-LEFT CORNER
+    d += (col === 0 && row === 0) ? "A 14 14 0 0 1 14 0 Z" : "L 0 0 L 14 0 Z";
+
+    return d;
+  };
+
+  return (
+    <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52 flex items-center justify-center font-['Lilita_One',sans-serif] text-7xl sm:text-8xl md:text-[9rem] text-slate-950 select-none">
+      <svg viewBox="-20 -20 140 140" className="absolute inset-0 w-full h-full drop-shadow-xl overflow-visible">
+        <path
+          d={getPath()}
+          fill="url(#puzzle-tile-grad)"
+          stroke="#b45309"
+          strokeWidth="2.5"
+        />
+        <defs>
+          <linearGradient id="puzzle-tile-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#FCD34D" />
+            <stop offset="60%" stopColor="#F59E0B" />
+            <stop offset="100%" stopColor="#F97316" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span className="relative z-10 drop-shadow-md">{char}</span>
+    </div>
+  );
+};
+
+export default function Conundrum2Game() {
+  const [selectedMode, setSelectedMode] = useState(null); // "kids" or "adults"
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  
+  const [scenario, setScenario] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  // Gameplay State
+  const [qaHistory, setQaHistory] = useState([]);
+  const [questionInput, setQuestionInput] = useState("");
+  const [askingQuestion, setAskingQuestion] = useState(false);
+
+  // Screen View State: "SPLASH", "MODE_SELECT", "CATEGORY_SELECT", "DISCOVERY", "SOLUTION", "OUTCOME"
+  const [viewState, setViewState] = useState("SPLASH");
+  const [pitchText, setPitchText] = useState("");
+  const [evaluating, setEvaluating] = useState(false);
+  const [evaluationResult, setEvaluationResult] = useState(null);
+
+  // Outcome Screen Sub-State: "FEEDBACK", "OTHER_SOLUTIONS"
+  const [outcomeSubState, setOutcomeSubState] = useState("FEEDBACK");
+  const [altSolutionIndex, setAltSolutionIndex] = useState(0);
+
+  const chatEndRef = useRef(null);
+
+  useEffect(() => {
+    if (viewState === "DISCOVERY") {
+      chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [qaHistory, viewState]);
+
+  const activeCategoryList = selectedMode === "kids" ? KIDS_CATEGORIES : ADULTS_CATEGORIES;
+
+  // Fetch Scenario for Selected Mode & Category Immediately
+  const handleLaunchChallenge = async (catParam, modeParam) => {
+    const modeToUse = modeParam || selectedMode;
+    const catToUse = catParam || selectedCategory;
+    if (!modeToUse || !catToUse) return;
+    
+    soundEffects.playClick();
+
+    setLoading(true);
+    setError(null);
+    setScenario(null);
+    setQaHistory([]);
+    setPitchText("");
+    setEvaluationResult(null);
+    setViewState("DISCOVERY");
+
+    try {
+      const response = await fetch("/api/conundrum2/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mode: modeToUse, targetCategory: catToUse.label }),
+      });
+
+      if (!response.ok) {
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || `HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+      setScenario(data);
+
+      setQaHistory([
+        {
+          id: `intro-${Date.now()}`,
+          sender: "character",
+          text: `Hi! I'm ${data.character}.\n\n${data.complaint}`,
+        },
+      ]);
+    } catch (err) {
+      console.error("Conundrum fetch error:", err.message);
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Handle Question Submission in Continuous Chat
+  const handleAskQuestion = async (e) => {
+    e.preventDefault();
+    if (!questionInput.trim() || askingQuestion) return;
+
+    soundEffects.playClick();
+    const qText = questionInput.trim();
+    setQuestionInput("");
+    setAskingQuestion(true);
+
+    setQaHistory((prev) => [...prev, { id: `q-${Date.now()}`, sender: "player", text: qText }]);
+
+    try {
+      const response = await fetch("/api/conundrum2/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          scenario,
+          question: qText,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Failed to answer question");
+
+      const data = await response.json();
+      setQaHistory((prev) => [
+        ...prev,
+        { id: `a-${Date.now()}`, sender: "character", text: data.answer },
+      ]);
+    } catch (err) {
+      setQaHistory((prev) => [
+        ...prev,
+        { id: `err-${Date.now()}`, sender: "character", text: "My thoughts got scrambled! Ask me again in a second!" },
+      ]);
+    } finally {
+      setAskingQuestion(false);
+    }
+  };
+
+  // Submit Solution Pitch
+  const handleSubmitPitch = async () => {
+    if (!pitchText.trim() || evaluating) return;
+
+    soundEffects.playClick();
+    setEvaluating(true);
+
+    try {
+      const response = await fetch("/api/conundrum2/evaluate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          scenario,
+          solutionText: pitchText.trim(),
+          mode: selectedMode
+        }),
+      });
+
+      if (!response.ok) throw new Error("Evaluation failed");
+
+      const data = await response.json();
+      setEvaluationResult(data);
+      setViewState("OUTCOME");
+      setOutcomeSubState("FEEDBACK");
+
+      if (data.passed) {
+        soundEffects.playSuccess();
+        confetti({
+          particleCount: 160,
+          spread: 100,
+          origin: { y: 0.3 },
+          colors: ["#F59E0B", "#EC4899", "#3B82F6", "#10B981", "#8B5CF6"],
+        });
+      } else {
+        soundEffects.playFailure();
+      }
+    } catch (err) {
+      alert(`Evaluation error: ${err.message}`);
+    } finally {
+      setEvaluating(false);
+    }
+  };
+
+  // SCREEN 0: SPLASH SCREEN WITH LARGER PUZZLE FOOTPRINT, "EVERYDAY PUZZLES" SUBTEXT & STANDARD PLAY BUTTON
+  if (viewState === "SPLASH") {
+    const line1 = ["C", "O", "N"];
+    const line2 = ["U", "N", "D"];
+    const line3 = ["R", "U", "M"];
+
+    return (
+      <div 
+        onClick={() => { soundEffects.playClick(); setViewState("MODE_SELECT"); }}
+        className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif] cursor-pointer overflow-hidden"
+      >
+        <div className="max-w-3xl sm:max-w-4xl w-full mx-auto flex-1 flex flex-col justify-center items-center text-center space-y-6 sm:space-y-8 my-auto">
+          
+          {/* MASSIVE 3-LINE JIGSAW GRID WITH ENLARGED FOOTPRINT */}
+          <div className="flex flex-col items-center justify-center -space-y-5 sm:-space-y-7 md:-space-y-9 my-2">
+            {[line1, line2, line3].map((row, rowIdx) => (
+              <div key={rowIdx} className="flex items-center justify-center -space-x-5 sm:-space-x-7 md:-space-x-9">
+                {row.map((char, charIdx) => {
+                  const totalIndex = rowIdx * 3 + charIdx;
+                  const randomX = (totalIndex % 2 === 0 ? 1 : -1) * (90 + Math.random() * 110);
+                  const randomY = (totalIndex % 3 === 0 ? 1 : -1) * (90 + Math.random() * 110);
+                  const randomRotate = (Math.random() - 0.5) * 240;
+
+                  return (
+                    <motion.div
+                      key={charIdx}
+                      initial={{
+                        x: randomX,
+                        y: randomY,
+                        rotate: randomRotate,
+                        opacity: 0,
+                        scale: 0.2
+                      }}
+                      animate={{
+                        x: 0,
+                        y: 0,
+                        rotate: 0,
+                        opacity: 1,
+                        scale: 1
+                      }}
+                      transition={{
+                        duration: 0.85,
+                        delay: totalIndex * 0.08,
+                        type: "spring",
+                        stiffness: 160,
+                        damping: 14
+                      }}
+                    >
+                      <JigsawGridPiece char={char} row={rowIdx} col={charIdx} />
+                    </motion.div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+
+          {/* SUBTITLE: EVERYDAY PUZZLES */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.5 }}
+            className="text-base sm:text-lg font-black uppercase tracking-[0.3em] text-white/90 pt-2"
+          >
+            EVERYDAY PUZZLES
+          </motion.p>
+
+          {/* STANDARD PLAY BUTTON (MATCHING APP BUTTON DIMENSIONS h-14 AND ROUNDED-FULL CURVATURE) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.3, duration: 0.4 }}
+            className="pt-2"
+          >
+            <Button
+              onClick={(e) => {
+                e.stopPropagation();
+                soundEffects.playClick();
+                setViewState("MODE_SELECT");
+              }}
+              size="lg"
+              className="w-64 h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-slate-950 font-['Lilita_One',sans-serif] text-xl uppercase tracking-wider rounded-full shadow-2xl hover:scale-105 transition-all cursor-pointer flex items-center justify-center border-none"
+            >
+              PLAY
+            </Button>
+          </motion.div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // SCREEN 1: MODE SELECTION
+  if (viewState === "MODE_SELECT") {
+    return (
+      <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
+        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-center items-center text-center space-y-8 my-auto">
+          
+          <motion.h2
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="text-5xl sm:text-6xl font-extrabold font-['Lilita_One',sans-serif] uppercase leading-none mb-2 text-white drop-shadow-2xl"
+          >
+            CHOOSE A MODE
+          </motion.h2>
+
+          <div className="grid grid-cols-1 gap-5 w-full text-left">
+            {[
+              {
+                key: "kids",
+                label: "KIDS MODE",
+                desc: "Ages 8–12 • Fun, Whimsical Everyday Challenges",
+                emoji: "🎈",
+                grad: "from-yellow-400 via-amber-400 to-orange-500",
+                glow: "rgba(250,204,21,0.5)",
+              },
+              {
+                key: "adults",
+                label: "ADULTS MODE",
+                desc: "Ages 13+ • Clever, Human-Centered Design Challenges",
+                emoji: "🚀",
+                grad: "from-fuchsia-500 via-purple-600 to-indigo-700",
+                glow: "rgba(217,70,239,0.5)",
+              },
+            ].map((m) => (
+              <motion.button
+                key={m.key}
+                type="button"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={() => {
+                  soundEffects.playClick();
+                  setSelectedMode(m.key);
+                  setSelectedCategory(null);
+                  setViewState("CATEGORY_SELECT");
+                }}
+                className={`relative text-left rounded-3xl p-6 sm:p-7 transition-all overflow-hidden bg-gradient-to-br ${m.grad} shadow-xl hover:shadow-2xl cursor-pointer`}
+              >
+                <div className="flex items-start justify-between">
+                  <div className="text-5xl drop-shadow">
+                    {m.emoji}
+                  </div>
+                </div>
+                <span className="block font-['Lilita_One',sans-serif] text-3xl sm:text-4xl text-white mt-4 uppercase tracking-wide drop-shadow">
+                  {m.label}
+                </span>
+                <span className="block text-white/95 text-sm font-bold leading-snug mt-1">{m.desc}</span>
+              </motion.button>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // SCREEN 2: CATEGORY SELECT
+  if (viewState === "CATEGORY_SELECT") {
+    return (
+      <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
+        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-4 my-auto">
+          
+          <div className="w-full flex items-center justify-between pt-2">
+            <button
+              onClick={() => setViewState("MODE_SELECT")}
+              className="px-4 py-2 rounded-full font-black text-xs uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
+            >
+              ← BACK TO MODES
+            </button>
+            <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
+              {selectedMode === "kids" ? "🎈 KIDS MODE" : "🚀 ADULTS MODE"}
+            </span>
+          </div>
+
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="space-y-1"
+          >
+            <h2 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-white drop-shadow-2xl">
+              PICK A CATEGORY
+            </h2>
+            <p className="text-xs font-black uppercase tracking-widest text-amber-300">
+              TAP ANY CATEGORY TO PLAY
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-3.5 w-full text-left flex-1 overflow-y-auto pr-1 py-1">
+            {activeCategoryList.map((cat) => (
+              <motion.button
+                key={cat.label}
+                type="button"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  handleLaunchChallenge(cat, selectedMode);
+                }}
+                className={`relative text-left rounded-3xl p-6 transition-all overflow-hidden bg-gradient-to-br ${cat.grad} shadow-xl min-h-[90px] flex items-center justify-between hover:shadow-2xl cursor-pointer`}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="text-4xl sm:text-5xl shrink-0 drop-shadow">
+                    {cat.emoji}
+                  </div>
+                  <div className="py-1">
+                    <span className="block font-['Lilita_One',sans-serif] text-2xl sm:text-3xl text-white uppercase tracking-wide drop-shadow leading-tight">
+                      {cat.label}
+                    </span>
+                    <span className="block text-white/90 text-xs sm:text-sm font-bold leading-snug mt-1">{cat.desc}</span>
+                  </div>
+                </div>
+                <ArrowRight className="h-6 w-6 text-white shrink-0 ml-2 drop-shadow" />
+              </motion.button>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // LOADING STATE
+  if (loading) {
+    return (
+      <div className="fixed inset-0 z-50 w-screen h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 flex flex-col items-center justify-center p-6 text-center text-white select-none font-['Nunito',sans-serif]">
+        <div className="w-20 h-20 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mb-6 shadow-2xl" />
+        <h2 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-amber-300 drop-shadow-2xl">
+          GENERATING CONUNDRUM...
+        </h2>
+      </div>
+    );
+  }
+
+  // ERROR STATE
+  if (error && !scenario) {
+    return (
+      <div className="fixed inset-0 z-50 w-screen h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center text-white select-none font-['Nunito',sans-serif]">
+        <AlertCircle className="w-16 h-16 text-rose-500 mb-4 animate-bounce" />
+        <h2 className="text-3xl font-['Lilita_One',sans-serif] uppercase text-rose-400 mb-2">GENERATION ERROR</h2>
+        <p className="text-sm text-slate-300 max-w-md font-mono bg-slate-900 p-4 rounded-2xl border border-slate-800 mb-6">
+          {error}
+        </p>
+        <Button
+          onClick={() => setViewState("CATEGORY_SELECT")}
+          size="lg"
+          className="h-14 px-8 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-black text-sm uppercase tracking-wider rounded-full shadow-2xl"
+        >
+          <RefreshCw className="w-5 h-5 mr-2" />
+          <span>BACK TO CATEGORIES</span>
+        </Button>
+      </div>
+    );
+  }
+
+  const isPassed = evaluationResult?.passed !== false;
+  const altSolutions = evaluationResult?.alternativeSolutions || [];
+
+  return (
+    <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
+      
+      <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-4 relative">
+        
+        {/* DISCOVERY / CHAT SCREEN */}
+        {viewState === "DISCOVERY" && (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key="discovery"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="flex-1 flex flex-col justify-between items-center w-full space-y-3 my-auto max-h-[92vh]"
+            >
+              <div className="flex items-center justify-between w-full">
+                <button
+                  onClick={() => setViewState("CATEGORY_SELECT")}
+                  className="px-4 py-2 rounded-full font-black text-xs uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
+                >
+                  ← CATEGORIES
+                </button>
+
+                <div className="flex items-center gap-2 bg-black/30 px-4 py-1.5 rounded-full backdrop-blur-md">
+                  <Star className="w-4 h-4 text-amber-300 fill-amber-300" />
+                  <span className="text-xs font-black uppercase text-amber-300">{scenario.character}</span>
+                </div>
+              </div>
+
+              <div className="w-full flex-1 overflow-y-auto space-y-4 pr-1 select-text my-auto py-2">
+                {qaHistory.map((msg, idx) => (
+                  <motion.div
+                    key={msg.id || idx}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`flex flex-col ${msg.sender === "player" ? "items-end" : "items-start"}`}
+                  >
+                    <div
+                      className={`max-w-[95%] p-6 sm:p-7 rounded-[36px] text-xl sm:text-2xl font-black leading-snug text-left shadow-2xl ${
+                        msg.sender === "player"
+                          ? "bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 rounded-br-none"
+                          : "bg-white text-slate-950 rounded-bl-none"
+                      }`}
+                    >
+                      {msg.text}
+                    </div>
+                  </motion.div>
+                ))}
+                <div ref={chatEndRef} />
+              </div>
+
+              <form onSubmit={handleAskQuestion} className="w-full flex gap-2 pt-1">
+                <Input
+                  value={questionInput}
+                  onChange={(e) => setQuestionInput(e.target.value)}
+                  placeholder={`Ask ${scenario.character} a question...`}
+                  disabled={askingQuestion}
+                  className="h-14 bg-white/10 border-2 border-white/20 rounded-full px-6 text-base text-white placeholder:text-white/60 focus-visible:ring-amber-400 backdrop-blur-md font-bold"
+                />
+                <Button
+                  type="submit"
+                  disabled={askingQuestion || !questionInput.trim()}
+                  className="h-14 w-14 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black shrink-0 flex items-center justify-center shadow-xl cursor-pointer"
+                >
+                  {askingQuestion ? (
+                    <RefreshCw className="w-5 h-5 animate-spin" />
+                  ) : (
+                    <Send className="w-5 h-5" />
+                  )}
+                </Button>
+              </form>
+
+              {/* SUBMIT SOLUTION BUTTON */}
+              <Button
+                onClick={() => { soundEffects.playClick(); setViewState("SOLUTION"); }}
+                size="lg"
+                className="w-full h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-['Lilita_One',sans-serif] text-xl uppercase tracking-wider rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+              >
+                <span>SUBMIT SOLUTION</span>
+              </Button>
+            </motion.div>
+          </AnimatePresence>
+        )}
+
+        {/* SOLUTION PITCH SCREEN */}
+        {viewState === "SOLUTION" && (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key="solution"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="flex-1 flex flex-col justify-between items-center w-full space-y-4 my-auto"
+            >
+              <div className="w-full flex items-start">
+                <Button
+                  onClick={() => { soundEffects.playClick(); setViewState("DISCOVERY"); }}
+                  variant="ghost"
+                  size="sm"
+                  className="text-white/80 hover:text-white font-black text-xs uppercase tracking-widest flex items-center gap-1 bg-black/30 border border-white/20 rounded-full px-4 py-2"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span>BACK TO CHAT</span>
+                </Button>
+              </div>
+
+              <div className="text-center">
+                <h2 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase text-white mb-1">
+                  CONUNDRUM SOLUTION
+                </h2>
+                <p className="text-xs font-black text-amber-300">
+                  How would you solve {scenario.character}'s conundrum?
+                </p>
+              </div>
+
+              <div className="bg-white text-slate-950 p-6 sm:p-7 rounded-[36px] shadow-2xl w-full text-left">
+                <Textarea
+                  value={pitchText}
+                  onChange={(e) => setPitchText(e.target.value)}
+                  placeholder={`describe your solution to ${scenario.character}'s conundrum`}
+                  className="min-h-[180px] bg-transparent border-none p-1 text-xl font-bold text-slate-900 placeholder:text-slate-400 focus-visible:ring-0 select-text resize-none"
+                />
+              </div>
+
+              <Button
+                onClick={handleSubmitPitch}
+                disabled={evaluating || !pitchText.trim()}
+                size="lg"
+                className="w-full h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-['Lilita_One',sans-serif] text-xl uppercase tracking-wider rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+              >
+                {evaluating ? (
+                  <RefreshCw className="w-6 h-6 animate-spin" />
+                ) : (
+                  <span>SUBMIT SOLUTION</span>
+                )}
+              </Button>
+            </motion.div>
+          </AnimatePresence>
+        )}
+
+        {/* CONSOLIDATED SINGLE OUTCOME SCREEN */}
+        {viewState === "OUTCOME" && outcomeSubState === "FEEDBACK" && (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key="consolidated-outcome"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex-1 flex flex-col justify-between items-center w-full space-y-4 my-auto pt-1 overflow-y-auto"
+            >
+              <div className="space-y-1 text-center pt-2">
+                <div className="text-6xl mb-2 flex items-center justify-center">
+                  {isPassed ? "🎉" : "🎭"}
+                </div>
+                <h1 className="text-5xl sm:text-6xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-amber-300 drop-shadow-2xl">
+                  {isPassed ? "PURE GENIUS!" : "TWEAK NEEDED!"}
+                </h1>
+                <p className="text-sm sm:text-base font-black uppercase tracking-widest text-amber-300">
+                  {isPassed ? "CONUNDRUM SOLVED!" : "TRY ANOTHER ANGLE!"}
+                </p>
+              </div>
+
+              {isPassed && (
+                <div className="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-slate-950 p-6 rounded-[32px] shadow-2xl w-full flex items-center justify-between border-4 border-amber-300">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="w-14 h-14 rounded-2xl bg-slate-950 text-amber-400 flex items-center justify-center shrink-0 shadow-lg">
+                      <Star className="w-9 h-9 fill-amber-400 text-amber-400 animate-pulse" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-black uppercase tracking-widest text-slate-900">BADGE UNLOCKED</div>
+                      <div className="text-3xl sm:text-4xl font-['Lilita_One',sans-serif] uppercase text-slate-950">
+                        {evaluationResult.badge || "The Lateral Thinker"}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div className="bg-white text-slate-950 p-6 sm:p-7 rounded-[36px] shadow-2xl text-2xl sm:text-3xl font-black leading-snug w-full text-left my-2">
+                {evaluationResult.feedback}
+              </div>
+
+              <div className="w-full space-y-3 pt-2">
+                {altSolutions.length > 0 && (
+                  <Button
+                    onClick={() => {
+                      soundEffects.playClick();
+                      setAltSolutionIndex(0);
+                      setOutcomeSubState("OTHER_SOLUTIONS");
+                    }}
+                    size="lg"
+                    className="w-full h-16 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-['Lilita_One',sans-serif] text-lg sm:text-xl uppercase tracking-wider rounded-2xl shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer"
+                  >
+                    <span className="text-2xl">💡</span>
+                    <span>SEE OTHER CLEVER SOLUTIONS</span>
+                  </Button>
+                )}
+
+                <Button
+                  onClick={() => {
+                    soundEffects.playClick();
+                    setViewState("CATEGORY_SELECT");
+                  }}
+                  size="lg"
+                  className="w-full h-16 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-['Lilita_One',sans-serif] text-lg sm:text-xl uppercase tracking-wider rounded-2xl shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer"
+                >
+                  <RefreshCw className="w-6 h-6" />
+                  <span>PLAY AGAIN</span>
+                </Button>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        )}
+
+        {/* OUTCOME SCREEN: PERFECTLY VERTICALLY CENTERED ALTERNATIVE SOLUTIONS CAROUSEL */}
+        {viewState === "OUTCOME" && outcomeSubState === "OTHER_SOLUTIONS" && (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key="other-solutions-carousel"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              className="flex-1 flex flex-col justify-center items-center w-full h-full my-auto relative"
+            >
+              <div className="absolute top-1 left-0 right-0 z-20 flex items-center justify-between w-full">
+                <Button
+                  onClick={() => setOutcomeSubState("FEEDBACK")}
+                  variant="ghost"
+                  size="sm"
+                  className="text-white/80 hover:text-white font-black text-xs uppercase tracking-widest flex items-center gap-1 bg-black/30 backdrop-blur-md rounded-full px-4 py-2"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span>BACK TO FEEDBACK</span>
+                </Button>
+                <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
+                  IDEA {altSolutionIndex + 1} OF {altSolutions.length}
+                </span>
+              </div>
+
+              <div className="relative w-full my-auto flex items-center justify-center pt-8">
+                
+                <button
+                  onClick={() => {
+                    soundEffects.playClick();
+                    setAltSolutionIndex((prev) => (prev > 0 ? prev - 1 : altSolutions.length - 1));
+                  }}
+                  className="absolute -left-3 sm:-left-5 z-10 w-13 h-13 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-2xl border-2 border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
+                >
+                  <ChevronLeft className="w-8 h-8 text-slate-950" />
+                </button>
+
+                <div className="bg-gradient-to-br from-amber-400 via-orange-500 to-pink-500 text-slate-950 p-7 sm:p-8 rounded-[36px] shadow-2xl w-full text-center space-y-4 border-4 border-amber-300 mx-2 min-h-[340px] sm:min-h-[360px] flex flex-col justify-between items-center">
+                  
+                  <div className="text-6xl mx-auto flex items-center justify-center">
+                    💡
+                  </div>
+
+                  <div className="text-xs font-black uppercase tracking-widest text-slate-900">
+                    ALTERNATIVE SOLUTION #{altSolutionIndex + 1}
+                  </div>
+                  
+                  <p className="text-2xl sm:text-3xl font-['Lilita_One',sans-serif] uppercase leading-snug text-slate-950 my-auto flex-1 flex items-center justify-center">
+                    "{altSolutions[altSolutionIndex]}"
+                  </p>
+
+                  <div className="flex items-center justify-center gap-2.5 pt-1">
+                    {altSolutions.map((_, dotIdx) => (
+                      <button
+                        key={dotIdx}
+                        onClick={() => {
+                          soundEffects.playClick();
+                          setAltSolutionIndex(dotIdx);
+                        }}
+                        className={`transition-all rounded-full ${
+                          dotIdx === altSolutionIndex
+                            ? "w-4 h-4 bg-slate-950 ring-2 ring-amber-300 scale-110"
+                            : "w-3 h-3 bg-slate-950/40 hover:bg-slate-950/70"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => {
+                    soundEffects.playClick();
+                    setAltSolutionIndex((prev) => (prev < altSolutions.length - 1 ? prev + 1 : 0));
+                  }}
+                  className="absolute -right-3 sm:-right-5 z-10 w-13 h-13 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-2xl border-2 border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
+                >
+                  <ChevronRight className="w-8 h-8 text-slate-950" />
+                </button>
+
+              </div>
+
+            </motion.div>
+          </AnimatePresence>
+        )}
+
+      </div>
+    </div>
+  );
+}
