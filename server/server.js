@@ -8,6 +8,11 @@ import { GoogleGenAI } from '@google/genai';
 
 dotenv.config();
 
+// Bypass automatic Google Cloud Metadata checks on hosted VMs (like Render)
+process.env.GCP_METADATA_HOST = '127.0.0.1';
+process.env.GCE_METADATA_HOST = '127.0.0.1';
+process.env.NO_GCE_CHECK = 'true';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
