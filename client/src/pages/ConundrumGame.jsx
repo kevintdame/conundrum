@@ -809,18 +809,7 @@ export default function ConundrumGame() {
                 </span>
               </div>
 
-              <div className="relative w-full my-auto flex items-center justify-center pt-6">
-                
-                <button
-                  onClick={() => {
-                    soundEffects.playClick();
-                    setAltSolutionIndex((prev) => (prev > 0 ? prev - 1 : altSolutions.length - 1));
-                  }}
-                  className="absolute -left-2 z-10 w-10 h-10 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-xl border border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
-                >
-                  <ChevronLeft className="w-6 h-6 text-slate-950" />
-                </button>
-
+              <div className="relative w-full my-auto flex items-center justify-center pt-2">
                 <div className="bg-gradient-to-br from-amber-400 via-orange-500 to-pink-500 text-slate-950 p-5 rounded-3xl shadow-xl w-full text-center space-y-2 border-2 border-amber-300 mx-1 min-h-[280px] flex flex-col justify-between items-center">
                   
                   <div className="text-4xl mx-auto flex items-center justify-center">
@@ -835,34 +824,50 @@ export default function ConundrumGame() {
                     "{altSolutions[altSolutionIndex]}"
                   </p>
 
-                  <div className="flex items-center justify-center gap-2 pt-1">
-                    {altSolutions.map((_, dotIdx) => (
-                      <button
-                        key={dotIdx}
-                        onClick={() => {
-                          soundEffects.playClick();
-                          setAltSolutionIndex(dotIdx);
-                        }}
-                        className={`transition-all rounded-full ${
-                          dotIdx === altSolutionIndex
-                            ? "w-3.5 h-3.5 bg-slate-950 ring-2 ring-amber-300 scale-110"
-                            : "w-2.5 h-2.5 bg-slate-950/40 hover:bg-slate-950/70"
-                        }`}
-                      />
-                    ))}
+                  {/* BOTTOM NAVIGATION STRIP WITH MINIMAL BLENDED ARROWS FLANKING PAGINATION DOTS */}
+                  <div className="flex items-center justify-center gap-3 pt-2 w-full">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        soundEffects.playClick();
+                        setAltSolutionIndex((prev) => (prev > 0 ? prev - 1 : altSolutions.length - 1));
+                      }}
+                      className="w-8 h-8 rounded-full bg-slate-950/20 hover:bg-slate-950/40 text-slate-950 flex items-center justify-center transition-all active:scale-90 cursor-pointer border border-slate-950/10 shrink-0"
+                    >
+                      <ChevronLeft className="w-5 h-5 text-slate-950" />
+                    </button>
+
+                    <div className="flex items-center justify-center gap-2">
+                      {altSolutions.map((_, dotIdx) => (
+                        <button
+                          key={dotIdx}
+                          type="button"
+                          onClick={() => {
+                            soundEffects.playClick();
+                            setAltSolutionIndex(dotIdx);
+                          }}
+                          className={`transition-all rounded-full ${
+                            dotIdx === altSolutionIndex
+                              ? "w-3.5 h-3.5 bg-slate-950 ring-2 ring-amber-300 scale-110"
+                              : "w-2.5 h-2.5 bg-slate-950/30 hover:bg-slate-950/60"
+                          }`}
+                        />
+                      ))}
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        soundEffects.playClick();
+                        setAltSolutionIndex((prev) => (prev < altSolutions.length - 1 ? prev + 1 : 0));
+                      }}
+                      className="w-8 h-8 rounded-full bg-slate-950/20 hover:bg-slate-950/40 text-slate-950 flex items-center justify-center transition-all active:scale-90 cursor-pointer border border-slate-950/10 shrink-0"
+                    >
+                      <ChevronRight className="w-5 h-5 text-slate-950" />
+                    </button>
                   </div>
+
                 </div>
-
-                <button
-                  onClick={() => {
-                    soundEffects.playClick();
-                    setAltSolutionIndex((prev) => (prev < altSolutions.length - 1 ? prev + 1 : 0));
-                  }}
-                  className="absolute -right-2 z-10 w-10 h-10 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-xl border border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
-                >
-                  <ChevronRight className="w-6 h-6 text-slate-950" />
-                </button>
-
               </div>
 
             </motion.div>
