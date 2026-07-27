@@ -467,10 +467,9 @@ export default function ConundrumGame() {
               soundEffects.playClick();
               setViewState("MODE_SELECT");
             }}
-            className="h-10 px-4 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 active:scale-95 backdrop-blur-md cursor-pointer transition-all border border-white/30 flex items-center gap-1.5 shrink-0 z-50 relative"
+            className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 active:scale-95 backdrop-blur-md cursor-pointer transition-all border border-white/30 flex items-center justify-center text-white shrink-0 z-50 relative"
           >
-            <ArrowLeft className="w-4 h-4 text-white shrink-0" />
-            <span>MODES</span>
+            <ArrowLeft className="w-5 h-5 text-white shrink-0" />
           </button>
           <span className="text-xs font-black uppercase text-amber-300 tracking-widest shrink-0">
             {selectedMode === "kids" ? "🎈 KIDS MODE" : "🚀 ADULTS MODE"}
@@ -584,10 +583,9 @@ export default function ConundrumGame() {
                     soundEffects.playClick();
                     setViewState("CATEGORY_SELECT");
                   }}
-                  className="px-3.5 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 backdrop-blur-md cursor-pointer transition-all active:scale-95 border border-white/20 flex items-center gap-1"
+                  className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 active:scale-95 backdrop-blur-md cursor-pointer transition-all border border-white/30 flex items-center justify-center text-white shrink-0 z-30 relative"
                 >
-                  <ArrowLeft className="w-3.5 h-3.5 text-white" />
-                  <span>CATEGORIES</span>
+                  <ArrowLeft className="w-5 h-5 text-white shrink-0" />
                 </button>
 
                 <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">
@@ -665,15 +663,13 @@ export default function ConundrumGame() {
               className="flex-1 flex flex-col justify-between items-center w-full h-full space-y-3 py-1 overflow-hidden"
             >
               <div className="w-full flex items-start shrink-0">
-                <Button
+                <button
+                  type="button"
                   onClick={() => { soundEffects.playClick(); setViewState("DISCOVERY"); }}
-                  variant="ghost"
-                  size="sm"
-                  className="text-white/80 hover:text-white font-black text-xs uppercase tracking-widest flex items-center gap-1 bg-black/30 border border-white/20 rounded-full px-3 py-1.5"
+                  className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 active:scale-95 backdrop-blur-md cursor-pointer transition-all border border-white/30 flex items-center justify-center text-white shrink-0 z-30 relative"
                 >
-                  <ArrowLeft className="w-3.5 h-3.5" />
-                  <span>BACK TO CHAT</span>
-                </Button>
+                  <ArrowLeft className="w-5 h-5 text-white shrink-0" />
+                </button>
               </div>
 
               <div className="text-center shrink-0">
@@ -721,13 +717,13 @@ export default function ConundrumGame() {
             >
               <div className="space-y-0.5 text-center shrink-0 pt-1">
                 <div className="text-4xl sm:text-5xl mb-1 flex items-center justify-center">
-                  {isPassed ? "🎉" : "🎭"}
+                  {isPassed ? "🎉" : "💥"}
                 </div>
                 <h1 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-amber-300 drop-shadow-2xl">
-                  {isPassed ? "PURE GENIUS!" : "TWEAK NEEDED!"}
+                  {isPassed ? "PURE GENIUS!" : "EPIC FAIL!"}
                 </h1>
                 <p className="text-xs sm:text-sm font-black uppercase tracking-widest text-amber-300">
-                  {isPassed ? "CONUNDRUM SOLVED!" : "TRY ANOTHER ANGLE!"}
+                  {isPassed ? "CONUNDRUM SOLVED!" : "TIME FOR PLAN B!"}
                 </p>
               </div>
 
@@ -795,14 +791,14 @@ export default function ConundrumGame() {
             >
               <div className="w-full flex items-center justify-between z-30 shrink-0 pt-1">
                 <button
+                  type="button"
                   onClick={() => {
                     soundEffects.playClick();
                     setOutcomeSubState("FEEDBACK");
                   }}
-                  className="px-3.5 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 backdrop-blur-md flex items-center gap-1 cursor-pointer transition-all active:scale-95 border border-white/20"
+                  className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 active:scale-95 backdrop-blur-md cursor-pointer transition-all border border-white/30 flex items-center justify-center text-white shrink-0 z-30 relative"
                 >
-                  <ArrowLeft className="w-4 h-4 text-white" />
-                  <span>BACK TO FEEDBACK</span>
+                  <ArrowLeft className="w-5 h-5 text-white shrink-0" />
                 </button>
                 <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
                   IDEA {altSolutionIndex + 1} OF {altSolutions.length}

@@ -71,27 +71,38 @@ class AudioEffects {
     }
   }
 
-  // Low Failure Buzz
+  // Dramatic Comical Cartoon Failure Sound (Descending Wah-Wah Slide)
   playFailure() {
     try {
       this.init();
       if (!this.ctx) return;
 
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
+      const steps = [
+        { startFreq: 340, endFreq: 300, duration: 0.15, delay: 0 },
+        { startFreq: 300, endFreq: 260, duration: 0.15, delay: 0.14 },
+        { startFreq: 260, endFreq: 220, duration: 0.15, delay: 0.28 },
+        { startFreq: 220, endFreq: 110, duration: 0.45, delay: 0.42 } // Long comical low slide
+      ];
 
-      osc.type = "sawtooth";
-      osc.frequency.setValueAtTime(180, this.ctx.currentTime);
-      osc.frequency.linearRampToValueAtTime(110, this.ctx.currentTime + 0.3);
+      steps.forEach((step) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
 
-      gain.gain.setValueAtTime(0.25, this.ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.3);
+        const startTime = this.ctx.currentTime + step.delay;
 
-      osc.connect(gain);
-      gain.connect(this.ctx.destination);
+        osc.type = "sawtooth";
+        osc.frequency.setValueAtTime(step.startFreq, startTime);
+        osc.frequency.exponentialRampToValueAtTime(step.endFreq, startTime + step.duration);
 
-      osc.start();
-      osc.stop(this.ctx.currentTime + 0.3);
+        gain.gain.setValueAtTime(0.22, startTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, startTime + step.duration);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(startTime);
+        osc.stop(startTime + step.duration);
+      });
     } catch (e) {
       // Ignore audio errors
     }
