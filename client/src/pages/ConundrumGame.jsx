@@ -456,30 +456,32 @@ export default function ConundrumGame() {
   // SCREEN 2: CATEGORY SELECT
   if (viewState === "CATEGORY_SELECT") {
     return (
-      <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-3 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
-        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-3 my-auto">
-          
-          <div className="w-full flex items-center justify-between pt-1 z-30 shrink-0">
-            <button
-              type="button"
-              onClick={() => {
-                soundEffects.playClick();
-                setViewState("MODE_SELECT");
-              }}
-              className="px-3.5 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 backdrop-blur-md cursor-pointer transition-all active:scale-95 border border-white/20 flex items-center gap-1"
-            >
-              <ArrowLeft className="w-3.5 h-3.5 text-white" />
-              <span>MODES</span>
-            </button>
-            <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
-              {selectedMode === "kids" ? "🎈 KIDS MODE" : "🚀 ADULTS MODE"}
-            </span>
-          </div>
+      <div className="fixed inset-0 z-50 w-screen h-[100dvh] flex flex-col justify-between p-3 sm:p-5 text-white select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif] overflow-hidden">
+        
+        {/* PINNED TOP HEADER BAR */}
+        <div className="max-w-md w-full mx-auto flex items-center justify-between pt-1 pb-2 shrink-0 z-50 relative">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              soundEffects.playClick();
+              setViewState("MODE_SELECT");
+            }}
+            className="h-10 px-4 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 active:scale-95 backdrop-blur-md cursor-pointer transition-all border border-white/30 flex items-center gap-1.5 shrink-0 z-50 relative"
+          >
+            <ArrowLeft className="w-4 h-4 text-white shrink-0" />
+            <span>MODES</span>
+          </button>
+          <span className="text-xs font-black uppercase text-amber-300 tracking-widest shrink-0">
+            {selectedMode === "kids" ? "🎈 KIDS MODE" : "🚀 ADULTS MODE"}
+          </span>
+        </div>
 
+        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-3 my-auto min-h-0 overflow-hidden">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="space-y-0.5"
+            className="space-y-0.5 shrink-0"
           >
             <h2 className="text-3xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-white drop-shadow-2xl">
               PICK A CATEGORY
