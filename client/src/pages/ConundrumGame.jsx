@@ -116,7 +116,7 @@ const JigsawGridPiece = ({ char, row, col }) => {
   };
 
   return (
-    <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52 flex items-center justify-center font-['Lilita_One',sans-serif] text-7xl sm:text-8xl md:text-[9rem] text-slate-950 select-none">
+    <div className="relative w-24 h-24 sm:w-40 sm:h-40 md:w-52 md:h-52 flex items-center justify-center font-['Lilita_One',sans-serif] text-5xl sm:text-8xl md:text-[9rem] text-slate-950 select-none">
       <svg viewBox="-20 -20 140 140" className="absolute inset-0 w-full h-full drop-shadow-xl overflow-visible">
         <path
           d={getPath()}
@@ -137,7 +137,7 @@ const JigsawGridPiece = ({ char, row, col }) => {
   );
 };
 
-export default function Conundrum2Game() {
+export default function ConundrumGame() {
   const [selectedMode, setSelectedMode] = useState(null); // "kids" or "adults"
   const [selectedCategory, setSelectedCategory] = useState(null);
   
@@ -205,7 +205,7 @@ export default function Conundrum2Game() {
         {
           id: `intro-${Date.now()}`,
           sender: "character",
-          text: `Hi! I'm ${data.character}.\n\n${data.complaint}`,
+          text: `Hi! I'm ${data.character}. ${data.complaint}`,
         },
       ]);
     } catch (err) {
@@ -298,7 +298,7 @@ export default function Conundrum2Game() {
     }
   };
 
-  // SCREEN 0: SPLASH SCREEN WITH LARGER PUZZLE FOOTPRINT, "EVERYDAY PUZZLES" SUBTEXT & STANDARD PLAY BUTTON
+  // SCREEN 0: SPLASH SCREEN WITH COMPACT RESPONSIVE SPACING
   if (viewState === "SPLASH") {
     const line1 = ["C", "O", "N"];
     const line2 = ["U", "N", "D"];
@@ -307,14 +307,14 @@ export default function Conundrum2Game() {
     return (
       <div 
         onClick={() => { soundEffects.playClick(); setViewState("MODE_SELECT"); }}
-        className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif] cursor-pointer overflow-hidden"
+        className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-3 sm:p-6 text-white select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif] cursor-pointer overflow-hidden"
       >
-        <div className="max-w-3xl sm:max-w-4xl w-full mx-auto flex-1 flex flex-col justify-center items-center text-center space-y-6 sm:space-y-8 my-auto">
+        <div className="max-w-3xl sm:max-w-4xl w-full mx-auto flex-1 flex flex-col justify-center items-center text-center space-y-4 sm:space-y-8 my-auto">
           
           {/* MASSIVE 3-LINE JIGSAW GRID WITH ENLARGED FOOTPRINT */}
-          <div className="flex flex-col items-center justify-center -space-y-5 sm:-space-y-7 md:-space-y-9 my-2">
+          <div className="flex flex-col items-center justify-center -space-y-4 sm:-space-y-7 md:-space-y-9 my-1">
             {[line1, line2, line3].map((row, rowIdx) => (
-              <div key={rowIdx} className="flex items-center justify-center -space-x-5 sm:-space-x-7 md:-space-x-9">
+              <div key={rowIdx} className="flex items-center justify-center -space-x-4 sm:-space-x-7 md:-space-x-9">
                 {row.map((char, charIdx) => {
                   const totalIndex = rowIdx * 3 + charIdx;
                   const randomX = (totalIndex % 2 === 0 ? 1 : -1) * (90 + Math.random() * 110);
@@ -359,17 +359,17 @@ export default function Conundrum2Game() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.5 }}
-            className="text-base sm:text-lg font-black uppercase tracking-[0.3em] text-white/90 pt-2"
+            className="text-sm sm:text-lg font-black uppercase tracking-[0.3em] text-white/90 pt-1"
           >
             EVERYDAY PUZZLES
           </motion.p>
 
-          {/* STANDARD PLAY BUTTON (MATCHING APP BUTTON DIMENSIONS h-14 AND ROUNDED-FULL CURVATURE) */}
+          {/* STANDARD PLAY BUTTON */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.3, duration: 0.4 }}
-            className="pt-2"
+            className="pt-1"
           >
             <Button
               onClick={(e) => {
@@ -378,7 +378,7 @@ export default function Conundrum2Game() {
                 setViewState("MODE_SELECT");
               }}
               size="lg"
-              className="w-64 h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-slate-950 font-['Lilita_One',sans-serif] text-xl uppercase tracking-wider rounded-full shadow-2xl hover:scale-105 transition-all cursor-pointer flex items-center justify-center border-none"
+              className="w-56 sm:w-64 h-12 sm:h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-slate-950 font-['Lilita_One',sans-serif] text-xl uppercase tracking-wider rounded-full shadow-2xl hover:scale-105 transition-all cursor-pointer flex items-center justify-center border-none"
             >
               PLAY
             </Button>
@@ -393,17 +393,17 @@ export default function Conundrum2Game() {
   if (viewState === "MODE_SELECT") {
     return (
       <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
-        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-center items-center text-center space-y-8 my-auto">
+        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-center items-center text-center space-y-6 my-auto">
           
           <motion.h2
             initial={{ scale: 0.85, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="text-5xl sm:text-6xl font-extrabold font-['Lilita_One',sans-serif] uppercase leading-none mb-2 text-white drop-shadow-2xl"
+            className="text-4xl sm:text-6xl font-extrabold font-['Lilita_One',sans-serif] uppercase leading-none mb-1 text-white drop-shadow-2xl"
           >
             CHOOSE A MODE
           </motion.h2>
 
-          <div className="grid grid-cols-1 gap-5 w-full text-left">
+          <div className="grid grid-cols-1 gap-4 w-full text-left">
             {[
               {
                 key: "kids",
@@ -433,17 +433,17 @@ export default function Conundrum2Game() {
                   setSelectedCategory(null);
                   setViewState("CATEGORY_SELECT");
                 }}
-                className={`relative text-left rounded-3xl p-6 sm:p-7 transition-all overflow-hidden bg-gradient-to-br ${m.grad} shadow-xl hover:shadow-2xl cursor-pointer`}
+                className={`relative text-left rounded-3xl p-5 sm:p-7 transition-all overflow-hidden bg-gradient-to-br ${m.grad} shadow-xl hover:shadow-2xl cursor-pointer`}
               >
                 <div className="flex items-start justify-between">
-                  <div className="text-5xl drop-shadow">
+                  <div className="text-4xl sm:text-5xl drop-shadow">
                     {m.emoji}
                   </div>
                 </div>
-                <span className="block font-['Lilita_One',sans-serif] text-3xl sm:text-4xl text-white mt-4 uppercase tracking-wide drop-shadow">
+                <span className="block font-['Lilita_One',sans-serif] text-2xl sm:text-4xl text-white mt-3 uppercase tracking-wide drop-shadow">
                   {m.label}
                 </span>
-                <span className="block text-white/95 text-sm font-bold leading-snug mt-1">{m.desc}</span>
+                <span className="block text-white/95 text-xs sm:text-sm font-bold leading-snug mt-1">{m.desc}</span>
               </motion.button>
             ))}
           </div>
@@ -456,15 +456,15 @@ export default function Conundrum2Game() {
   // SCREEN 2: CATEGORY SELECT
   if (viewState === "CATEGORY_SELECT") {
     return (
-      <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
-        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-4 my-auto">
+      <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-3 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
+        <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-3 my-auto">
           
-          <div className="w-full flex items-center justify-between pt-2">
+          <div className="w-full flex items-center justify-between pt-1">
             <button
               onClick={() => setViewState("MODE_SELECT")}
-              className="px-4 py-2 rounded-full font-black text-xs uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
+              className="px-3 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
             >
-              ← BACK TO MODES
+              ← MODES
             </button>
             <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
               {selectedMode === "kids" ? "🎈 KIDS MODE" : "🚀 ADULTS MODE"}
@@ -474,41 +474,41 @@ export default function Conundrum2Game() {
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="space-y-1"
+            className="space-y-0.5"
           >
-            <h2 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-white drop-shadow-2xl">
+            <h2 className="text-3xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-white drop-shadow-2xl">
               PICK A CATEGORY
             </h2>
-            <p className="text-xs font-black uppercase tracking-widest text-amber-300">
+            <p className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-amber-300">
               TAP ANY CATEGORY TO PLAY
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-3.5 w-full text-left flex-1 overflow-y-auto pr-1 py-1">
+          <div className="grid grid-cols-1 gap-2.5 w-full text-left flex-1 overflow-y-auto pr-1 py-1">
             {activeCategoryList.map((cat) => (
               <motion.button
                 key={cat.label}
                 type="button"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => {
                   setSelectedCategory(cat);
                   handleLaunchChallenge(cat, selectedMode);
                 }}
-                className={`relative text-left rounded-3xl p-6 transition-all overflow-hidden bg-gradient-to-br ${cat.grad} shadow-xl min-h-[90px] flex items-center justify-between hover:shadow-2xl cursor-pointer`}
+                className={`relative text-left rounded-2xl p-4 transition-all overflow-hidden bg-gradient-to-br ${cat.grad} shadow-lg min-h-[72px] flex items-center justify-between hover:shadow-xl cursor-pointer`}
               >
-                <div className="flex items-center gap-4">
-                  <div className="text-4xl sm:text-5xl shrink-0 drop-shadow">
+                <div className="flex items-center gap-3">
+                  <div className="text-3xl sm:text-4xl shrink-0 drop-shadow">
                     {cat.emoji}
                   </div>
-                  <div className="py-1">
-                    <span className="block font-['Lilita_One',sans-serif] text-2xl sm:text-3xl text-white uppercase tracking-wide drop-shadow leading-tight">
+                  <div>
+                    <span className="block font-['Lilita_One',sans-serif] text-xl sm:text-2xl text-white uppercase tracking-wide drop-shadow leading-tight">
                       {cat.label}
                     </span>
-                    <span className="block text-white/90 text-xs sm:text-sm font-bold leading-snug mt-1">{cat.desc}</span>
+                    <span className="block text-white/90 text-xs font-bold leading-snug mt-0.5">{cat.desc}</span>
                   </div>
                 </div>
-                <ArrowRight className="h-6 w-6 text-white shrink-0 ml-2 drop-shadow" />
+                <ArrowRight className="h-5 w-5 text-white shrink-0 ml-2 drop-shadow" />
               </motion.button>
             ))}
           </div>
@@ -522,8 +522,8 @@ export default function Conundrum2Game() {
   if (loading) {
     return (
       <div className="fixed inset-0 z-50 w-screen h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 flex flex-col items-center justify-center p-6 text-center text-white select-none font-['Nunito',sans-serif]">
-        <div className="w-20 h-20 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mb-6 shadow-2xl" />
-        <h2 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-amber-300 drop-shadow-2xl">
+        <div className="w-16 h-16 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mb-4 shadow-2xl" />
+        <h2 className="text-3xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-amber-300 drop-shadow-2xl">
           GENERATING CONUNDRUM...
         </h2>
       </div>
@@ -534,17 +534,17 @@ export default function Conundrum2Game() {
   if (error && !scenario) {
     return (
       <div className="fixed inset-0 z-50 w-screen h-screen bg-slate-950 flex flex-col items-center justify-center p-6 text-center text-white select-none font-['Nunito',sans-serif]">
-        <AlertCircle className="w-16 h-16 text-rose-500 mb-4 animate-bounce" />
-        <h2 className="text-3xl font-['Lilita_One',sans-serif] uppercase text-rose-400 mb-2">GENERATION ERROR</h2>
-        <p className="text-sm text-slate-300 max-w-md font-mono bg-slate-900 p-4 rounded-2xl border border-slate-800 mb-6">
+        <AlertCircle className="w-14 h-14 text-rose-500 mb-3 animate-bounce" />
+        <h2 className="text-2xl font-['Lilita_One',sans-serif] uppercase text-rose-400 mb-2">GENERATION ERROR</h2>
+        <p className="text-xs text-slate-300 max-w-md font-mono bg-slate-900 p-3 rounded-2xl border border-slate-800 mb-4">
           {error}
         </p>
         <Button
           onClick={() => setViewState("CATEGORY_SELECT")}
           size="lg"
-          className="h-14 px-8 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-black text-sm uppercase tracking-wider rounded-full shadow-2xl"
+          className="h-12 px-6 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-black text-xs uppercase tracking-wider rounded-full shadow-2xl"
         >
-          <RefreshCw className="w-5 h-5 mr-2" />
+          <RefreshCw className="w-4 h-4 mr-2" />
           <span>BACK TO CATEGORIES</span>
         </Button>
       </div>
@@ -555,44 +555,46 @@ export default function Conundrum2Game() {
   const altSolutions = evaluationResult?.alternativeSolutions || [];
 
   return (
-    <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-4 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
+    <div className="fixed inset-0 z-50 w-screen h-[100dvh] flex flex-col justify-between p-3 sm:p-5 text-white overflow-hidden select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
       
-      <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-4 relative">
+      <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-2 relative h-full overflow-hidden">
         
-        {/* DISCOVERY / CHAT SCREEN */}
+        {/* DISCOVERY / CHAT SCREEN - HIGH-EFFICIENCY MOBILE LAYOUT */}
         {viewState === "DISCOVERY" && (
           <AnimatePresence mode="wait">
             <motion.div
               key="discovery"
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="flex-1 flex flex-col justify-between items-center w-full space-y-3 my-auto max-h-[92vh]"
+              exit={{ opacity: 0, scale: 0.98 }}
+              className="flex-1 flex flex-col justify-between items-center w-full h-full space-y-2 py-1 overflow-hidden"
             >
-              <div className="flex items-center justify-between w-full">
+              {/* COMPACT TOP HEADER */}
+              <div className="flex items-center justify-between w-full shrink-0">
                 <button
                   onClick={() => setViewState("CATEGORY_SELECT")}
-                  className="px-4 py-2 rounded-full font-black text-xs uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
+                  className="px-3 py-1 rounded-full font-black text-[11px] uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
                 >
                   ← CATEGORIES
                 </button>
 
-                <div className="flex items-center gap-2 bg-black/30 px-4 py-1.5 rounded-full backdrop-blur-md">
-                  <Star className="w-4 h-4 text-amber-300 fill-amber-300" />
-                  <span className="text-xs font-black uppercase text-amber-300">{scenario.character}</span>
+                <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">
+                  <Star className="w-3.5 h-3.5 text-amber-300 fill-amber-300" />
+                  <span className="text-[11px] font-black uppercase text-amber-300">{scenario.character}</span>
                 </div>
               </div>
 
-              <div className="w-full flex-1 overflow-y-auto space-y-4 pr-1 select-text my-auto py-2">
+              {/* CHAT MESSAGES SCROLL AREA */}
+              <div className="w-full flex-1 overflow-y-auto space-y-2.5 pr-1 select-text py-1 my-auto min-h-0">
                 {qaHistory.map((msg, idx) => (
                   <motion.div
                     key={msg.id || idx}
-                    initial={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className={`flex flex-col ${msg.sender === "player" ? "items-end" : "items-start"}`}
                   >
                     <div
-                      className={`max-w-[95%] p-6 sm:p-7 rounded-[36px] text-xl sm:text-2xl font-black leading-snug text-left shadow-2xl ${
+                      className={`max-w-[92%] p-4 sm:p-5 rounded-3xl text-base sm:text-lg font-black leading-snug text-left shadow-xl ${
                         msg.sender === "player"
                           ? "bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 rounded-br-none"
                           : "bg-white text-slate-950 rounded-bl-none"
@@ -605,35 +607,37 @@ export default function Conundrum2Game() {
                 <div ref={chatEndRef} />
               </div>
 
-              <form onSubmit={handleAskQuestion} className="w-full flex gap-2 pt-1">
-                <Input
-                  value={questionInput}
-                  onChange={(e) => setQuestionInput(e.target.value)}
-                  placeholder={`Ask ${scenario.character} a question...`}
-                  disabled={askingQuestion}
-                  className="h-14 bg-white/10 border-2 border-white/20 rounded-full px-6 text-base text-white placeholder:text-white/60 focus-visible:ring-amber-400 backdrop-blur-md font-bold"
-                />
-                <Button
-                  type="submit"
-                  disabled={askingQuestion || !questionInput.trim()}
-                  className="h-14 w-14 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black shrink-0 flex items-center justify-center shadow-xl cursor-pointer"
-                >
-                  {askingQuestion ? (
-                    <RefreshCw className="w-5 h-5 animate-spin" />
-                  ) : (
-                    <Send className="w-5 h-5" />
-                  )}
-                </Button>
-              </form>
+              {/* COMPACT INPUT FORM & ACTION BUTTON */}
+              <div className="w-full shrink-0 space-y-2 pt-1">
+                <form onSubmit={handleAskQuestion} className="w-full flex gap-2">
+                  <Input
+                    value={questionInput}
+                    onChange={(e) => setQuestionInput(e.target.value)}
+                    placeholder={`Ask ${scenario.character} a question...`}
+                    disabled={askingQuestion}
+                    className="h-11 sm:h-12 bg-white/10 border border-white/20 rounded-full px-4 text-sm sm:text-base text-white placeholder:text-white/60 focus-visible:ring-amber-400 backdrop-blur-md font-bold"
+                  />
+                  <Button
+                    type="submit"
+                    disabled={askingQuestion || !questionInput.trim()}
+                    className="h-11 w-11 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black shrink-0 flex items-center justify-center shadow-lg cursor-pointer"
+                  >
+                    {askingQuestion ? (
+                      <RefreshCw className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Send className="w-4 h-4" />
+                    )}
+                  </Button>
+                </form>
 
-              {/* SUBMIT SOLUTION BUTTON */}
-              <Button
-                onClick={() => { soundEffects.playClick(); setViewState("SOLUTION"); }}
-                size="lg"
-                className="w-full h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-['Lilita_One',sans-serif] text-xl uppercase tracking-wider rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
-              >
-                <span>SUBMIT SOLUTION</span>
-              </Button>
+                <Button
+                  onClick={() => { soundEffects.playClick(); setViewState("SOLUTION"); }}
+                  size="lg"
+                  className="w-full h-12 sm:h-13 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-['Lilita_One',sans-serif] text-lg sm:text-xl uppercase tracking-wider rounded-full shadow-xl flex items-center justify-center cursor-pointer border-none"
+                >
+                  <span>SUBMIT SOLUTION</span>
+                </Button>
+              </div>
             </motion.div>
           </AnimatePresence>
         )}
@@ -643,38 +647,38 @@ export default function Conundrum2Game() {
           <AnimatePresence mode="wait">
             <motion.div
               key="solution"
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="flex-1 flex flex-col justify-between items-center w-full space-y-4 my-auto"
+              exit={{ opacity: 0, scale: 0.98 }}
+              className="flex-1 flex flex-col justify-between items-center w-full h-full space-y-3 py-1 overflow-hidden"
             >
-              <div className="w-full flex items-start">
+              <div className="w-full flex items-start shrink-0">
                 <Button
                   onClick={() => { soundEffects.playClick(); setViewState("DISCOVERY"); }}
                   variant="ghost"
                   size="sm"
-                  className="text-white/80 hover:text-white font-black text-xs uppercase tracking-widest flex items-center gap-1 bg-black/30 border border-white/20 rounded-full px-4 py-2"
+                  className="text-white/80 hover:text-white font-black text-xs uppercase tracking-widest flex items-center gap-1 bg-black/30 border border-white/20 rounded-full px-3 py-1.5"
                 >
-                  <ArrowLeft className="w-4 h-4" />
+                  <ArrowLeft className="w-3.5 h-3.5" />
                   <span>BACK TO CHAT</span>
                 </Button>
               </div>
 
-              <div className="text-center">
-                <h2 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase text-white mb-1">
+              <div className="text-center shrink-0">
+                <h2 className="text-3xl sm:text-4xl font-['Lilita_One',sans-serif] uppercase text-white mb-0.5">
                   CONUNDRUM SOLUTION
                 </h2>
-                <p className="text-xs font-black text-amber-300">
+                <p className="text-[11px] font-black text-amber-300">
                   How would you solve {scenario.character}'s conundrum?
                 </p>
               </div>
 
-              <div className="bg-white text-slate-950 p-6 sm:p-7 rounded-[36px] shadow-2xl w-full text-left">
+              <div className="bg-white text-slate-950 p-4 sm:p-5 rounded-3xl shadow-xl w-full text-left flex-1 min-h-0 my-auto flex flex-col">
                 <Textarea
                   value={pitchText}
                   onChange={(e) => setPitchText(e.target.value)}
-                  placeholder={`describe your solution to ${scenario.character}'s conundrum`}
-                  className="min-h-[180px] bg-transparent border-none p-1 text-xl font-bold text-slate-900 placeholder:text-slate-400 focus-visible:ring-0 select-text resize-none"
+                  placeholder={`Describe your solution to ${scenario.character}'s conundrum...`}
+                  className="w-full h-full bg-transparent border-none p-1 text-base sm:text-lg font-bold text-slate-900 placeholder:text-slate-400 focus-visible:ring-0 select-text resize-none"
                 />
               </div>
 
@@ -682,10 +686,10 @@ export default function Conundrum2Game() {
                 onClick={handleSubmitPitch}
                 disabled={evaluating || !pitchText.trim()}
                 size="lg"
-                className="w-full h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-['Lilita_One',sans-serif] text-xl uppercase tracking-wider rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+                className="w-full h-12 sm:h-14 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-['Lilita_One',sans-serif] text-lg sm:text-xl uppercase tracking-wider rounded-full shadow-xl flex items-center justify-center cursor-pointer shrink-0 border-none"
               >
                 {evaluating ? (
-                  <RefreshCw className="w-6 h-6 animate-spin" />
+                  <RefreshCw className="w-5 h-5 animate-spin" />
                 ) : (
                   <span>SUBMIT SOLUTION</span>
                 )}
@@ -694,36 +698,36 @@ export default function Conundrum2Game() {
           </AnimatePresence>
         )}
 
-        {/* CONSOLIDATED SINGLE OUTCOME SCREEN */}
+        {/* CONSOLIDATED OUTCOME SCREEN */}
         {viewState === "OUTCOME" && outcomeSubState === "FEEDBACK" && (
           <AnimatePresence mode="wait">
             <motion.div
               key="consolidated-outcome"
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex-1 flex flex-col justify-between items-center w-full space-y-4 my-auto pt-1 overflow-y-auto"
+              className="flex-1 flex flex-col justify-between items-center w-full h-full space-y-3 py-1 overflow-y-auto"
             >
-              <div className="space-y-1 text-center pt-2">
-                <div className="text-6xl mb-2 flex items-center justify-center">
+              <div className="space-y-0.5 text-center shrink-0 pt-1">
+                <div className="text-4xl sm:text-5xl mb-1 flex items-center justify-center">
                   {isPassed ? "🎉" : "🎭"}
                 </div>
-                <h1 className="text-5xl sm:text-6xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-amber-300 drop-shadow-2xl">
+                <h1 className="text-4xl sm:text-5xl font-['Lilita_One',sans-serif] uppercase tracking-wide text-amber-300 drop-shadow-2xl">
                   {isPassed ? "PURE GENIUS!" : "TWEAK NEEDED!"}
                 </h1>
-                <p className="text-sm sm:text-base font-black uppercase tracking-widest text-amber-300">
+                <p className="text-xs sm:text-sm font-black uppercase tracking-widest text-amber-300">
                   {isPassed ? "CONUNDRUM SOLVED!" : "TRY ANOTHER ANGLE!"}
                 </p>
               </div>
 
               {isPassed && (
-                <div className="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-slate-950 p-6 rounded-[32px] shadow-2xl w-full flex items-center justify-between border-4 border-amber-300">
-                  <div className="flex items-center gap-4 text-left">
-                    <div className="w-14 h-14 rounded-2xl bg-slate-950 text-amber-400 flex items-center justify-center shrink-0 shadow-lg">
-                      <Star className="w-9 h-9 fill-amber-400 text-amber-400 animate-pulse" />
+                <div className="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-slate-950 p-4 rounded-2xl shadow-xl w-full flex items-center justify-between border-2 border-amber-300 shrink-0">
+                  <div className="flex items-center gap-3 text-left">
+                    <div className="w-10 h-10 rounded-xl bg-slate-950 text-amber-400 flex items-center justify-center shrink-0 shadow">
+                      <Star className="w-6 h-6 fill-amber-400 text-amber-400 animate-pulse" />
                     </div>
                     <div>
-                      <div className="text-xs font-black uppercase tracking-widest text-slate-900">BADGE UNLOCKED</div>
-                      <div className="text-3xl sm:text-4xl font-['Lilita_One',sans-serif] uppercase text-slate-950">
+                      <div className="text-[10px] font-black uppercase tracking-widest text-slate-900">BADGE UNLOCKED</div>
+                      <div className="text-xl sm:text-2xl font-['Lilita_One',sans-serif] uppercase text-slate-950">
                         {evaluationResult.badge || "The Lateral Thinker"}
                       </div>
                     </div>
@@ -731,11 +735,11 @@ export default function Conundrum2Game() {
                 </div>
               )}
 
-              <div className="bg-white text-slate-950 p-6 sm:p-7 rounded-[36px] shadow-2xl text-2xl sm:text-3xl font-black leading-snug w-full text-left my-2">
+              <div className="bg-white text-slate-950 p-4 sm:p-5 rounded-3xl shadow-xl text-lg sm:text-xl font-black leading-snug w-full text-left flex-1 min-h-0 my-auto overflow-y-auto">
                 {evaluationResult.feedback}
               </div>
 
-              <div className="w-full space-y-3 pt-2">
+              <div className="w-full space-y-2 shrink-0">
                 {altSolutions.length > 0 && (
                   <Button
                     onClick={() => {
@@ -744,9 +748,9 @@ export default function Conundrum2Game() {
                       setOutcomeSubState("OTHER_SOLUTIONS");
                     }}
                     size="lg"
-                    className="w-full h-16 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-['Lilita_One',sans-serif] text-lg sm:text-xl uppercase tracking-wider rounded-2xl shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer"
+                    className="w-full h-12 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-['Lilita_One',sans-serif] text-base uppercase tracking-wider rounded-xl shadow-lg flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer"
                   >
-                    <span className="text-2xl">💡</span>
+                    <span>💡</span>
                     <span>SEE OTHER CLEVER SOLUTIONS</span>
                   </Button>
                 )}
@@ -757,9 +761,9 @@ export default function Conundrum2Game() {
                     setViewState("CATEGORY_SELECT");
                   }}
                   size="lg"
-                  className="w-full h-16 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-['Lilita_One',sans-serif] text-lg sm:text-xl uppercase tracking-wider rounded-2xl shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer"
+                  className="w-full h-12 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-['Lilita_One',sans-serif] text-base uppercase tracking-wider rounded-xl shadow-lg flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer"
                 >
-                  <RefreshCw className="w-6 h-6" />
+                  <RefreshCw className="w-5 h-5" />
                   <span>PLAY AGAIN</span>
                 </Button>
               </div>
@@ -767,7 +771,7 @@ export default function Conundrum2Game() {
           </AnimatePresence>
         )}
 
-        {/* OUTCOME SCREEN: PERFECTLY VERTICALLY CENTERED ALTERNATIVE SOLUTIONS CAROUSEL */}
+        {/* OUTCOME SCREEN: CAROUSEL */}
         {viewState === "OUTCOME" && outcomeSubState === "OTHER_SOLUTIONS" && (
           <AnimatePresence mode="wait">
             <motion.div
@@ -777,48 +781,48 @@ export default function Conundrum2Game() {
               exit={{ opacity: 0, x: -50 }}
               className="flex-1 flex flex-col justify-center items-center w-full h-full my-auto relative"
             >
-              <div className="absolute top-1 left-0 right-0 z-20 flex items-center justify-between w-full">
+              <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between w-full">
                 <Button
                   onClick={() => setOutcomeSubState("FEEDBACK")}
                   variant="ghost"
                   size="sm"
-                  className="text-white/80 hover:text-white font-black text-xs uppercase tracking-widest flex items-center gap-1 bg-black/30 backdrop-blur-md rounded-full px-4 py-2"
+                  className="text-white/80 hover:text-white font-black text-[11px] uppercase tracking-widest flex items-center gap-1 bg-black/30 backdrop-blur-md rounded-full px-3 py-1"
                 >
-                  <ArrowLeft className="w-4 h-4" />
-                  <span>BACK TO FEEDBACK</span>
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                  <span>BACK</span>
                 </Button>
-                <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
+                <span className="text-[11px] font-black uppercase text-amber-300 tracking-widest">
                   IDEA {altSolutionIndex + 1} OF {altSolutions.length}
                 </span>
               </div>
 
-              <div className="relative w-full my-auto flex items-center justify-center pt-8">
+              <div className="relative w-full my-auto flex items-center justify-center pt-6">
                 
                 <button
                   onClick={() => {
                     soundEffects.playClick();
                     setAltSolutionIndex((prev) => (prev > 0 ? prev - 1 : altSolutions.length - 1));
                   }}
-                  className="absolute -left-3 sm:-left-5 z-10 w-13 h-13 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-2xl border-2 border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
+                  className="absolute -left-2 z-10 w-10 h-10 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-xl border border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
                 >
-                  <ChevronLeft className="w-8 h-8 text-slate-950" />
+                  <ChevronLeft className="w-6 h-6 text-slate-950" />
                 </button>
 
-                <div className="bg-gradient-to-br from-amber-400 via-orange-500 to-pink-500 text-slate-950 p-7 sm:p-8 rounded-[36px] shadow-2xl w-full text-center space-y-4 border-4 border-amber-300 mx-2 min-h-[340px] sm:min-h-[360px] flex flex-col justify-between items-center">
+                <div className="bg-gradient-to-br from-amber-400 via-orange-500 to-pink-500 text-slate-950 p-5 rounded-3xl shadow-xl w-full text-center space-y-2 border-2 border-amber-300 mx-1 min-h-[280px] flex flex-col justify-between items-center">
                   
-                  <div className="text-6xl mx-auto flex items-center justify-center">
+                  <div className="text-4xl mx-auto flex items-center justify-center">
                     💡
                   </div>
 
-                  <div className="text-xs font-black uppercase tracking-widest text-slate-900">
+                  <div className="text-[10px] font-black uppercase tracking-widest text-slate-900">
                     ALTERNATIVE SOLUTION #{altSolutionIndex + 1}
                   </div>
                   
-                  <p className="text-2xl sm:text-3xl font-['Lilita_One',sans-serif] uppercase leading-snug text-slate-950 my-auto flex-1 flex items-center justify-center">
+                  <p className="text-xl sm:text-2xl font-['Lilita_One',sans-serif] uppercase leading-snug text-slate-950 my-auto flex-1 flex items-center justify-center">
                     "{altSolutions[altSolutionIndex]}"
                   </p>
 
-                  <div className="flex items-center justify-center gap-2.5 pt-1">
+                  <div className="flex items-center justify-center gap-2 pt-1">
                     {altSolutions.map((_, dotIdx) => (
                       <button
                         key={dotIdx}
@@ -828,8 +832,8 @@ export default function Conundrum2Game() {
                         }}
                         className={`transition-all rounded-full ${
                           dotIdx === altSolutionIndex
-                            ? "w-4 h-4 bg-slate-950 ring-2 ring-amber-300 scale-110"
-                            : "w-3 h-3 bg-slate-950/40 hover:bg-slate-950/70"
+                            ? "w-3.5 h-3.5 bg-slate-950 ring-2 ring-amber-300 scale-110"
+                            : "w-2.5 h-2.5 bg-slate-950/40 hover:bg-slate-950/70"
                         }`}
                       />
                     ))}
@@ -841,9 +845,9 @@ export default function Conundrum2Game() {
                     soundEffects.playClick();
                     setAltSolutionIndex((prev) => (prev < altSolutions.length - 1 ? prev + 1 : 0));
                   }}
-                  className="absolute -right-3 sm:-right-5 z-10 w-13 h-13 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-2xl border-2 border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
+                  className="absolute -right-2 z-10 w-10 h-10 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-xl border border-slate-200 transition-all hover:scale-110 active:scale-95 cursor-pointer"
                 >
-                  <ChevronRight className="w-8 h-8 text-slate-950" />
+                  <ChevronRight className="w-6 h-6 text-slate-950" />
                 </button>
 
               </div>
