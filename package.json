@@ -2,12 +2,17 @@
   "name": "conundrum-game-root",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "install:all": "npm install --prefix client --legacy-peer-deps --production=false && npm install --prefix server",
-    "build:client": "npm run build --prefix client",
-    "build": "npm run install:all && npm run build:client",
+    "build": "npm install --prefix client --legacy-peer-deps --production=false && npm run build --prefix client",
     "start": "node server/server.js",
-    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\""
+    "dev": "concurrently \"npm run dev --prefix client\" \"node server/server.js\""
+  },
+  "dependencies": {
+    "@google/genai": "^2.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
