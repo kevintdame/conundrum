@@ -88,28 +88,38 @@ app.post('/api/conundrum2/generate', async (req, res) => {
 
   const domain = domainMap[categoryName] || "Food & Cooking";
   const selectedSubTopic = getRandomSubTopic(domain) || "ice cream melting sticky on hands";
+  const NAME_POOL = [
+    "Maya", "Zoe", "Mia", "Ella", "Chloe", "Ruby", "Lily", "Ivy", "Sophia", "Aria", "Emma", "Nora",
+    "Sammy", "Max", "Ben", "Kai", "Finn", "Eli", "Jack", "Owen", "Mason", "Ethan", "Noah", "Toby",
+    "Jasper", "Oliver", "Ezra", "Milo", "Sora", "Devon", "Cora", "Nico", "Felix", "Amara", "Hugo",
+    "Gemma", "Kobe", "Rory", "Shiloh", "Rowan", "Skyler", "Priya", "Lucas", "Caleb", "Liam", "Mateo"
+  ];
+  const assignedName = NAME_POOL[Math.floor(Math.random() * NAME_POOL.length)];
   const randomSeed = Math.floor(Math.random() * 1000000);
 
   const modeInstruction = isKidsMode
-    ? `MODE: KIDS MODE (Ages 8-12). Create a fun, energetic kid character with a 1-sentence simple complaint.`
-    : `MODE: ADULTS MODE (Ages 13+). Create a clever, grounded adult character with a 1-2 sentence complaint.`;
+    ? `MODE: KIDS MODE (Ages 8-12). Create a fun, energetic kid character named "${assignedName}" with a 1-sentence simple complaint.`
+    : `MODE: ADULTS MODE (Ages 13+). Create a clever, grounded adult character named "${assignedName}" with a 1-2 sentence complaint.`;
 
   const promptText = `You are the Master Puzzle Designer for CONUNDRUM.
 
 [RANDOM SEED: ${randomSeed}]
 ${modeInstruction}
 
+MANDATORY CHARACTER NAME CONSTRAINT:
+- The character's first name MUST BE EXACTLY: "${assignedName}". Do NOT change or replace this name!
+
 PARAMETER CONSTRAINTS:
 - Category: ${categoryName}
 - Grounded Sub-Topic: ${selectedSubTopic}
-- Pick 1 simple first name matching gender!
+- Character Name: "${assignedName}"
 
 JSON OUTPUT SCHEMA (Return JSON ONLY):
 {
   "id": "conundrum-${Date.now()}",
   "mode": "${isKidsMode ? 'kids' : 'adults'}",
   "category": "${categoryName}",
-  "character": "FirstName",
+  "character": "${assignedName}",
   "characterType": "1-2 word role",
   "setting": "Cozy Location",
   "title": "Short Punchy Title",
