@@ -781,17 +781,18 @@ export default function ConundrumGame() {
               exit={{ opacity: 0, x: -50 }}
               className="flex-1 flex flex-col justify-center items-center w-full h-full my-auto relative"
             >
-              <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between w-full">
-                <Button
-                  onClick={() => setOutcomeSubState("FEEDBACK")}
-                  variant="ghost"
-                  size="sm"
-                  className="text-white/80 hover:text-white font-black text-[11px] uppercase tracking-widest flex items-center gap-1 bg-black/30 backdrop-blur-md rounded-full px-3 py-1"
+              <div className="w-full flex items-center justify-between z-30 shrink-0 pt-1">
+                <button
+                  onClick={() => {
+                    soundEffects.playClick();
+                    setOutcomeSubState("FEEDBACK");
+                  }}
+                  className="px-3.5 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 backdrop-blur-md flex items-center gap-1 cursor-pointer transition-all active:scale-95 border border-white/20"
                 >
-                  <ArrowLeft className="w-3.5 h-3.5" />
-                  <span>BACK</span>
-                </Button>
-                <span className="text-[11px] font-black uppercase text-amber-300 tracking-widest">
+                  <ArrowLeft className="w-4 h-4 text-white" />
+                  <span>BACK TO FEEDBACK</span>
+                </button>
+                <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
                   IDEA {altSolutionIndex + 1} OF {altSolutions.length}
                 </span>
               </div>
