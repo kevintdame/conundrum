@@ -459,12 +459,17 @@ export default function ConundrumGame() {
       <div className="fixed inset-0 z-50 w-screen h-screen flex flex-col justify-between p-3 sm:p-6 text-white overflow-y-auto select-none bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-600 font-['Nunito',sans-serif]">
         <div className="max-w-md w-full mx-auto flex-1 flex flex-col justify-between items-center text-center space-y-3 my-auto">
           
-          <div className="w-full flex items-center justify-between pt-1">
+          <div className="w-full flex items-center justify-between pt-1 z-30 shrink-0">
             <button
-              onClick={() => setViewState("MODE_SELECT")}
-              className="px-3 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
+              type="button"
+              onClick={() => {
+                soundEffects.playClick();
+                setViewState("MODE_SELECT");
+              }}
+              className="px-3.5 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 backdrop-blur-md cursor-pointer transition-all active:scale-95 border border-white/20 flex items-center gap-1"
             >
-              ← MODES
+              <ArrowLeft className="w-3.5 h-3.5 text-white" />
+              <span>MODES</span>
             </button>
             <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
               {selectedMode === "kids" ? "🎈 KIDS MODE" : "🚀 ADULTS MODE"}
@@ -570,12 +575,17 @@ export default function ConundrumGame() {
               className="flex-1 flex flex-col justify-between items-center w-full h-full space-y-2 py-1 overflow-hidden"
             >
               {/* COMPACT TOP HEADER */}
-              <div className="flex items-center justify-between w-full shrink-0">
+              <div className="flex items-center justify-between w-full shrink-0 z-30">
                 <button
-                  onClick={() => setViewState("CATEGORY_SELECT")}
-                  className="px-3 py-1 rounded-full font-black text-[11px] uppercase tracking-wider text-white/80 hover:text-white bg-black/30 backdrop-blur-md"
+                  type="button"
+                  onClick={() => {
+                    soundEffects.playClick();
+                    setViewState("CATEGORY_SELECT");
+                  }}
+                  className="px-3.5 py-1.5 rounded-full font-black text-xs uppercase tracking-wider text-white bg-black/40 hover:bg-black/60 backdrop-blur-md cursor-pointer transition-all active:scale-95 border border-white/20 flex items-center gap-1"
                 >
-                  ← CATEGORIES
+                  <ArrowLeft className="w-3.5 h-3.5 text-white" />
+                  <span>CATEGORIES</span>
                 </button>
 
                 <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">
