@@ -61,178 +61,50 @@ async function generateContentWithRetry(params) {
 // CONUNDRUM API ENDPOINTS
 // ----------------------------------------------------
 
-// 1. Generation Endpoint
+// 1. Instant Verified Conundrum Scenario Endpoint (Powered by Pro-Generated Bank)
 app.post('/api/conundrum2/generate', async (req, res) => {
   try {
     const { mode, targetCategory } = req.body || {};
-  const isKidsMode = mode === "kids";
-  const categoryName = targetCategory || (isKidsMode ? "Food & Snacks" : "Food & Cooking");
-
-  const domainMap = {
-    "Food & Snacks": "Food & Cooking",
-    "Food & Cooking": "Food & Cooking",
-    "Pets & Animals": "Health & Wellness",
-    "Health & Wellness": "Health & Wellness",
-    "Toys & Games": "Entertainment & Gaming",
-    "Entertainment & Gaming": "Entertainment & Gaming",
-    "Arts & Crafts": "Education",
-    "Education & Learning": "Education",
-    "Outdoors & Playground": "Travel & Mobility",
-    "Travel & Mobility": "Travel & Mobility",
-    "School & Cartoons": "Education",
-    "Finance & Budgeting": "Work & Productivity",
-    "Inventions & Gadgets": "Work & Productivity",
-    "Work & Productivity": "Work & Productivity",
-    "Music & Dancing": "Entertainment & Gaming",
-    "Environment & Plants": "Sustainability"
-  };
-
-  const domain = domainMap[categoryName] || "Food & Cooking";
-  const selectedSubTopic = getRandomSubTopic(domain) || "ice cream melting sticky on hands";
-  const NAME_POOL = [
-    "Maya", "Zoe", "Mia", "Ella", "Chloe", "Ruby", "Lily", "Ivy", "Sophia", "Aria", "Emma", "Nora",
-    "Sammy", "Max", "Ben", "Kai", "Finn", "Eli", "Jack", "Owen", "Mason", "Ethan", "Noah", "Toby",
-    "Jasper", "Oliver", "Ezra", "Milo", "Sora", "Devon", "Cora", "Nico", "Felix", "Amara", "Hugo",
-    "Gemma", "Kobe", "Rory", "Shiloh", "Rowan", "Skyler", "Priya", "Lucas", "Caleb", "Liam", "Mateo"
-  ];
-  const PET_NAME_POOL = [
-    "Buster", "Biscuit", "Ziggy", "Pippin", "Otis", "Clover", "Waffles", "Mochi", "Peanut", "Bean",
-    "Archie", "Cooper", "Rosie", "Bruno", "Teddy", "Gizmo", "Jasper", "Chewie", "Noodle", "Spud",
-    "Cleo", "Milo", "Banjo", "Pepper", "Copper", "Ziggy", "Oreo", "Bandit", "Shadow", "Pebbles",
-    "Taco", "Nugget", "Fifi", "Ziggy", "Pip", "Bubbles", "Pickles", "Moose", "Trixie", "Goose"
-  ];
-  const assignedName = NAME_POOL[Math.floor(Math.random() * NAME_POOL.length)];
-  const assignedPetName = PET_NAME_POOL[Math.floor(Math.random() * PET_NAME_POOL.length)];
-  const randomSeed = Math.floor(Math.random() * 1000000);
-
-  const modeInstruction = isKidsMode
-    ? `MODE: KIDS MODE (Ages 8-12) - EASY DIFFICULTY MATRIX: Create a fun kid character named "${assignedName}" with 1 simple physical barrier solvable in 1 direct physical action.`
-    : `MODE: ADULTS MODE (Ages 13+) - CHALLENGING DIFFICULTY MATRIX: Create a clever adult character named "${assignedName}" with a multi-variable trade-off requiring 2-3 logical steps.`;
-
-  const promptText = `You are the Master Puzzle Designer for CONUNDRUM.
-
-[RANDOM SEED: ${randomSeed}]
-${modeInstruction}
-
-3-INGREDIENT FORMULAIC ARCHITECTURE:
-1. CHARACTER: Named "${assignedName}" with a specific grounded role.
-2. SITUATION / CONTEXT: A specific physical setting or activity.
-3. CONUNDRUM TYPE: Select 1 specific friction type from: Tool Mismatch, Material Fragility, Grip Slippage, Mess Contamination, Weight Strain, Container Overflow, Tangle Interlocking, Component Jamming, Small Object Loss, Thermal Change, Weather Exposure, Unintended Side Effect, Shared Space, Pet Interference, Disruption Avoidance, Multitasking Overflow.
-
-STRICT DOMAIN COHERENCE CONSTRAINT:
-- The character's role, physical setting, tools, and problem MUST ALL BELONG TO THE EXACT SAME REAL-WORLD DOMAIN.
-- ABSOLUTELY NEVER mix software engineering / agile methodologies (sprints, standups, Kanban, virtual sticky notes) into non-tech professions (book editing, baking, teaching, gardening, painting)!
-
-MANDATORY CHARACTER NAME CONSTRAINT:
-- The character's first name MUST BE EXACTLY: "${assignedName}". Do NOT change or replace this name!
-
-PARAMETER CONSTRAINTS:
-- Category: ${categoryName}
-- Grounded Sub-Topic: ${selectedSubTopic}
-- Character Name: "${assignedName}"
-- Pet Name Constraint: If a pet (dog, cat, bunny, parrot, hamster, etc.) is involved in this scenario, the pet's name MUST BE EXACTLY: "${assignedPetName}". ABSOLUTELY NEVER use "Barnaby"!
-
-JSON OUTPUT SCHEMA (Return JSON ONLY):
-{
-  "id": "conundrum-${Date.now()}",
-  "mode": "${isKidsMode ? 'kids' : 'adults'}",
-  "category": "${categoryName}",
-  "character": "${assignedName}",
-  "characterType": "1-2 word role",
-  "setting": "Cozy Location",
-  "title": "Short Punchy Title",
-  "complaint": "Hi! I'm ${assignedName}. [1-2 short, vivid, 1st-person sentences describing the conundrum clearly]",
-  "conundrumType": "Selected Friction Type",
-  "customer_persona": "1 neutral high-level intro sentence about who they are",
-  "customer_context": "Hidden internal details about their daily routine, environment, emotional preferences, and core motivations that player discovers through Q&A",
-  "hiddenConstraints": [
-    { "id": 1, "topic": "Routine/Environment", "summary": "Plain-language summary of environment or timing", "unlocked": false },
-    { "id": 2, "topic": "Sensory/Personal Preference", "summary": "Plain-language summary of what they love or dislike", "unlocked": false },
-    { "id": 3, "topic": "Core Motivation", "summary": "Plain-language summary of what they care about most", "unlocked": false }
-  ]
-}`;
-
-    let finalScenario = null;
-    let attempts = 0;
-    const maxAttempts = 3;
-
-    while (attempts < maxAttempts && !finalScenario) {
-      attempts++;
-      const response = await generateContentWithRetry({
-        model: 'gemini-3.1-pro-preview',
-        contents: promptText,
-        config: {
-          temperature: 0.95,
-          responseMimeType: 'application/json'
-        }
-      });
-
-      const text = typeof response?.text === 'function' ? response.text() : response?.candidates?.[0]?.content?.parts?.[0]?.text;
-      let cleanText = text ? text.trim() : "";
-      const jsonMatch = cleanText.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) continue;
-      const parsed = JSON.parse(jsonMatch[0]);
-
-      // 🕵️ 2-AGENT INSPECTOR / CRITIC PASS: Audit logic & real-world feasibility
-      const inspectorPrompt = `You are the Chief Logic & Feasibility Inspector for the puzzle game CONUNDRUM.
-
-Your job is to strictly audit a candidate scenario for real-world logic, internal coherence, and physical plausibility.
-
-CANDIDATE SCENARIO:
-Title: "${parsed.title}"
-Character: "${parsed.character}" (${parsed.characterType})
-Complaint: "${parsed.complaint}"
-Conundrum Type: "${parsed.conundrumType}"
-
-CRITICAL REJECTION CRITERIA (Set "passed": false if ANY apply):
-1. LOGICAL CONTRADICTION: The scenario contains absurd or contradictory logic (e.g. claiming pets can't sleep at night because daytime office lights don't dim during work hours, or claiming paper burns from room light).
-2. PSEUDO-SCIENCE / FAKE PROBLEM: The problem is an artificial or fake dilemma that wouldn't actually be a problem in real life.
-3. DOMAIN MISMATCH: Mismatched profession and tools (e.g. software sprints mixed into book editing).
-4. CONFUSING PREMISE: The situation is hard for a normal person to picture in 3 seconds.
-
-Return JSON ONLY:
-{
-  "passed": true,
-  "reason": "Clear 1-sentence reason why it passed or failed"
-}`;
-
-      try {
-        const inspectRes = await generateContentWithRetry({
-          model: 'gemini-3.1-pro-preview',
-          contents: inspectorPrompt,
-          config: {
-            temperature: 0.2,
-            responseMimeType: 'application/json'
-          }
-        });
-
-        const inspectText = typeof inspectRes?.text === 'function' ? inspectRes.text() : inspectRes?.candidates?.[0]?.content?.parts?.[0]?.text;
-        const inspectMatch = inspectText ? inspectText.match(/\{[\s\S]*\}/) : null;
-        const inspectJson = inspectMatch ? JSON.parse(inspectMatch[0]) : { passed: true };
-
-        if (inspectJson.passed) {
-          console.log(`✅ [2-AGENT INSPECTOR PASSED Attempt ${attempts}] "${parsed.title}": ${inspectJson.reason || 'Logically sound'}`);
-          finalScenario = parsed;
-        } else {
-          console.warn(`⚠️ [2-AGENT INSPECTOR REJECTED Attempt ${attempts}] "${parsed.title}": ${inspectJson.reason}`);
-        }
-      } catch (inspectErr) {
-        console.warn("Inspector pass bypassed on error, accepting candidate:", inspectErr.message);
-        finalScenario = parsed;
-      }
+    const reqMode = (mode || "adults").toLowerCase();
+    
+    const bankPath = path.join(__dirname, 'conundrums_bank.json');
+    let bank = [];
+    if (fs.existsSync(bankPath)) {
+      bank = JSON.parse(fs.readFileSync(bankPath, 'utf8'));
     }
 
-    if (!finalScenario) throw new Error("Failed to generate a verified logical scenario.");
+    // Filter bank by mode & category
+    let matches = bank.filter(item => item.mode === reqMode && (!targetCategory || item.category === targetCategory));
+    
+    // Fallback 1: match mode only
+    if (matches.length === 0) {
+      matches = bank.filter(item => item.mode === reqMode);
+    }
 
-    console.log(`[CONUNDRUM ENGINE VERIFIED] Mode: ${finalScenario.mode} | Character: ${finalScenario.character}`);
-    return res.json(finalScenario);
+    // Fallback 2: return any item from bank
+    if (matches.length === 0) {
+      matches = bank;
+    }
+
+    if (matches.length === 0) {
+      return res.status(500).json({ error: "No conundrum scenarios available in bank." });
+    }
+
+    const selected = matches[Math.floor(Math.random() * matches.length)];
+    const scenario = {
+      ...selected,
+      id: `conundrum-${Date.now()}`
+    };
+
+    console.log(`⚡ [INSTANT BANK SERVED] Mode: ${scenario.mode} | Cat: ${scenario.category} | Title: "${scenario.title}"`);
+    return res.json(scenario);
   } catch (err) {
     console.error("[CONUNDRUM GENERATION ERROR]:", err.message);
-    return res.status(500).json({ error: `Failed to generate conundrum: ${err.message}` });
+    return res.status(500).json({ error: `Failed to serve conundrum: ${err.message}` });
   }
 });
 
-// 2. Q&A Probing Endpoint
+// 2. Natural Q&A Probing Endpoint (Powered by gemini-3.6-flash using Pro Knowledge Base)
 app.post('/api/conundrum2/ask', async (req, res) => {
   const { scenario, question } = req.body;
   if (!question) return res.status(400).json({ error: "Missing question" });
@@ -265,7 +137,7 @@ Return JSON ONLY:
 
   try {
     const response = await generateContentWithRetry({
-      model: 'gemini-3.1-pro-preview',
+      model: 'gemini-3.6-flash',
       contents: promptText,
       config: {
         temperature: 0.7,

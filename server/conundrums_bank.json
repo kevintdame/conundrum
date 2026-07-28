@@ -1,0 +1,709 @@
+[
+  {
+    "mode": "adults",
+    "category": "Food & Cooking",
+    "character": "Owen",
+    "characterType": "Home Chef",
+    "setting": "Home Kitchen",
+    "title": "The Sticky Pasta Predicament",
+    "complaint": "Hi! I'm Owen. I am rolling out fresh pasta on the wooden island in my home kitchen while my dog Cooper naps at my feet, but the high summer humidity is making the dough so sticky it won't pass through the pasta machine without tearing!",
+    "conundrumType": "Material Adhesion & Environmental Interference",
+    "customer_persona": "Owen is a dedicated amateur cook who prides himself on making everything from scratch, but sometimes fails to account for environmental variables when following a strict recipe.",
+    "customer_context": "Owen is preparing a large batch of homemade fettuccine for a dinner party. He is using a traditional hand-cranked stainless steel pasta roller clamped to his wooden kitchen island. His golden retriever, Cooper, is sleeping nearby. A heavy summer thunderstorm has pushed the indoor humidity up to 85%. Although Owen followed his standard egg-and-flour recipe to the exact gram, the ambient moisture has turned the usually elastic dough into a tacky, fragile mass. Whenever he attempts to feed a flattened sheet into the metal rollers, the dough sticks to the cylinders, stretching and ripping apart rather than rolling through smoothly.",
+    "auditReason": "The scenario presents a realistic, scientifically sound culinary problem with well-contextualized entities and appropriate tools for a home chef."
+  },
+  {
+    "mode": "adults",
+    "category": "Work & Productivity",
+    "character": "Max",
+    "characterType": "Custom Furniture Maker",
+    "setting": "Woodworking Shop",
+    "title": "The Fast-Setting Glue",
+    "complaint": "Hi! I'm Max. I am gluing together a large oak tabletop in my woodworking shop while my dog Cooper watches, but the dry winter air is making the wood glue set before I can get all the heavy clamps tightened down!",
+    "conundrumType": "Material Timing & Environmental Friction",
+    "customer_persona": "I am a meticulous solo woodworker who crafts custom hardwood dining tables in a small, heated garage shop.",
+    "customer_context": "I am building an 8-foot long dining table out of heavy oak boards. Because it is winter, I have my space heater running continuously, which has made the air inside the shop very warm and dry. I am using standard PVA wood glue, which usually gives me a 10-minute open time. However, due to the dry heat, the glue on the first few boards is tacking up and skinning over in just a couple of minutes. Working entirely alone, I cannot align the heavy boards and attach the heavy iron pipe clamps fast enough to close the joints before the glue begins to dry, risking a weak and highly visible seam.",
+    "auditReason": "The scenario presents a scientifically accurate woodworking problem with appropriate tools and well-contextualized entities, meeting all logical and domain requirements."
+  },
+  {
+    "mode": "adults",
+    "category": "Travel & Mobility",
+    "character": "Chloe",
+    "characterType": "Daily Commuter",
+    "setting": "Commuter train car",
+    "title": "The Sliding Stowaway",
+    "complaint": "Hi! I'm Chloe. I am riding the express commuter train into the city with my cat Mochi in his plastic pet carrier, but every time the train brakes, his carrier slides right off the smooth plastic seat!",
+    "conundrumType": "Friction and Momentum",
+    "customer_persona": "Chloe is a busy professional who relies on public transit to transport herself and her pet safely across the city.",
+    "customer_context": "Chloe is sitting in a moving train car with hard fiberglass seats. Mochi is inside a standard hard-shell plastic pet carrier resting on the seat next to her. The train accelerates and decelerates quickly, causing the low-friction plastic bottom of the carrier to slide uncontrollably on the smooth seat. Chloe has her purse, a thick wool winter coat, a scarf, and a reusable rubber-gripped travel mug. She needs a physical solution using her available items to increase the friction beneath the carrier so Mochi stops sliding during transit.",
+    "auditReason": "The scenario presents a realistic physics problem based on inertia and low friction without introducing unexplained entities or domain mismatches."
+  },
+  {
+    "mode": "adults",
+    "category": "Health & Wellness",
+    "character": "Max",
+    "characterType": "Fitness Enthusiast",
+    "setting": "Living Room",
+    "title": "Downward Dog Slide",
+    "complaint": "Hi! I'm Max. I am doing my morning yoga routine on the hardwood floor in my living room with my dog Bean, but my sweaty hands keep slipping forward on the rubber mat every time I try to hold Downward Dog!",
+    "conundrumType": "Traction Loss",
+    "customer_persona": "A dedicated home-fitness practitioner who relies on intense morning mobility routines to stay healthy and flexible.",
+    "customer_context": "Max uses a standard closed-cell PVC yoga mat on a polished hardwood floor for a 45-minute vinyasa flow. Bean, a lazy basset hound, sleeps nearby. As the intense workout progresses, Max builds up a sweat. The moisture accumulates on the non-porous surface of the mat, creating a lubricating layer that drastically reduces friction. This causes Max's palms to gradually slide away from his body during weight-bearing poses, disrupting the workout and creating a physical strain on his shoulders.",
+    "auditReason": "The scenario presents a realistic, scientifically sound physical problem with perfectly matched tools and well-contextualized entities."
+  },
+  {
+    "mode": "kids",
+    "category": "Toys & Games",
+    "character": "Mia",
+    "characterType": "Kid Builder",
+    "setting": "Playroom floor",
+    "title": "The Domino Disaster",
+    "complaint": "Hi! I'm Mia. I am setting up a giant domino track on the playroom floor with my puppy Biscuit, but his wagging tail keeps knocking over the middle pieces before I can finish the line!",
+    "conundrumType": "Physical Interference",
+    "customer_persona": "An enthusiastic young builder who loves creating elaborate toy setups but struggles to keep them intact around an energetic pet.",
+    "customer_context": "Mia has spent the last hour carefully lining up hundreds of colorful plastic dominoes on the smooth wooden floor of her playroom. Her golden retriever puppy, Biscuit, loves to watch her play and sits right next to the building area. However, every time Mia successfully completes a tricky curve, Biscuit gets happy and wags his tail, accidentally swiping the dominoes and causing a premature chain reaction. Mia needs a physical way to protect her unfinished domino lines from Biscuit's tail without kicking him out of the room.",
+    "auditReason": "The scenario clearly introduces all entities, presents a realistic physical problem with the puppy's tail, and perfectly aligns the kid builder role with the domino activity."
+  },
+  {
+    "mode": "kids",
+    "category": "Food & Snacks",
+    "character": "Finn",
+    "characterType": "Popsicle Maker",
+    "setting": "Backyard Snack Stand",
+    "title": "The Floating Sticks",
+    "complaint": "Hi! I'm Finn. I am making fresh fruit popsicles at my backyard snack stand with my dog Mochi, but the wooden sticks keep floating to the top before the juice freezes!",
+    "conundrumType": "Buoyancy",
+    "customer_persona": "I am an enthusiastic kid who loves making refreshing summer snacks for my friends and neighbors.",
+    "customer_context": "I mixed up a big batch of delicious strawberry-lemonade juice to cool everyone down on a hot day. I poured the juice into my plastic popsicle molds and dropped the wooden sticks inside. However, the wooden sticks are lighter than the liquid, so they float right up and lean completely sideways. If the popsicles freeze like this in the freezer, the handles will be crooked and way too short to hold! I need a simple physical way to keep the sticks standing straight down in the middle of the molds while the juice turns into ice.",
+    "auditReason": "The scenario presents a scientifically accurate physical problem of wood buoyancy in liquid that perfectly aligns with the character's established context and tools without introducing any unexplained entities."
+  },
+  {
+    "mode": "kids",
+    "category": "Outdoors & Playground",
+    "character": "Max",
+    "characterType": "Playground Builder",
+    "setting": "Park Sandbox",
+    "title": "The Crumbling Sandcastle",
+    "complaint": "Hi! I'm Max. I am building a giant sandcastle in the park sandbox with my dog Biscuit, but the dry sand keeps crumbling and won't hold its shape!",
+    "conundrumType": "Material Cohesion",
+    "customer_persona": "I am an energetic kid who loves building epic structures at the park while playing with my dog, Biscuit.",
+    "customer_context": "Max is trying to build the tallest sandcastle ever in the neighborhood park's sandbox. It is a hot, sunny day and it hasn't rained all week, so the sand is completely bone-dry. Without moisture, the sand grains cannot stick together, causing his towers to immediately collapse into flat piles the moment he lifts his plastic buckets. Biscuit is happily digging holes nearby, but Max needs to figure out how to transport water from the nearby drinking fountain to wet his building materials so his castle will finally stand.",
+    "auditReason": "The scenario presents a scientifically accurate physical problem with properly introduced entities and a perfectly matched character domain."
+  },
+  {
+    "mode": "kids",
+    "category": "School & Cartoons",
+    "character": "Jasper",
+    "characterType": "Student",
+    "setting": "Elementary School Classroom",
+    "title": "The Hamster Hazard",
+    "complaint": "Hi! I'm Jasper. I am building a giant cardboard castle for my school project in the classroom, but the class hamster, Peanut, keeps rolling his exercise ball into the table and knocking over my towers before the glue dries!",
+    "conundrumType": "Environmental Interference",
+    "customer_persona": "A creative and eager elementary school student who just wants to finish his big history fair project.",
+    "customer_context": "Jasper is building a tall cardboard castle for the school's history fair on a wobbly art table. He is using white liquid school glue, which takes a few minutes to fully set. Peanut is the energetic classroom hamster who is currently having his free-roam time in a plastic exercise ball on the floor. Every time Jasper balances a cardboard tower, Peanut bumps into the table legs, vibrating the table and causing the wet cardboard pieces to slide off and crash to the floor.",
+    "auditReason": "The scenario presents a logically sound, physically plausible problem with well-contextualized entities and appropriate tools for a student."
+  },
+  {
+    "mode": "adults",
+    "category": "Food & Cooking",
+    "character": "Chloe",
+    "characterType": "Prep Cook",
+    "setting": "Restaurant prep kitchen",
+    "title": "The Tearing Tortillas",
+    "complaint": "Hi! I'm Chloe. I am pressing hundreds of fresh corn tortillas in my restaurant's prep kitchen, but the wet masa dough keeps sticking to the heavy cast iron plates and tearing when I try to peel it off!",
+    "conundrumType": "Material Adhesion Friction",
+    "customer_persona": "A hardworking prep cook struggling to maintain quality and speed before the busy dinner rush.",
+    "customer_context": "Chloe is working at a stainless steel prep table in a bustling Mexican restaurant. She has a massive bowl of freshly mixed masa (corn dough), a heavy cast iron tortilla press, and a stack of damp towels. The dough has the perfect moisture level for cooking, but that same moisture acts like glue against the raw iron of the press, ruining the structural integrity of the tortillas and slowing down her prep time.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Line the inside of the cast iron press with a cut-open zip-top plastic bag to create a flexible, non-stick barrier that easily peels away from the dough."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Lightly dust the cast iron plates with a thin layer of dry masa flour between every press to temporarily absorb surface moisture and break the suction."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Abandon the sticky cast iron press and use the smooth, flat bottom of a heavy glass baking dish to press the dough evenly onto sheets of parchment paper."
+      }
+    ],
+    "auditReason": "The scenario presents a realistic, well-contextualized culinary problem that perfectly aligns with the character's profession and avoids any logical contradictions or out-of-place elements."
+  },
+  {
+    "mode": "adults",
+    "category": "Work & Productivity",
+    "character": "Chloe",
+    "characterType": "Bespoke Seamstress",
+    "setting": "Alterations Studio",
+    "title": "The Slippery Silk Situation",
+    "complaint": "Hi! I'm Chloe. I am cutting a large silk gown pattern on my drafting table in my alterations studio, but the smooth fabric keeps sliding right off the edge onto the floor before I can pin it!",
+    "conundrumType": "Material Friction and Slippage",
+    "customer_persona": "Chloe is a meticulous bespoke seamstress who specializes in creating custom evening wear out of high-end, delicate fabrics.",
+    "customer_context": "She is working in her brightly lit studio on a large, perfectly smooth wooden cutting table. The fabric is a heavy, yards-long continuous piece of silk satin that naturally drapes over the edge, and its own weight is pulling the rest of the yardage down. She has standard sewing supplies around: pattern weights, pins, bolts of muslin cloth, tissue paper, measuring tape, and scissors, but standard metal weights aren't gripping the slippery wood-to-silk contact point.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Roll out a large piece of coarse cotton muslin cloth over the bare wooden table first, creating a high-friction base layer that catches the silk and completely stops the sliding."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Use large C-clamps to attach a raised wooden yardstick along the bottom edge of the drafting table, creating a physical barrier that catches the cascading fabric before it can fall onto the floor."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Wrap standard, thick rubber bands around heavy books or smooth sewing weights, providing just enough tacky, rubberized grip to hold the silk firmly against the table without snagging the delicate threads."
+      }
+    ],
+    "auditReason": "The scenario presents a realistic, physically accurate problem for a seamstress using appropriate tools without introducing any unexplained entities or forced pets."
+  },
+  {
+    "mode": "adults",
+    "category": "Health & Wellness",
+    "character": "Toby",
+    "characterType": "Massage Therapist",
+    "setting": "Tranquil treatment room",
+    "title": "The Sliding Studio",
+    "complaint": "Hi! I'm Toby. I am giving a deep tissue massage in my tranquil treatment room, but my wooden massage table keeps sliding across the newly polished bamboo floor when I apply pressure!",
+    "conundrumType": "Unwanted Physical Friction",
+    "customer_persona": "A dedicated massage therapist who takes pride in providing a perfectly relaxing and structurally sound deep tissue experience for his clients.",
+    "customer_context": "The treatment room was recently remodeled with beautiful, highly polished bamboo flooring. The heavy wooden massage table has smooth wooden legs with no rubber stoppers. Toby is currently in the middle of a session, applying lateral pressure for a deep tissue massage, and the table shifts a few inches every time, ruining the client's relaxation. Toby only has standard massage studio supplies nearby: rolled hand towels, massage oil bottles, a heavy hot stone heater, foam rollers, yoga mats, and rubber resistance bands.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Cut an old, textured yoga mat into small squares and place a piece directly under each of the wooden table legs to instantly provide traction against the polished bamboo."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Reposition the heavy hot stone heater and the foam rollers against the baseboard of the wall, wedging them directly against the front legs of the table to create a physical barrier that stops forward movement."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Take the thick rubber resistance bands used for physical therapy and wrap them tightly multiple times around the very bottom of each table leg to create a makeshift rubberized grip."
+      }
+    ],
+    "auditReason": "The scenario presents a realistic physical problem with appropriate tools for the profession, introduces no unexplained entities, and contains no forced pets."
+  },
+  {
+    "mode": "kids",
+    "category": "Toys & Games",
+    "character": "Chloe",
+    "characterType": "Block Builder",
+    "setting": "Bedroom Playroom",
+    "title": "The Toppling Tower",
+    "complaint": "Hi! I'm Chloe. I am building a giant wooden block tower on my bedroom's fluffy carpet, but the squishy rug makes the base wobble and the blocks keep toppling over!",
+    "conundrumType": "Physical Stability",
+    "customer_persona": "An imaginative young builder who loves constructing the tallest possible toy castles.",
+    "customer_context": "Chloe is working in her bedroom with a large set of classic, smooth wooden blocks. The floor is covered in a thick, soft shag carpet. Because the soft carpet fibers are uneven and compress under weight, the foundation blocks sink and shift every time she adds a new layer, causing the entire tower to lean and crash before she can finish.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Place a large, flat hardcover children's book or a sturdy board game board on top of the carpet to create a solid, even foundation for the bottom blocks."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Pack up the wooden blocks and relocate the building project to a naturally hard, flat surface in the house, such as a wooden play table or a tiled floor."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Use small bits of sticky modeling clay or rolled-up masking tape to stick the bottom layer of blocks together, forming one heavy, unified base that won't individually tip over on the soft rug."
+      }
+    ],
+    "auditReason": "The scenario presents a logically sound, everyday physics problem without introducing forced pets, unexplained entities, or domain mismatches."
+  },
+  {
+    "mode": "kids",
+    "category": "Food & Snacks",
+    "character": "Zoe",
+    "characterType": "Junior Baker",
+    "setting": "Home kitchen counter",
+    "title": "The Melting Ice Cream Sandwiches",
+    "complaint": "Hi! I'm Zoe. I am making homemade ice cream sandwiches at my kitchen counter, but the warm cookies are melting the ice cream before I can wrap them up!",
+    "conundrumType": "Temperature Friction",
+    "customer_persona": "Zoe is an energetic ten-year-old who loves inventing delicious new treats for her friends.",
+    "customer_context": "Zoe just finished baking a fresh batch of chocolate chip cookies in her home kitchen. She wants to assemble them into ice cream sandwiches. However, the cookies are still too warm from the oven, and the hard vanilla ice cream turns into a messy, dripping puddle the second it touches the cookie surface.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Place the freshly baked cookies into the freezer for ten minutes to rapidly cool them down before adding the ice cream."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Create a mini cold-station by placing a metal baking sheet on top of a large bowl filled with ice cubes, assembling the sandwiches on the freezing metal surface."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Pre-scoop the ice cream into cookie-sized discs onto wax paper and freeze them solid, so you can quickly slide a frozen ice cream puck between two cookies without the friction and time of scooping."
+      }
+    ],
+    "auditReason": "The scenario presents a realistic, logically sound baking problem without any unexplained entities, forced pets, or domain mismatches."
+  },
+  {
+    "mode": "kids",
+    "category": "Pets & Animals",
+    "character": "Oliver",
+    "characterType": "Hamster Owner",
+    "setting": "Oliver's Bedroom",
+    "title": "Peanut's Great Escape",
+    "complaint": "Hi! I'm Oliver. I am setting up a floor playpen for my hamster Peanut in my bedroom, but he keeps squeezing under the tiny gap where the plastic walls meet the fluffy carpet!",
+    "conundrumType": "Containment and Spatial Gap",
+    "customer_persona": "I am an energetic ten-year-old who loves building fun, safe obstacle courses for my tiny pet.",
+    "customer_context": "The playpen is made of lightweight, colorful plastic panels that snap together in a circle. Because my bedroom has thick, squishy carpet, the bottom edges of the panels don't sit perfectly flat, creating little tunnels that Peanut easily flattens his furry body to slide right under. I have heavy school books, some empty cardboard boxes, and my bed pillows nearby.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Place heavy school books around the outside edges of the plastic panels to weigh them down, forcing the bottom edges to sink deeply into the carpet and close the gap."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Flatten a large cardboard box and place it underneath the entire playpen to create a hard, perfectly flat floor that prevents any gaps from forming in the first place."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Roll up some spare bed sheets or long towels into thick tubes and line the inside bottom edge of the playpen walls, creating a soft physical bumper that Peanut cannot squeeze under."
+      }
+    ],
+    "auditReason": "The scenario correctly matches the 'Pets & Animals' category, introduces all entities clearly, and presents a highly realistic, logically sound physical problem for a hamster owner."
+  },
+  {
+    "mode": "kids",
+    "category": "Outdoors & Playground",
+    "character": "Oliver",
+    "characterType": "Sandbox Architect",
+    "setting": "Park Sandbox",
+    "title": "The Crumbling Castle",
+    "complaint": "Hi! I'm Oliver. I am building a giant sandcastle in the park's sunny sandbox, but the dry summer sand keeps crumbling every time I flip my bucket over to make a tower!",
+    "conundrumType": "Material Cohesion Issue",
+    "customer_persona": "An imaginative kid who is determined to build the tallest, strongest sand fortress ever seen at the local playground.",
+    "customer_context": "Oliver has plastic building buckets, a couple of shovels, and access to a nearby drinking fountain. The playground gets a lot of direct afternoon sunlight, which bakes the top layer of the sand bone-dry. He is trying to build a multi-level castle, but the dry sand lacks the moisture needed to hold the bucket's shape, resulting in constant sandy avalanches.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Use the plastic bucket to fetch water from the nearby drinking fountain, then mix it into the dry sand to create a wet, sticky consistency that will hold its shape."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Use the shovel to dig deep past the hot, sun-baked top layer of the sandbox to reach the cooler, naturally damp sand underneath to use for the towers."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Line the inside walls of the plastic bucket with large, fresh leaves from a nearby playground tree to act as a supportive wrapper that helps the dry sand slide out in one piece."
+      }
+    ],
+    "auditReason": "The scenario presents a scientifically accurate, contextually sound playground problem without any forced pets, unexplained entities, or domain mismatches."
+  },
+  {
+    "mode": "kids",
+    "category": "Arts & Crafts",
+    "character": "Eli",
+    "characterType": "Young Crafter",
+    "setting": "Kitchen Craft Table",
+    "title": "The Collapsing Cardboard Castle",
+    "complaint": "Hi! I'm Eli. I am building a tall cardboard castle on my kitchen craft table, but the wet school glue keeps making the heavy cardboard walls slide down before they can dry!",
+    "conundrumType": "Structural Instability",
+    "customer_persona": "I am an enthusiastic young creator who loves turning recycled materials into giant playsets.",
+    "customer_context": "I am working on a smooth wooden kitchen table using empty cereal boxes, paper towel tubes, safety scissors, and standard liquid white school glue. Because the cardboard pieces are thick and heavy, gravity is pulling the walls flat against the table during the twenty minutes it takes for the liquid glue to completely harden.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical Modification",
+        "description": "Wrap strips of masking tape around the corners of the cardboard walls to hold them firmly together while the liquid school glue dries underneath."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Place heavy kitchen items, like full soup cans or thick cookbooks, on both sides of the cardboard walls to prop them up and block them from sliding down until the glue sets."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Use safety scissors to cut small, matching slits into the edges of the cardboard walls so they securely slot into one another like puzzle pieces, eliminating the immediate need for glue to hold the weight."
+      }
+    ],
+    "auditReason": "The scenario presents a realistic, logically sound crafting problem with appropriate tools and no unexplained entities or forced pets."
+  },
+  {
+    "mode": "adults",
+    "category": "Work & Productivity",
+    "character": "Toby",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Snapping Spine",
+    "complaint": "Hi! I'm Toby. I have to type data from a thick, stiff notebook that constantly snaps shut on my desk. Every time I use a paperweight to hold it open, it covers the exact numbers I need to read.",
+    "conundrumType": "Physical Obstruction vs. Visibility",
+    "customer_persona": "A focused desk worker frustrated by the friction of transferring analog data to a digital system.",
+    "customer_context": "Toby is working with company ledgers that cannot be unbound, bent backward, or damaged. He has standard office supplies at his disposal, but no specialized book-holding stands.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Physical Modification",
+        "description": "Use a large binder clip to pinch the top edges of the left and right page stacks together, creating a 'bridge' that forces the book to stay open without obscuring the text on the page itself."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Place the notebook over an upside-down, V-shaped desk organizer or a thick 3-ring binder, using gravity to let the heavy sides drape downward and naturally pry the center pages open."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Use a clear plastic clipboard or a rigid transparent document sleeve as a makeshift paperweight, holding the pages flat while allowing full visibility of the numbers beneath."
+      }
+    ],
+    "auditReason": "The puzzle presents a highly relatable, instantly visual physical friction point that requires clever lateral thinking to overcome without obscuring the text."
+  },
+  {
+    "mode": "adults",
+    "category": "Health & Wellness",
+    "character": "Max",
+    "characterType": "Office Worker",
+    "setting": "Home Living Room",
+    "title": "The Runaway Massage Ball",
+    "complaint": "Hi! I'm Max. I use a smooth rubber massage ball against the wall to work out stubborn knots in my back. But every time I lean my weight into it and try to roll, the ball shoots out sideways and bounces across the room.",
+    "conundrumType": "Friction and Leverage Management",
+    "customer_persona": "An active adult trying to manage daily muscle tension at home without buying bulky or expensive physical therapy equipment.",
+    "customer_context": "Max has chronic shoulder tension from working at a desk all day. The smooth rubber ball provides great targeted pressure, but the living room walls are painted drywall, which offers absolutely zero grip when sheer force is applied.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Physical Modification",
+        "description": "Drop the massage ball into a long tube sock. By holding the open end of the sock over your shoulder, you create a physical tether that completely prevents the ball from dropping or shooting away."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Move from the flat wall to an open doorframe. By placing the ball in the inside corner of the frame, the perpendicular wall acts as a physical barrier that stops all lateral slipping."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Take a flat silicone jar-opener pad from the kitchen and place it between the ball and the wall. The silicone instantly provides extreme friction against both the drywall and the rubber ball, keeping it perfectly in place."
+      }
+    ],
+    "auditReason": "This highly relatable, instantly visual real-world physics problem perfectly captures a genuine everyday frustration while demanding a clever, lateral-thinking solution like placing the ball inside a long sock."
+  },
+  {
+    "mode": "kids",
+    "category": "Toys & Games",
+    "character": "Oliver",
+    "characterType": "Determined Child",
+    "setting": "Playroom Floor",
+    "title": "The Flush Peg",
+    "complaint": "Hi! I'm Oliver. I hammered a perfectly smooth wooden cylinder into my toy workbench, but it went into a blind hole and is now completely flush with the surface. There's nothing to grip and no hole on the bottom to push it back out.",
+    "conundrumType": "Flush Object Retrieval",
+    "customer_persona": "An observant 7-year-old who wants his favorite building piece back without permanently damaging his wooden toy.",
+    "customer_context": "Oliver was playing with a wooden construction set. He used a wooden mallet to pound the peg into a storage slot that was slightly too snug. The peg is entirely smooth, the hole has a solid bottom, and prying the edge with a metal tool will splinter the wood.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Physical Modification",
+        "description": "Place a single drop of hot glue on the flat end of a pencil, press it against the top of the trapped peg, let it cool, and pull it out like a handle. The cooled glue can be easily peeled off the smooth wood afterward."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Place the circular nozzle of a strong household vacuum cleaner directly over the hole. The tight seal will create enough negative air pressure to instantly suck the lightweight wooden peg out of the socket."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Take a piece of highly adhesive duct tape, press the middle of it firmly onto the top of the flush peg, and fold the ends upward to pinch them together into a makeshift pull-tab."
+      }
+    ],
+    "auditReason": "This puzzle successfully meets all criteria by presenting a highly visual, relatable real-world physical dilemma that demands a clever lateral thinking solution, such as using a screw, adhesive, or vacuum, to extract the trapped peg."
+  },
+  {
+    "mode": "kids",
+    "category": "Outdoors & Playground",
+    "character": "Zoe",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Suction-Cup Sandcastle",
+    "complaint": "Hi! I'm Zoe. I'm trying to make a giant sandcastle tower, but the heavy wet sand forms a tight suction seal inside my plastic bucket. Every time I pull the bucket up, the vacuum rips the top half of my tower right off!",
+    "conundrumType": "Vacuum/Suction Friction",
+    "customer_persona": "A determined child trying to master sandbox engineering.",
+    "customer_context": "Zoe is using perfectly wet packing sand and a smooth, deep plastic bucket. Because the sand is packed tight and the bucket is airtight, lifting the bucket creates a vacuum at the top that refuses to let the sand slide out cleanly.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Physical Modification",
+        "description": "Poke a small hole in the bottom of the plastic bucket (which is the top when flipped over). This allows air to rush in as the bucket is lifted, instantly breaking the vacuum seal."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Dust the inside of the wet bucket with a thin layer of completely dry sand before packing in the wet sand. The dry sand acts as a non-stick release agent."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Place a large, smooth leaf at the very bottom of the bucket before adding the sand. The leaf prevents the wet sand from sealing directly against the flat plastic bottom, stopping the suction from forming."
+      }
+    ],
+    "auditReason": "This puzzle passes because it presents a universally recognizable, highly visual real-world physics problem that requires a clever lateral solution, such as poking an air hole in the bottom of the bucket to break the vacuum."
+  },
+  {
+    "mode": "kids",
+    "category": "Arts & Crafts",
+    "character": "Noah",
+    "characterType": "Young Crafter",
+    "setting": "Craft Table",
+    "title": "The Clay Cup Trap",
+    "complaint": "Hi! I'm Noah. I packed wet air-dry clay into a small plastic cup to make a perfectly smooth dome, but it's stuck like a vacuum seal and trying to pull it out squishes the shape.",
+    "conundrumType": "Vacuum Seal & Material Friction",
+    "customer_persona": "A focused, creative kid trying to build a neat model without ruining the smooth geometric pieces.",
+    "customer_context": "Noah is building a clay robot and needs a flawless dome for the head. The clay is still wet and highly pliable, meaning any pinching or prying with fingers will leave permanent dents. The cup is a standard, rigid plastic drinking cup.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Physical Modification",
+        "description": "Poke a tiny hole in the bottom of the plastic cup with a pushpin to break the vacuum seal, allowing air in so the clay dome slides right out."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Place the cup in the freezer for ten minutes; the cold will temporarily firm up the clay and cause the water inside it to contract slightly, letting it drop out without warping."
+      },
+      {
+        "title": "Solution 3: Lateral Material Swap",
+        "description": "Line the inside of the cup with a square of plastic wrap before packing the clay, leaving the corners hanging over the rim to act as a gentle, even pull-tab."
+      }
+    ],
+    "auditReason": "The puzzle presents a highly relatable, easily visualizable physical dilemma that requires a clever lateral solution, such as poking a hole in the cup's base to break the vacuum seal."
+  },
+  {
+    "mode": "adults",
+    "category": "Food & Cooking",
+    "pillar": "Physical",
+    "character": "Finn",
+    "characterType": "Home Cook",
+    "setting": "Home Kitchen",
+    "title": "The Boiling Brim",
+    "complaint": "Hi! I'm Finn. I just microwaved a completely full, rimless ceramic bowl of soup, and now it's boiling hot and filled to the absolute brim. I need to get it out of the microwave and over to the kitchen island without burning my bare fingers or spilling a single drop on the floor.",
+    "conundrumType": "Heat Transfer & Fluid Balance",
+    "customer_persona": "An impatient home cook who drastically misjudged the volume of their leftovers.",
+    "customer_context": "The bowl is heavy, totally smooth with no lip or handles, and the liquid sits just a millimeter from the edge. Thick oven mitts are too bulky and will immediately dip into the boiling broth if he tries to grip the sides.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Ladle Reduction",
+        "description": "Leave the bowl in the microwave temporarily and use a ladle or spoon to transfer a portion of the hot soup into a secondary mug, safely lowering the liquid level before attempting to grip the bowl with mitts."
+      },
+      {
+        "title": "Solution 2: The Cutting Board Bridge",
+        "description": "Align a rigid, flat cutting board perfectly flush with the microwave's internal tray, then carefully slide the bowl directly onto the board to transport it without ever having to lift it by its sides."
+      },
+      {
+        "title": "Solution 3: The Spatula Forklift",
+        "description": "Slide two wide, flat, heat-resistant spatulas under opposite sides of the bowl's base, lifting the heavy bowl entirely from underneath like a forklift to avoid the hot sides and keep the liquid perfectly level."
+      }
+    ],
+    "auditReason": "The puzzle presents a highly relatable, everyday physical dilemma that is instantly visualizable and requires practical lateral thinking to solve safely."
+  },
+  {
+    "mode": "adults",
+    "category": "Work & Productivity",
+    "pillar": "Social",
+    "character": "Jack",
+    "characterType": "Office Worker",
+    "setting": "Open-plan office next to the break area",
+    "title": "The Espresso Proximity Trap",
+    "complaint": "Hi! I'm Jack. My assigned desk is right next to the office espresso machine, and everyone waiting for their brew assumes it's an open invitation to chat with me. I can't move my desk, but I need a way to stop the constant small talk without looking like an antisocial jerk.",
+    "conundrumType": "Unintentional Shared Space Friction",
+    "customer_persona": "A focused data analyst who needs uninterrupted concentration but wants to maintain a friendly professional reputation.",
+    "customer_context": "The office seating is fixed. The espresso machine takes exactly 45 seconds to brew a cup, leaving coworkers lingering in Jack's direct line of sight. Wearing noise-canceling headphones hasn't worked, as coworkers just wave at him until he takes them off to talk.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Decoy Delegation",
+        "description": "Keep a stack of incredibly boring manual tasks (like untangling paperclips or sorting messy printed spreadsheets) on the desk. Whenever someone starts chatting, immediately ask if they can 'help out for just a second while their coffee brews.' They will quickly learn to avoid eye contact to escape the work."
+      },
+      {
+        "title": "Solution 2: The Humorous 'On-Air' Boundary",
+        "description": "Set up a highly visible, somewhat humorous LED desk light shaped like a radio 'ON AIR' or 'DO NOT CROSS: DEEP THOUGHT' sign. When it's lit, leave a bowl of premium candies next to it with a note saying, 'In the zone! Take a candy and wish me luck in silence.'"
+      },
+      {
+        "title": "Solution 3: The Attention Redirection Swap",
+        "description": "Mount a highly engaging distraction right next to the coffee machine, facing away from Jack's desk. A daily trivia whiteboard, an intricate mechanical puzzle, or a 'Find the Waldo' poster gives waiting coworkers a 45-second focal point that absorbs their attention and naturally silences them."
+      }
+    ],
+    "auditReason": "The puzzle perfectly captures a highly relatable, instantly visualizable office friction point that demands a tactful, lateral solution to balance productivity with workplace etiquette."
+  },
+  {
+    "mode": "adults",
+    "category": "Health & Wellness",
+    "pillar": "Physical",
+    "character": "Ruby",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Slipping Sphere",
+    "complaint": "Hi! I'm Ruby. I'm trying to roll out a shoulder knot by leaning against a smooth massage ball on my painted wall, but the ball keeps sliding sideways and dropping to the floor before I can apply pressure.",
+    "conundrumType": "Friction & Gravity Imbalance",
+    "customer_persona": "A tense, desk-bound professional trying to independently relieve muscle knots at home.",
+    "customer_context": "Ruby cannot lie on the floor because it applies too much body weight and aggravates the nerve, so she must do it standing. The wall is smooth, painted drywall, and the ball is a hard, smooth rubber.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action (The Sock Drop)",
+        "description": "Place the massage ball inside a long tube sock. By holding the top of the sock over her shoulder, Ruby can physically suspend the ball at the exact height needed, while the fabric provides necessary friction against the wall."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation (Surface Modifier)",
+        "description": "Tape a small square of rubberized shelf liner, or temporarily press a yoga mat against the wall. This instantly changes the coefficient of friction on the environment, trapping the ball securely in place."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap (Upholstery Grip)",
+        "description": "Abandon the wall entirely and sit in a firm, high-backed fabric armchair. Placing the ball between her back and the fabric backrest allows the upholstery to naturally grip the ball as she leans her weight into it."
+      }
+    ],
+    "auditReason": "This highly relatable, real-world physical friction point is instantly easy to visualize and requires a clever, lateral-thinking solution like placing the ball inside a long sock to maintain control."
+  },
+  {
+    "mode": "kids",
+    "category": "Toys & Games",
+    "pillar": "Physical",
+    "character": "Owen",
+    "characterType": "Curious Kid",
+    "setting": "Living Room Floor",
+    "title": "The Spring Trap",
+    "complaint": "Hi! I'm Owen. My favorite rubber bouncy ball is trapped right in the middle of a metal spring toy, but whenever I pull the coils apart to reach in and grab it, the spring stretches out and grips the ball even tighter!",
+    "conundrumType": "Tension & Friction",
+    "customer_persona": "A playful, determined 8-year-old trying to rescue his favorite toy without bending the metal out of shape.",
+    "customer_context": "Owen was dropping different items down the center of his coil spring toy when the rubber ball got lodged. Because of how coil springs work, pulling the ends apart reduces the diameter of the cylinder, acting like a finger-trap and locking the grippy rubber ball perfectly in place.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Instead of pulling the spring apart, push the ends completely together to compress the coils to their widest diameter, then use a pencil or a ruler to push the ball out from one end."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Place the entire toy setup into the freezer for twenty minutes; the cold temperature will cause the rubber ball to shrink slightly and lose its sticky surface friction, allowing it to easily drop out."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Squirt a few drops of dish soap or baby oil directly onto the ball to eliminate the rubber friction, allowing it to easily slip through the metal rings even if they tighten."
+      }
+    ],
+    "auditReason": "This puzzle passes because it presents a highly relatable, instantly visualizable real-world physics trap that subverts the intuitive solution of pulling, requiring clever lateral thinking like bending or twisting the spring to release the ball."
+  },
+  {
+    "mode": "kids",
+    "category": "Food & Snacks",
+    "pillar": "Mental",
+    "character": "Leo",
+    "characterType": "Mischievous Host",
+    "setting": "Kitchen Counter",
+    "title": "The Gummy Bear Gamble",
+    "complaint": "Hi! I'm Leo. I mixed sweet gummy bears and super-sour gummy bears into one big snack bowl, but they are the exact same colors and shapes! I need a clever way to figure out which ones are the sour candies without tasting them first.",
+    "conundrumType": "Visual Identification & Deduction",
+    "customer_persona": "A playful kid who wanted to set up a party game but suddenly realized he doesn't want to get tricked by his own prank.",
+    "customer_context": "Leo bought two different brands of gummies—one normal, one intensely sour. He mixed them together for a snack roulette game, but now he wants to secretly know how to spot the safe ones for himself.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Texture Tell",
+        "description": "Look closely at the surface. Super-sour gummies almost always have a dusty, crystalline coating made of citric acid, whereas standard sweet gummy bears are usually smooth and shiny."
+      },
+      {
+        "title": "Solution 2: The Science Sizzle",
+        "description": "Scrape a tiny bit off a gummy and drop it into a spoonful of water mixed with baking soda. The citric acid on the sour gummy will create a chemical reaction and fizz, while the sweet one won't do anything."
+      },
+      {
+        "title": "Solution 3: The Squish Test",
+        "description": "Since the two types of bears are from different bags or brands, they likely have different gelatin formulas. Give them a pinch to see which brand is noticeably firmer or softer."
+      }
+    ],
+    "auditReason": "The puzzle presents a highly relatable, easily visualizable snack dilemma that requires clever lateral thinking—such as using baking soda to test for acidic fizzing or relying on smell—to solve without tasting."
+  },
+  {
+    "mode": "kids",
+    "category": "Pets & Animals",
+    "pillar": "Social",
+    "character": "Mia",
+    "characterType": "Student and Pet Owner",
+    "setting": "Neighborhood Sidewalk",
+    "title": "The Too-Friendly Dog",
+    "complaint": "Hi! I'm Mia. My dog wants to stop and hug every single neighbor on our morning walk to school, making me super late! I can't just pull him away because it hurts my neighbors' feelings, but I really need to get to class on time.",
+    "conundrumType": "Politeness vs. Time Management",
+    "customer_persona": "A punctual but empathetic kid struggling to balance community friendliness with school rules.",
+    "customer_context": "Mia walks her golden retriever, Barnaby, every morning. The street is busy with neighbors who love him. Barnaby sits and anchors himself until he gets a pat, and the neighbors get offended if Mia rushes off.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The 'In a Rush' Vest",
+        "description": "Put a bright vest or bandana on Barnaby that says 'Off to School! Pet me on the way back!' to give neighbors a polite, non-verbal reason for not stopping."
+      },
+      {
+        "title": "Solution 2: The Empty Route",
+        "description": "Change the walking route to use quiet back alleys or a slightly longer street that has fewer people out in the morning, bypassing the social stops entirely."
+      },
+      {
+        "title": "Solution 3: The Moving Meeting",
+        "description": "Hand out small dog treats to the regular morning neighbors and ask them to toss the treats slightly ahead on the sidewalk, so Barnaby gets his social interaction without breaking his forward momentum."
+      }
+    ],
+    "auditReason": "The dilemma is highly relatable and instantly understandable, presenting a genuine social friction point that requires a clever, lateral solution to balance neighborly politeness with strict time constraints."
+  },
+  {
+    "mode": "kids",
+    "category": "Outdoors & Playground",
+    "pillar": "Physical",
+    "character": "Oliver",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Spilling Frisbee",
+    "complaint": "Hi! I'm Oliver. I need to carry water from the park fountain to the sandbox, but I only have a flat plastic frisbee and the water sloshes over the edges every time I take a step.",
+    "conundrumType": "Fluid Dynamics & Balance Friction",
+    "customer_persona": "A determined 8-year-old architect trying to build the ultimate wet sandcastle.",
+    "customer_context": "The drinking fountain is 30 feet away from the dry sandbox. Oliver has no buckets or cups, only a standard plastic flying disc. The ground between the fountain and the sandbox is flat grass. He has access to typical outdoor kid elements: a cotton hoodie, leaves, sticks, and gravel.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action (The Sled Drag)",
+        "description": "Instead of carrying the frisbee at waist height where his walking motion causes bouncing, Oliver can place the water-filled frisbee directly on the smooth grass and carefully slide it along the ground like a sled to keep it perfectly level."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation (The Slosh Baffle)",
+        "description": "Oliver can float a few large, dry autumn leaves on top of the water inside the frisbee. The leaves will act as a physical baffle, breaking the surface tension and drastically reducing the water's ability to create a sloshing wave while he walks."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap (The Sponge Method)",
+        "description": "Instead of trying to carry the water in the frisbee at all, Oliver can soak his cotton hoodie in the fountain, carry the dripping wet cloth to the sandbox, and wring the water out directly onto the dry sand."
+      }
+    ],
+    "auditReason": "The puzzle presents a highly relatable, easily visualized physical dilemma that requires clever lateral thinking, such as floating a leaf on the water to disrupt the sloshing waves, to solve."
+  },
+  {
+    "mode": "kids",
+    "category": "School & Cartoons",
+    "pillar": "Social",
+    "character": "Ben",
+    "characterType": "Student",
+    "setting": "Classroom",
+    "title": "The Center-Desk Surprise",
+    "complaint": "Hi! I'm Ben. I need to get all twenty kids in my class to sign a giant birthday card for Leo, but Leo sits right in the middle of the room and notices absolutely everything.",
+    "conundrumType": "Group Coordination & Stealth",
+    "customer_persona": "An enthusiastic classmate trying to orchestrate a secret group surprise under high-visibility conditions.",
+    "customer_context": "The classroom is set up with desks in a grid, and Leo is dead center. The card is too large to casually hide inside a standard textbook, and passing it desk-to-desk will inevitably draw Leo's attention. The teacher is busy grading and not helping.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Coordinate a staged distraction. Have two friends at the front of the room perform a loud, fascinating activity (like a fake magic trick or showing off a weird bug) to lock Leo's attention forward while the card rapidly circles the back rows."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Change the format of the card. Cut the giant card into twenty individual puzzle pieces, distribute them secretly during recess for kids to sign privately, and then tape them all back together into a giant poster just before the reveal."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Hide it in plain sight. Slip the giant card inside the teacher's oversized 'Classroom Rules' or 'Chore Chart' clipboard. As kids pass it around, Leo will just assume everyone is signing up for a boring classroom duty."
+      }
+    ],
+    "auditReason": "The puzzle presents a highly relatable, easily visualized real-world logistical challenge that requires clever lateral thinking to bypass the target's central vantage point."
+  },
+  {
+    "mode": "kids",
+    "category": "Arts & Crafts",
+    "pillar": "Mental",
+    "character": "Eli",
+    "characterType": "Young Crafter",
+    "setting": "Kitchen Table Art Station",
+    "title": "The Lost Alien Green",
+    "complaint": "Hi! I'm Eli. I mixed the absolute perfect shade of alien-green paint for my spaceship model yesterday, but I ran out halfway through and completely forgot which colors I used to make it!",
+    "conundrumType": "Memory Trap & Replication Puzzle",
+    "customer_persona": "An enthusiastic young artist who gets totally absorbed in the creative process but forgets to track their steps.",
+    "customer_context": "Eli is using a standard 12-color washable paint set. The plastic mixing palette still has dried, crusty smears of yesterday's paint on it, and the spaceship needs to be finished for a school project tomorrow.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Systematically mix tiny dot-sized test batches on a piece of scrap paper, holding each one up to the painted spaceship until an exact match is found before committing to a large batch."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Inspect the dried mixing palette closely and scrape the edges of the dried green puddle to reveal the unmixed streaks of the original base colors hidden underneath."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Stop trying to match the paint and intentionally paint the second half of the ship a totally different neon color, declaring that the spaceship is in the middle of activating its 'chameleon cloaking camouflage'."
+      }
+    ],
+    "auditReason": "The scenario presents a highly relatable, instantly understandable real-world crafting dilemma that requires clever deductive reasoning, such as checking paint tube caps for fresh residue, to solve."
+  }
+]
