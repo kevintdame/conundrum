@@ -95,7 +95,14 @@ app.post('/api/conundrum2/generate', async (req, res) => {
     "Jasper", "Oliver", "Ezra", "Milo", "Sora", "Devon", "Cora", "Nico", "Felix", "Amara", "Hugo",
     "Gemma", "Kobe", "Rory", "Shiloh", "Rowan", "Skyler", "Priya", "Lucas", "Caleb", "Liam", "Mateo"
   ];
+  const PET_NAME_POOL = [
+    "Buster", "Biscuit", "Ziggy", "Pippin", "Otis", "Clover", "Waffles", "Mochi", "Peanut", "Bean",
+    "Archie", "Cooper", "Rosie", "Bruno", "Teddy", "Gizmo", "Jasper", "Chewie", "Noodle", "Spud",
+    "Cleo", "Milo", "Banjo", "Pepper", "Copper", "Ziggy", "Oreo", "Bandit", "Shadow", "Pebbles",
+    "Taco", "Nugget", "Fifi", "Ziggy", "Pip", "Bubbles", "Pickles", "Moose", "Trixie", "Goose"
+  ];
   const assignedName = NAME_POOL[Math.floor(Math.random() * NAME_POOL.length)];
+  const assignedPetName = PET_NAME_POOL[Math.floor(Math.random() * PET_NAME_POOL.length)];
   const randomSeed = Math.floor(Math.random() * 1000000);
 
   const modeInstruction = isKidsMode
@@ -123,6 +130,7 @@ PARAMETER CONSTRAINTS:
 - Category: ${categoryName}
 - Grounded Sub-Topic: ${selectedSubTopic}
 - Character Name: "${assignedName}"
+- Pet Name Constraint: If a pet (dog, cat, bunny, parrot, hamster, etc.) is involved in this scenario, the pet's name MUST BE EXACTLY: "${assignedPetName}". ABSOLUTELY NEVER use "Barnaby"!
 
 JSON OUTPUT SCHEMA (Return JSON ONLY):
 {
