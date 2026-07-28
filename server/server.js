@@ -159,7 +159,7 @@ JSON OUTPUT SCHEMA (Return JSON ONLY):
     while (attempts < maxAttempts && !finalScenario) {
       attempts++;
       const response = await generateContentWithRetry({
-        model: 'gemini-3.6-flash',
+        model: 'gemini-3.6-pro',
         contents: promptText,
         config: {
           temperature: 0.95,
@@ -198,7 +198,7 @@ Return JSON ONLY:
 
       try {
         const inspectRes = await generateContentWithRetry({
-          model: 'gemini-3.6-flash',
+          model: 'gemini-3.6-pro',
           contents: inspectorPrompt,
           config: {
             temperature: 0.2,
@@ -265,7 +265,7 @@ Return JSON ONLY:
 
   try {
     const response = await generateContentWithRetry({
-      model: 'gemini-3.6-flash',
+      model: 'gemini-3.6-pro',
       contents: promptText,
       config: {
         temperature: 0.7,
