@@ -204,11 +204,15 @@ export default function ConundrumGame() {
       const data = await response.json();
       setScenario(data);
 
+      const cleanComplaint = data.complaint.startsWith("Hi! I'm") 
+        ? data.complaint 
+        : `Hi! I'm ${data.character}. ${data.complaint}`;
+
       setQaHistory([
         {
           id: `intro-${Date.now()}`,
           sender: "character",
-          text: `Hi! I'm ${data.character}. ${data.complaint}`,
+          text: cleanComplaint,
         },
       ]);
     } catch (err) {
