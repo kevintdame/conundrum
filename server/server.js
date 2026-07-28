@@ -63,7 +63,8 @@ async function generateContentWithRetry(params) {
 
 // 1. Generation Endpoint
 app.post('/api/conundrum2/generate', async (req, res) => {
-  const { mode, targetCategory } = req.body;
+  try {
+    const { mode, targetCategory } = req.body || {};
   const isKidsMode = mode === "kids";
   const categoryName = targetCategory || (isKidsMode ? "Food & Snacks" : "Food & Cooking");
 
