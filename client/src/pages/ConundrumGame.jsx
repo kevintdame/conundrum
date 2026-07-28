@@ -170,6 +170,8 @@ export default function ConundrumGame() {
 
   const activeCategoryList = selectedMode === "kids" ? KIDS_CATEGORIES : ADULTS_CATEGORIES;
 
+  const [questionsLeft, setQuestionsLeft] = useState(5);
+
   // Fetch Scenario for Selected Mode & Category Immediately
   const handleLaunchChallenge = async (catParam, modeParam) => {
     const modeToUse = modeParam || selectedMode;
@@ -184,6 +186,7 @@ export default function ConundrumGame() {
     setQaHistory([]);
     setPitchText("");
     setEvaluationResult(null);
+    setQuestionsLeft(5);
     setViewState("DISCOVERY");
 
     try {
@@ -219,12 +222,13 @@ export default function ConundrumGame() {
   // Handle Question Submission in Continuous Chat
   const handleAskQuestion = async (e) => {
     e.preventDefault();
-    if (!questionInput.trim() || askingQuestion) return;
+    if (!questionInput.trim() || askingQuestion || questionsLeft <= 0) return;
 
     soundEffects.playClick();
     const qText = questionInput.trim();
     setQuestionInput("");
     setAskingQuestion(true);
+    setQuestionsLeft((prev) => Math.max(0, prev - 1));
 
     setQaHistory((prev) => [...prev, { id: `q-${Date.now()}`, sender: "player", text: qText }]);
 
@@ -588,10 +592,9 @@ export default function ConundrumGame() {
                   <ArrowLeft className="w-5 h-5 text-white shrink-0" />
                 </button>
 
-                <div className="flex items-center gap-1.5 bg-black/30 px-3 py-1 rounded-full backdrop-blur-md">
-                  <Star className="w-3.5 h-3.5 text-amber-300 fill-amber-300" />
-                  <span className="text-[11px] font-black uppercase text-amber-300">{scenario.character}</span>
-                </div>
+                <span className="text-xs font-black uppercase text-amber-300 tracking-widest">
+                  {questionsLeft} {questionsLeft === 1 ? "question" : "questions"} left
+                </span>
               </div>
 
               {/* CHAT MESSAGES SCROLL AREA */}
@@ -623,13 +626,13 @@ export default function ConundrumGame() {
                   <Input
                     value={questionInput}
                     onChange={(e) => setQuestionInput(e.target.value)}
-                    placeholder={`Ask ${scenario.character} a question...`}
-                    disabled={askingQuestion}
+                    placeholder={questionsLeft > 0 ? `Ask ${scenario.character} a question...` : "0 questions left. Tap SUBMIT SOLUTION!"}
+                    disabled={askingQuestion || questionsLeft <= 0}
                     className="h-11 sm:h-12 bg-white/10 border border-white/20 rounded-full px-4 text-sm sm:text-base text-white placeholder:text-white/60 focus-visible:ring-amber-400 backdrop-blur-md font-bold"
                   />
                   <Button
                     type="submit"
-                    disabled={askingQuestion || !questionInput.trim()}
+                    disabled={askingQuestion || !questionInput.trim() || questionsLeft <= 0}
                     className="h-11 w-11 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black shrink-0 flex items-center justify-center shadow-lg cursor-pointer"
                   >
                     {askingQuestion ? (
@@ -681,12 +684,12 @@ export default function ConundrumGame() {
                 </p>
               </div>
 
-              <div className="bg-white text-slate-950 p-4 sm:p-5 rounded-3xl shadow-xl w-full text-left flex-1 min-h-0 my-auto flex flex-col">
+              <div className="bg-white text-slate-950 p-5 rounded-3xl shadow-xl w-full text-left my-auto min-h-[160px] max-h-[240px] flex flex-col">
                 <Textarea
                   value={pitchText}
                   onChange={(e) => setPitchText(e.target.value)}
                   placeholder={`Describe your solution to ${scenario.character}'s conundrum...`}
-                  className="w-full h-full bg-transparent border-none p-1 text-base sm:text-lg font-bold text-slate-900 placeholder:text-slate-400 focus-visible:ring-0 select-text resize-none"
+                  className="w-full h-full bg-transparent border-none p-1 text-xl sm:text-2xl font-extrabold text-slate-900 placeholder:text-slate-400 focus-visible:ring-0 select-text resize-none leading-snug"
                 />
               </div>
 
@@ -743,7 +746,7 @@ export default function ConundrumGame() {
                 </div>
               )}
 
-              <div className="bg-white text-slate-950 p-4 sm:p-5 rounded-3xl shadow-xl text-lg sm:text-xl font-black leading-snug w-full text-left flex-1 min-h-0 my-auto overflow-y-auto">
+              <div className="bg-white text-slate-950 p-6 rounded-3xl shadow-xl text-xl sm:text-2xl font-extrabold leading-relaxed w-full text-left my-auto min-h-[140px] max-h-[260px] overflow-y-auto">
                 {evaluationResult.feedback}
               </div>
 

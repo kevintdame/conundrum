@@ -98,13 +98,22 @@ app.post('/api/conundrum2/generate', async (req, res) => {
   const randomSeed = Math.floor(Math.random() * 1000000);
 
   const modeInstruction = isKidsMode
-    ? `MODE: KIDS MODE (Ages 8-12). Create a fun, energetic kid character named "${assignedName}" with a 1-sentence simple complaint.`
-    : `MODE: ADULTS MODE (Ages 13+). Create a clever, grounded adult character named "${assignedName}" with a 1-2 sentence complaint.`;
+    ? `MODE: KIDS MODE (Ages 8-12) - EASY DIFFICULTY MATRIX: Create a fun kid character named "${assignedName}" with 1 simple physical barrier solvable in 1 direct physical action.`
+    : `MODE: ADULTS MODE (Ages 13+) - CHALLENGING DIFFICULTY MATRIX: Create a clever adult character named "${assignedName}" with a multi-variable trade-off requiring 2-3 logical steps.`;
 
   const promptText = `You are the Master Puzzle Designer for CONUNDRUM.
 
 [RANDOM SEED: ${randomSeed}]
 ${modeInstruction}
+
+3-INGREDIENT FORMULAIC ARCHITECTURE:
+1. CHARACTER: Named "${assignedName}" with a specific grounded role.
+2. SITUATION / CONTEXT: A specific physical setting or activity.
+3. CONUNDRUM TYPE: Select 1 specific friction type from: Tool Mismatch, Material Fragility, Grip Slippage, Mess Contamination, Weight Strain, Container Overflow, Tangle Interlocking, Component Jamming, Small Object Loss, Thermal Change, Weather Exposure, Unintended Side Effect, Shared Space, Pet Interference, Disruption Avoidance, Multitasking Overflow.
+
+STRICT DOMAIN COHERENCE CONSTRAINT:
+- The character's role, physical setting, tools, and problem MUST ALL BELONG TO THE EXACT SAME REAL-WORLD DOMAIN.
+- ABSOLUTELY NEVER mix software engineering / agile methodologies (sprints, standups, Kanban, virtual sticky notes) into non-tech professions (book editing, baking, teaching, gardening, painting)!
 
 MANDATORY CHARACTER NAME CONSTRAINT:
 - The character's first name MUST BE EXACTLY: "${assignedName}". Do NOT change or replace this name!
@@ -123,7 +132,8 @@ JSON OUTPUT SCHEMA (Return JSON ONLY):
   "characterType": "1-2 word role",
   "setting": "Cozy Location",
   "title": "Short Punchy Title",
-  "complaint": "1 short simple first-person complaint sentence",
+  "complaint": "Hi! I'm ${assignedName}. [1-2 short, vivid, 1st-person sentences describing the conundrum clearly]",
+  "conundrumType": "Selected Friction Type",
   "customer_persona": "1 neutral high-level intro sentence about who they are",
   "customer_context": "Hidden internal details about their daily routine, environment, emotional preferences, and core motivations that player discovers through Q&A",
   "hiddenConstraints": [
@@ -177,9 +187,10 @@ PLAYER'S MESSAGE TO YOU:
 
 STRICT ROLEPLAY & BOUNDARY INSTRUCTIONS:
 1. Answer questions about your daily life, routine, environment, feelings, and preferences naturally in 1 to 2 short sentences in character as ${charName}.
-2. DO NOT evaluate, critique, or test any solution or idea proposed in the player's message!
-3. DO NOT list or invent past failed attempts or past inventions.
-4. IF THE PLAYER PROPOSES A NEW IDEA OR FIX IN THEIR MESSAGE, DO NOT GRADE IT! Simply respond warmly with:
+2. CHARACTER HUMOR RULE: Add 1 short, witty, self-deprecating or quirky character reaction or observation (e.g. a funny habit, quirky thought, or amusing observation) to make the character feel lively and fun!
+3. DO NOT evaluate, critique, or test any solution or idea proposed in the player's message!
+4. DO NOT list or invent past failed attempts or past inventions.
+5. IF THE PLAYER PROPOSES A NEW IDEA OR FIX IN THEIR MESSAGE, DO NOT GRADE IT! Simply respond warmly with:
    "Ooh, that sounds like a new idea! Tap the SUBMIT SOLUTION button below so we can officially test it out!"
 
 Return JSON ONLY:
