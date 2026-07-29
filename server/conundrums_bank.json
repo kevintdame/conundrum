@@ -4,41 +4,257 @@
     "category": "Escape Room",
     "mode": "kids",
     "character": "Leo",
-    "setting": "Backyard Treehouse Fort",
-    "title": "The Great Treehouse Trap",
-    "complaint": "Hi! I'm Leo. I'm hanging out in my awesome backyard treehouse fort, but my sneaky little sister pulled the rope ladder up and tossed it over a branch just out of my reach! I need to get it back down so I can go inside for dinner.",
+    "setting": "Locked Garage",
+    "title": "The Great Garage Getaway",
+    "complaint": "Hi! I'm Leo. I am hanging out in my family's garage, but the power just went out and the automatic door won't open! I need to pull the emergency release handle hanging from the ceiling, but it is way too high for me to reach.",
     "on_hand_items": [
-      "A long sweeping broom",
-      "A jump rope",
-      "A plastic bucket with a handle",
-      "A toy walkie-talkie"
+      "Broom",
+      "Roll of duct tape",
+      "Tennis ball",
+      "Jump rope"
     ],
     "clue_cards": [
       {
-        "title": "Extra Long Arms",
-        "insight": "You can't reach the ladder with your hands, but maybe you have something long that can act like an extra arm to hook it."
+        "title": "Reach Higher",
+        "insight": "You can make short things longer by attaching them together to build a giant grabbing tool."
       },
       {
-        "title": "Lasso and Pull",
-        "insight": "If you can throw something with a loop or a hook over the ladder, you might be able to pull it back to the treehouse window."
+        "title": "Lasso Time",
+        "insight": "A rope can be tied into a loop to catch things that are hanging out of your reach."
       },
       {
-        "title": "Call for Backup",
-        "insight": "Sometimes the smartest way out of a trap is simply asking for help from someone on the ground."
+        "title": "Throwing Weight",
+        "insight": "Tying something round and heavy to the end of a string makes it much easier to throw accurately over a target."
       }
     ],
     "potential_solutions": [
       {
         "title": "Solution 1: Direct Action",
-        "description": "Use the long sweeping broom to reach out the window, hook the bristles onto the rungs of the rope ladder, and drag it back to the treehouse."
+        "description": "Tape the jump rope securely to the handle of the broom. Hold the broom up high to reach the emergency release handle, loop the jump rope through it, and pull down to open the door."
       },
       {
         "title": "Solution 2: Environmental Adaptation",
-        "description": "Tie one end of the jump rope to the handle of the plastic bucket. Toss the bucket over the tangled ladder and use the rope to pull it down to you."
+        "description": "Tape the tennis ball to the very end of the jump rope to give it some weight. Toss the heavy tennis ball over the emergency release cord so it wraps around it, then pull both ends of the jump rope down."
       },
       {
         "title": "Solution 3: Lateral Swap",
-        "description": "Skip trying to grab the ladder entirely! Use the toy walkie-talkie to call your parents inside the house so they can come out and fix the ladder for you."
+        "description": "Roll a big piece of duct tape so it is sticky on the outside and stick it to the top of the broom bristles. Reach up with the broom and press the sticky tape hard against the emergency release handle, then yank it down."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
+    "mode": "kids",
+    "character": "Maya",
+    "setting": "Backyard Treehouse",
+    "title": "The Tall Tube Trap",
+    "complaint": "Hi! I'm Maya. I'm locked in my big brother's backyard treehouse escape room, and I need to get the wooden key out of a tall, skinny clear pipe, but my hands can't fit inside to grab it!",
+    "on_hand_items": [
+      "Pitcher of water",
+      "Shoelace",
+      "Chewing gum",
+      "Wire coat hanger"
+    ],
+    "clue_cards": [
+      {
+        "title": "Floating Wood",
+        "insight": "Wood likes to stay on top of liquids. Think about how you could bring the bottom of the pipe up to you."
+      },
+      {
+        "title": "Sticky Grabber",
+        "insight": "Chewing gum is very sticky. If you attach it to something long, it can pick things up for you."
+      },
+      {
+        "title": "Bend and Catch",
+        "insight": "A wire hanger can be untwisted and reshaped. Maybe you can make a shape that grabs things?"
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Float It Up",
+        "description": "Pour the pitcher of water into the tall clear pipe. Since the key is made of wood, it will float all the way to the top where you can easily reach it."
+      },
+      {
+        "title": "Solution 2: The Sticky Pole",
+        "description": "Chew the gum to make it soft, stick it to the bottom end of the wire hanger, lower it down the pipe, and press it firmly onto the key to pull it out."
+      },
+      {
+        "title": "Solution 3: Make a Fishing Hook",
+        "description": "Untwist the wire coat hanger to make a long metal stick, bend the very bottom into a small hook, and use it to catch the hole in the wooden key to drag it up."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
+    "mode": "kids",
+    "character": "Chloe",
+    "setting": "Backyard Treehouse",
+    "title": "The Trapped Treehouse",
+    "complaint": "Hi! I'm Chloe. I am playing inside my backyard treehouse, but the trapdoor handle broke off from the inside and I am stuck!",
+    "on_hand_items": [
+      "Jump rope",
+      "Small handheld mirror",
+      "Heavy hardcover book",
+      "Flashlight"
+    ],
+    "clue_cards": [
+      {
+        "title": "Clue 1: Reach Out",
+        "insight": "Can you use something long and bendy to grab the latch from the outside?"
+      },
+      {
+        "title": "Clue 2: Send a Signal",
+        "insight": "Is there a way to get your parents' attention using something bright?"
+      },
+      {
+        "title": "Clue 3: Wedge it Open",
+        "insight": "The door needs to be pushed. Is there something thick and strong you can stick into the broken handle hole?"
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Slide the jump rope through the crack in the door to hook the outside latch and pull it open."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Use the flashlight and the mirror to bounce bright light through the treehouse window and into the house to signal your parents for help."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Stick the corner of the heavy hardcover book into the hole where the handle used to be and push down hard to pop the door open."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
+    "mode": "kids",
+    "character": "Toby",
+    "setting": "Backyard Treehouse",
+    "title": "The Treehouse Trapdoor",
+    "complaint": "Hi! I'm Toby. I am hanging out in my backyard treehouse, but the heavy wooden trapdoor is jammed shut and the handle snapped right off!",
+    "on_hand_items": [
+      "Jump rope",
+      "Heavy hardcover book",
+      "Metal coat hanger",
+      "Bottle of baby oil"
+    ],
+    "clue_cards": [
+      {
+        "title": "Slippery Trick",
+        "insight": "Liquids like oil can make sticky or tight things slide much easier against each other."
+      },
+      {
+        "title": "Hook It Up",
+        "insight": "A bent wire can act like a hook or a brand new handle if you slide it into a small hole."
+      },
+      {
+        "title": "Knock Knock",
+        "insight": "Bumping the edges of a stuck door with a heavy object can wiggle it loose."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Use the heavy hardcover book to pound near the hinges and edges of the trapdoor to loosen the stuck wood, then push hard with your feet to pop it open."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Squirt the baby oil all around the sticky edges of the trapdoor to make it slippery, letting the door glide open without getting stuck."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Bend the metal coat hanger into a hook, poke it through the hole where the old handle used to be, and use it as a brand new handle to pull the latch open."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
+    "mode": "kids",
+    "character": "Oliver",
+    "setting": "Backyard Treehouse",
+    "title": "The Treehouse Trap",
+    "complaint": "Hi! I'm Oliver. I am playing in my backyard treehouse but the wind blew the heavy wooden door shut and the inside handle just fell off!",
+    "on_hand_items": [
+      "Jump rope",
+      "Broom",
+      "Metal coat hanger",
+      "Toy bucket"
+    ],
+    "clue_cards": [
+      {
+        "title": "Look Through the Cracks",
+        "insight": "There is a gap under the door and a small open window right next to the outside handle."
+      },
+      {
+        "title": "Hook and Pull",
+        "insight": "The outside handle is still attached. If you can grab it through the window, you can pull the door open."
+      },
+      {
+        "title": "Push It Away",
+        "insight": "The door pushes outward to open. A long, sturdy stick could push the broken latch piece out of the hole."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Bend the metal coat hanger into a hook, reach it out through the small window, and pull the outside door handle to swing the door open."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Take the long wooden handle off the broom and wedge it against the broken latch piece on the door, pushing hard to pop the door open."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Tie the metal coat hanger to the jump rope, slide it under the bottom of the door to hook the outside handle, and pull the rope."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
+    "mode": "adults",
+    "character": "Zoe",
+    "setting": "Office-Themed Escape Room",
+    "title": "The Glass Tube Trap",
+    "complaint": "Hi! I'm Zoe. I'm in the final stage of an office-themed escape room, but the exit key is trapped inside a hollow plastic ball resting at the bottom of a tall, narrow glass pipe bolted to the floor, and my arm is too wide to reach in and grab it!",
+    "on_hand_items": [
+      "A pitcher of drinking water",
+      "A roll of clear tape",
+      "A pair of shoelaces",
+      "A heavy desk stapler",
+      "A magnetic name badge"
+    ],
+    "clue_cards": [
+      {
+        "title": "Liquid Lift",
+        "insight": "The key is hidden inside a hollow plastic container. Think about how lightweight plastic behaves when introduced to a lot of liquid."
+      },
+      {
+        "title": "Sticky Fishing",
+        "insight": "If your arm cannot fit down the narrow pipe, you might be able to create a makeshift fishing line that grabs onto the plastic."
+      },
+      {
+        "title": "Outside Influence",
+        "insight": "You do not necessarily have to go inside the tube to move the key. The glass is thin, and the key inside is made of metal."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Pour the pitcher of drinking water directly into the glass pipe. The hollow plastic ball containing the key will naturally float to the top of the water, allowing you to easily pluck it out of the tube."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Take off your shoelace and wrap a piece of clear tape around the end so the sticky side is facing out. Lower the shoelace down the tube until it presses against the plastic ball, then carefully pull it up."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Press the magnetic name badge against the outside of the glass tube near the bottom. The metal key inside the plastic ball will be attracted to the magnet, allowing you to slowly slide the badge up the outside of the glass, dragging the key up with it."
       }
     ]
   },
@@ -47,171 +263,822 @@
     "category": "Escape Room",
     "mode": "adults",
     "character": "Elena",
-    "setting": "Home Workshop Shed",
-    "title": "The Jammed Shed",
-    "complaint": "Hi! I'm Elena. I was organizing my home workshop shed when the heavy sliding door suddenly slid shut and got stuck. The old metal track is completely jammed with gunk, and when I tried to force it, the inside door handle snapped right off in my hand!",
+    "setting": "Detective-themed Escape Room",
+    "title": "The Glass Pipe Dilemma",
+    "complaint": "Hi! I'm Elena. I'm stuck in the final stage of a detective-themed escape room, and the key to the exit door is resting at the bottom of a tall, narrow glass pipe bolted to the floor. The key is stuck inside a light wooden block, but the pipe is too narrow for my arm to fit inside.",
     "on_hand_items": [
-      "Can of lubricating spray oil",
-      "Flathead screwdriver",
-      "Heavy-duty C-clamp",
-      "Thick nylon rope"
+      "Half-full water bottle",
+      "Shoelace",
+      "Chewing gum",
+      "Wire coat hanger"
     ],
     "clue_cards": [
       {
-        "title": "Clear the Path",
-        "insight": "The door won't slide if the track is full of dirt and rust. You need something thin and rigid to scrape it out, followed by something slippery to get things moving."
+        "title": "Rising Tide",
+        "insight": "Wood naturally floats in liquid. Finding a way to fill the pipe might bring the object straight to you."
       },
       {
-        "title": "Make a Handle",
-        "insight": "With the handle gone, you have nothing to grab. Is there a tool nearby that can grip tightly onto the edge of the door to act as a temporary handle?"
+        "title": "Fishing Line",
+        "insight": "A sticky substance attached to a flexible string can act just like a fishing rod for lightweight items."
       },
       {
-        "title": "Use Your Weight",
-        "insight": "Sliding a heavy door takes a lot of force. Tying something long to a makeshift handle would let you lean back and pull with your whole body weight."
+        "title": "Bend and Hook",
+        "insight": "A stiff piece of metal can be reshaped to reach down and grab onto small loops or rings."
       }
     ],
     "potential_solutions": [
       {
         "title": "Solution 1: Direct Action",
-        "description": "Scrape the dirt and rust out of the bottom track using the flathead screwdriver, then spray the lubricating oil all along the bottom edge. Push the door open using your shoulder for leverage."
+        "description": "Unwind the wire coat hanger and bend one end into a small hook. Lower it down the glass pipe to snag the key ring and pull the block out."
       },
       {
         "title": "Solution 2: Environmental Adaptation",
-        "description": "Tighten the heavy-duty C-clamp directly onto the broken latch area or the edge of the door. Grip the sturdy metal frame of the clamp just like a brand new handle and pull the door open."
+        "description": "Pour the water from your bottle directly into the glass pipe. Since the key is in a light wooden block, it will float to the top where you can easily reach it."
       },
       {
         "title": "Solution 3: Lateral Swap",
-        "description": "Attach the C-clamp to the door, then tie the thick nylon rope securely around the clamp. Sit on the floor, brace your feet against the wall next to the doorframe, and pull the rope like a tug-of-war to force the door open."
+        "description": "Chew the gum to make it extra sticky, then press it firmly onto the end of your shoelace. Lower the shoelace down the pipe, stick the gum onto the wooden block, and gently pull it up."
       }
     ]
   },
   {
-    "category_bubble": "Time Crunch",
-    "category": "Time Crunch",
-    "mode": "kids",
-    "character": "Maya",
-    "setting": "Sunny Park Picnic Bench",
-    "title": "The Windy Art Rush",
-    "complaint": "Hi! I'm Maya. I'm at the Sunny Park Picnic Bench trying to finish a birthday drawing for my best friend. My mom says we have to leave in exactly three minutes, but the wind keeps blowing my paper around and I can't color fast enough!",
-    "on_hand_items": [
-      "Box of heavy crayons",
-      "Half-full water bottle",
-      "Peanut butter and jelly sandwich",
-      "Bright red frisbee"
-    ],
-    "clue_cards": [
-      {
-        "title": "Heavy Helpers",
-        "insight": "Look for items on the table that are heavy enough to hold the corners of your paper down."
-      },
-      {
-        "title": "Build a Wall",
-        "insight": "Is there something big and flat you can use to block the wind from hitting your drawing?"
-      },
-      {
-        "title": "Sticky Trick",
-        "insight": "Maybe something a little messy could help your paper stick safely to the table for just a few minutes."
-      }
-    ],
-    "potential_solutions": [
-      {
-        "title": "Solution 1: Picnic Paperweights",
-        "description": "Place the heavy water bottle on one corner of your drawing and the box of crayons on the other corner to keep the paper totally flat while you finish coloring."
-      },
-      {
-        "title": "Solution 2: Frisbee Wind Shield",
-        "description": "Lean the bright red frisbee against the water bottle right in front of your paper. This makes a little wall that blocks the wind so your paper stops flying around."
-      },
-      {
-        "title": "Solution 3: Jelly Glue",
-        "description": "Take a tiny dab of sticky jelly from your sandwich and put it under the back of the paper to temporarily stick your drawing to the picnic bench until you are done."
-      }
-    ]
-  },
-  {
-    "category_bubble": "Time Crunch",
-    "category": "Time Crunch",
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
     "mode": "adults",
     "character": "Marcus",
-    "setting": "Outdoor Summer Wedding Marquee",
-    "title": "The Leaning Tower of Buttercream",
-    "complaint": "Hi! I'm Marcus. I'm the best man at an outdoor summer wedding in a marquee, and the three-tier buttercream wedding cake is starting to lean and melt in this brutal heat! The bride and groom are doing their grand entrance in exactly 10 minutes to cut it, and I need to stop this leaning tower from collapsing before they arrive.",
+    "setting": "1980s Detective Escape Room",
+    "title": "The Pipe Dream Exit",
+    "complaint": "Hi! I'm Marcus. I'm stuck in the final room of a 1980s detective-themed escape room with only five minutes left on the clock. The final exit key is resting at the bottom of a narrow, bolted-down glass pipe, and my fingers are way too big to reach it!",
     "on_hand_items": [
-      "Large bags of ice (for drinks)",
-      "Battery-powered fans (from the guest tables)",
-      "Wooden skewers (from the appetizer station)",
-      "Tall silver serving trays",
-      "Spare white tablecloths"
+      "A roll of masking tape",
+      "A long shoe lace",
+      "A pack of chewing gum",
+      "Two long metal chopsticks",
+      "A small pocket flashlight"
     ],
     "clue_cards": [
       {
-        "title": "Internal Support",
-        "insight": "If a tall structure is starting to lean, it needs a brace to hold the layers together. What long, thin items could act like hidden tent poles?"
+        "title": "Sticky Situation",
+        "insight": "If you can't pinch and grab the key, try finding a way to make the key stick to something you can pull up."
       },
       {
-        "title": "Makeshift AC",
-        "insight": "Blowing warm air won't help the melting frosting. You need to combine the moving air with something freezing cold to chill the cake quickly."
+        "title": "Extend Your Reach",
+        "insight": "You have several items that are too short on their own but could be combined to make a much longer tool."
       },
       {
-        "title": "Block the Glare",
-        "insight": "The afternoon sun shining through the clear plastic marquee walls is baking the cake. You need to create immediate shade without making it look ugly."
+        "title": "A Guiding Light",
+        "insight": "The pipe is dark. Use your light source to see exactly how the key is angled so you know how to grab it."
       }
     ],
     "potential_solutions": [
       {
-        "title": "Solution 1: Skewer Support",
-        "description": "Carefully push several long wooden skewers from the appetizer station straight down through the top of the cake. This will act as an internal brace to hold the sliding tiers together until it's cut."
+        "title": "Solution 1: The Sticky Fisher",
+        "description": "Chew a piece of gum until it gets really sticky, press it firmly onto the end of the long shoe lace, and carefully lower it down the pipe to stick to the key and pull it up."
       },
       {
-        "title": "Solution 2: Ice Breeze",
-        "description": "Fill a few silver serving trays with ice from the bar. Place them closely around the base of the cake and point the battery-powered table fans directly over the ice to blow a chilled breeze onto the frosting to firm it up."
+        "title": "Solution 2: Chopstick Extension",
+        "description": "Use the masking tape to bind the two metal chopsticks together end-to-end to make a long pole. Roll a piece of tape sticky-side out on the bottom tip, and poke it down the glass pipe to grab the key."
       },
       {
-        "title": "Solution 3: Tablecloth Tent",
-        "description": "Stand two tall silver serving trays upright on the table behind the cake and drape a spare white tablecloth over them. This creates a quick, elegant sun-shield that blocks the direct sunlight from baking the cake."
+        "title": "Solution 3: Snag and Pull",
+        "description": "Tie a small slipknot loop at the end of the shoe lace. Shine the pocket flashlight down the outside of the glass pipe so you can clearly see the bottom, then lower the shoe lace loop to catch the jagged teeth of the key and pull it out."
       }
     ]
   },
   {
-    "category_bubble": "Social Tact",
-    "category": "Social Tact",
-    "mode": "kids",
-    "character": "Chloe",
-    "setting": "School Bus Shared Seat",
-    "title": "The Shoulder Surfer",
-    "complaint": "Hi! I'm Chloe. I'm riding the school bus in a shared seat, but the kid next to me keeps leaning over to read my book over my shoulder! He is breathing right on my neck, and I want my personal space back without starting a big argument or being mean.",
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
+    "mode": "adults",
+    "character": "David",
+    "setting": "Prison-Themed Escape Room",
+    "title": "The Out-of-Reach Token",
+    "complaint": "Hi! I'm David. I'm in the basement cell of a prison-themed escape room, and the final wooden exit token has been pushed just out of reach behind a locked metal floor grate.",
     "on_hand_items": [
-      "Backpack",
-      "Puffy jacket",
-      "Spare comic book",
-      "Headphones"
+      "Shoelaces",
+      "Chewed chewing gum",
+      "Broken broom handle",
+      "Metal belt buckle"
     ],
     "clue_cards": [
       {
-        "title": "Body Language",
-        "insight": "Sometimes turning your shoulders or creating a physical barrier sends a polite message that you need space without having to say a word."
+        "title": "Sticky Situation",
+        "insight": "You have something sticky and something long. Combining them might give you the extra reach you need."
       },
       {
-        "title": "Friendly Distraction",
-        "insight": "If someone is bored and bothering you, giving them something else to do can solve the problem nicely."
+        "title": "Rope and Loop",
+        "insight": "Clothing accessories can be tied into a loop to grab or drag items from a distance."
       },
       {
-        "title": "The Polite Pivot",
-        "insight": "You can use everyday items as props to show you are in your own world and don't want to chat or share right now."
+        "title": "Change the Angle",
+        "insight": "If you can't lift the token straight up from where it is, try sliding it to a more accessible part of the floor grate first."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Sticky Extension",
+        "description": "Stick the chewed chewing gum to the flat end of the broken broom handle. Lower it through the grate, press it firmly onto the wooden token, and carefully lift it out."
+      },
+      {
+        "title": "The Lasso Trick",
+        "description": "Tie a slipknot at the end of a shoelace to make a small loop. Lower it through the grate, snag it around the edge of the wooden token, pull it tight, and haul it up."
+      },
+      {
+        "title": "Sweep and Pinch",
+        "description": "Use the broken broom handle to slide the token across the floor to the very edge of the grate, where you can angle your fingers just deep enough to grab it directly."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Escape Room",
+    "category": "Escape Room",
+    "mode": "adults",
+    "character": "Hannah",
+    "setting": "Vintage Study Escape Room",
+    "title": "The Narrow Vase",
+    "complaint": "Hi! I'm Hannah. I'm in the final room of a vintage study escape game, and the final clue is a wooden token sitting at the bottom of a tall, narrow glass vase glued to the desk that I can't reach with my hands.",
+    "on_hand_items": [
+      "A long shoelace",
+      "A wad of sticky tack",
+      "A pitcher full of water",
+      "A wire coat hanger"
+    ],
+    "clue_cards": [
+      {
+        "title": "Sticky Situation",
+        "insight": "Sticky materials can easily grab loose objects if you have a way to lower them down like a fishing line."
+      },
+      {
+        "title": "Rising Tide",
+        "insight": "Wood naturally floats on liquid. Filling a container from the bottom up can bring objects to you."
+      },
+      {
+        "title": "Bend and Reach",
+        "insight": "Stiff metal wire can be reshaped and bent to extend your reach into tight, narrow spaces."
       }
     ],
     "potential_solutions": [
       {
         "title": "Solution 1: Direct Action",
-        "description": "Hand the kid your spare comic book and say, 'I like to read by myself, but you can borrow this if you are bored!' It solves his boredom while politely setting your boundary."
+        "description": "Press the wad of sticky tack onto one end of the shoelace. Lower the shoelace down into the vase, press the sticky tack firmly against the wooden token, and carefully pull it up to the top."
       },
       {
         "title": "Solution 2: Environmental Adaptation",
-        "description": "Take off your puffy jacket and place it, along with your backpack, right in the middle of the seat. This creates a soft, natural wall that gives you your personal space back."
+        "description": "Pour the pitcher of water directly into the glass vase. Because the token is made of wood, it will float on the water and rise all the way to the rim where you can just pick it up."
       },
       {
         "title": "Solution 3: Lateral Swap",
-        "description": "Put your headphones on and turn your body completely toward the window. This blocks his view of your book and uses body language to show you want to be left alone."
+        "description": "Untwist the wire coat hanger and stretch it out into a long rod. Bend the very end into a small, tight hook, slide it down into the vase, snag the edge of the wooden token, and fish it out."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "kids",
+    "character": "Devon",
+    "setting": "Bedroom getting ready for a field trip",
+    "title": "The Lucky Shirt Spill",
+    "complaint": "Hi! I'm Devon. I am getting ready for the best school field trip ever, but I just spilled juice on my lucky shirt and the school bus will be here in five minutes!",
+    "on_hand_items": [
+      "Hair dryer",
+      "Dry fluffy bath towel",
+      "Electric fan",
+      "Clean backup shirt",
+      "Safety pins"
+    ],
+    "clue_cards": [
+      {
+        "title": "Squeeze First",
+        "insight": "Pressing a wet piece of clothing inside a dry towel pulls a lot of the water out instantly."
+      },
+      {
+        "title": "Warm Breezes",
+        "insight": "Blowing warm air over a damp spot will make it dry much faster than just waiting."
+      },
+      {
+        "title": "Lucky Charms",
+        "insight": "If you can't wear the shirt right now, maybe you can still bring it with you in a different way."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Roll the wet part of the lucky shirt inside the fluffy bath towel and squeeze hard to soak up most of the juice, then blast it with the hair dryer to dry the rest before the bus arrives."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Put on the clean backup shirt so you are fully dressed, and drape the damp lucky shirt safely over the back of the electric fan to let the breeze dry it while you finish packing your bag."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Quickly change into the clean backup shirt so you don't miss the bus, and use the safety pins to pin the lucky shirt to the outside of your backpack so your good luck still comes with you."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "kids",
+    "character": "Carlos",
+    "setting": "Garage",
+    "title": "Muddy Cleat Madness",
+    "complaint": "Hi! I'm Carlos. I'm in the garage getting ready for my championship soccer game, but my cleats are caked in solid dried mud and the car is leaving in exactly two minutes!",
+    "on_hand_items": [
+      "Stiff bristled brush",
+      "Spray bottle of water",
+      "Old towel",
+      "Plastic grocery bag",
+      "Spare sneakers"
+    ],
+    "clue_cards": [
+      {
+        "title": "Water Works Fast",
+        "insight": "A little bit of water makes hard mud turn back into soft dirt that wipes away much faster."
+      },
+      {
+        "title": "Clean On The Go",
+        "insight": "If you can't finish the job right now, maybe you can pack the mess up safely and clean them later."
+      },
+      {
+        "title": "Good Enough",
+        "insight": "Focus on the bottoms of the shoes so you don't slip on the field. The tops can stay dirty!"
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Spray the bottom of the cleats with water to soften the mud, then use the stiff brush to quickly scrub the spikes clean so you can run safely."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Throw the muddy cleats into the plastic grocery bag so they don't make a mess in the car, wear your spare sneakers for the ride, and clean the cleats when you arrive at the soccer field."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Wrap the old towel around the muddy cleats to carry them, jump in the car right now, and take the brush with you to scrub the dried mud off outside on the grass before the game starts."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "kids",
+    "character": "Sophia",
+    "setting": "Kitchen Table",
+    "title": "Hot Oatmeal Hurry",
+    "complaint": "Hi! I'm Sophia. I am sitting at the kitchen table trying to finish my breakfast, but my bowl of oatmeal is way too hot to eat and the school bus will be here in exactly three minutes!",
+    "on_hand_items": [
+      "A wide flat dinner plate",
+      "A glass of cold milk",
+      "A big metal serving spoon",
+      "An ice cube",
+      "A clean plastic sandwich bag"
+    ],
+    "clue_cards": [
+      {
+        "title": "Spread it Out",
+        "insight": "Spreading hot food out makes it cool down much faster because more of the food is touching the cooler air."
+      },
+      {
+        "title": "Cold Mix-In",
+        "insight": "Adding a cold liquid to a hot bowl of food will quickly bring the overall temperature down so you can eat it."
+      },
+      {
+        "title": "Metal Magic",
+        "insight": "Metal spoons pull heat away from hot food. Stirring quickly helps the heat escape into the air."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Pour the glass of cold milk directly into the hot oatmeal and stir it with the metal spoon to cool it down instantly."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Pour the hot oatmeal out of the deep bowl and spread it flat across the wide dinner plate so the room air cools it in a flash."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Put the ice cube inside the clean plastic sandwich bag, then dip the bag into the oatmeal and stir it to cool the food without making it watery."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "kids",
+    "character": "Ethan",
+    "setting": "Kitchen table before school",
+    "title": "The Gooey Poster Panic",
+    "complaint": "Hi! I'm Ethan. I'm at my kitchen table trying to finish my science poster before the school bus arrives in five minutes, but the big blobs of glue I used to stick my pictures on are still super wet and sliding everywhere!",
+    "on_hand_items": [
+      "Hair dryer",
+      "Paper clips",
+      "Roll of tape",
+      "Small desk fan",
+      "Paper towels"
+    ],
+    "clue_cards": [
+      {
+        "title": "Blowing Air",
+        "insight": "Moving warm or cool air helps wet things dry a lot faster."
+      },
+      {
+        "title": "Instant Stick",
+        "insight": "Glue takes time to dry, but other sticky things hold pictures in place right away."
+      },
+      {
+        "title": "Hold it Tight",
+        "insight": "If you can't dry the glue in time, you just need a way to keep the pictures from moving while you walk to the bus."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Plug in the hair dryer or the small desk fan and point it right at the poster to dry the glue super fast before the bus gets here."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Slide the pictures to the edge of the poster and use the paper clips to clip them tightly in place so they don't slide around while the glue slowly dries on the bus ride."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Wipe off the wet, messy glue with paper towels and use pieces of tape rolled into little sticky loops to stick the pictures down instantly."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "kids",
+    "character": "Aria",
+    "setting": "Family Kitchen",
+    "title": "The Cookie Countdown",
+    "complaint": "Hi! I'm Aria. I am in my kitchen getting ready for the school bake sale, but the school bus is coming in 10 minutes and my fresh cookies are way too hot to pack in my plastic container without turning into a mushy mess!",
+    "on_hand_items": [
+      "A small desk fan",
+      "Two frozen lunchbox ice packs",
+      "A clean metal baking sheet",
+      "A roll of paper towels"
+    ],
+    "clue_cards": [
+      {
+        "title": "Breezy Relief",
+        "insight": "Blowing air across something hot helps push the heat away much faster than just leaving it alone."
+      },
+      {
+        "title": "Bottoms Up",
+        "insight": "Metal changes temperature very fast. If a metal pan touches something freezing cold, the pan gets cold right away."
+      },
+      {
+        "title": "Soggy Stopper",
+        "insight": "When hot food gets packed away, it sweats. Paper towels are great at catching that moisture before it ruins the food."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Move the hot cookies to the cool metal baking sheet and turn on the small desk fan right next to them. The moving air will blow the heat away so they are cool enough to pack before the bus arrives."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Lay the frozen lunchbox ice packs flat on the counter and put the metal baking sheet on top of them. Place the cookies on the cold sheet to quickly pull the heat out from the bottom up."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Line the plastic container with paper towels to catch any warm sweat from the cookies. Pack the cookies in, leave the lid off, and carry them to the bus stop while holding the fan to blow into the box as you walk."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "adults",
+    "character": "Noah",
+    "setting": "Apartment Kitchen",
+    "title": "The Wine Emergency",
+    "complaint": "Hi! I'm Noah. I'm in my apartment getting ready for a dinner date that starts in 15 minutes, and my corkscrew just snapped in half leaving me with an unopened bottle of wine.",
+    "on_hand_items": [
+      "Wooden spoon",
+      "Thick towel",
+      "House key",
+      "Wire coat hanger"
+    ],
+    "clue_cards": [
+      {
+        "title": "Clue 1: Change Direction",
+        "insight": "If you can't pull the cork out, think about pushing it the opposite way."
+      },
+      {
+        "title": "Clue 2: Sturdy Tools",
+        "insight": "A blunt, solid handle can apply a lot of steady pressure without breaking the glass."
+      },
+      {
+        "title": "Clue 3: Grip and Twist",
+        "insight": "Inserting a metal object at an angle might give you just enough leverage to turn and pull."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Push It In",
+        "description": "Use the handle of the wooden spoon to press down hard on the top of the cork, pushing it completely into the bottle so you can pour the wine."
+      },
+      {
+        "title": "Solution 2: The Wall Tap",
+        "description": "Wrap the base of the wine bottle securely in the thick towel, then rhythmically and firmly tap the base against a sturdy wall. The gentle force will slowly nudge the cork out far enough to grab."
+      },
+      {
+        "title": "Solution 3: The Key Twist",
+        "description": "Push the house key deeply into the cork at a 45-degree angle, then use the towel to grab the top of the key to carefully twist and pull the cork out."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "adults",
+    "character": "Lily",
+    "setting": "Kitchen preparing for a dinner party",
+    "title": "The Warm Wine Panic",
+    "complaint": "Hi! I'm Lily. I am in my kitchen rushing to finish cooking for a dinner party, but my guests are arriving in exactly ten minutes and I just realized the fancy bottle of white wine is still sitting on the counter, completely warm!",
+    "on_hand_items": [
+      "Roll of paper towels",
+      "Ice cubes",
+      "Table salt",
+      "Large mixing bowl",
+      "Plastic zip bags"
+    ],
+    "clue_cards": [
+      {
+        "title": "Wrap It Up",
+        "insight": "Wet paper clings tightly to glass and helps the freezer chill the bottle much faster than cold air alone."
+      },
+      {
+        "title": "Salty Ice Bath",
+        "insight": "Adding salt to a bowl of ice water makes the water get intensely cold very quickly, creating a perfect fast-chill plunge."
+      },
+      {
+        "title": "Inside Out",
+        "insight": "If you can't cool the outside of the bottle fast enough, putting the cold directly into the liquid works in seconds."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Wet Towel Wrap",
+        "description": "Wet a few paper towels, wrap them tightly around the wine bottle, and put it in the freezer. The damp towels will freeze quickly and chill the glass down much faster than just leaving the bare bottle in the cold air."
+      },
+      {
+        "title": "Solution 2: The Salty Ice Spin",
+        "description": "Fill the large mixing bowl with ice, a little water, and a heavy pour of table salt. Submerge the bottle in the icy water and spin it by the neck for a few minutes so all the warm wine inside touches the freezing glass."
+      },
+      {
+        "title": "Solution 3: The Baggie Ice Drop",
+        "description": "Pour the warm wine into glasses. Put a few ice cubes into clean plastic zip bags, seal them tightly, and drop the bags right into the wine glasses. This instantly chills the drinks without letting melting ice water ruin the taste."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "adults",
+    "character": "Jackson",
+    "setting": "Home Kitchen",
+    "title": "The Frozen Steak Panic",
+    "complaint": "Hi! I'm Jackson. I'm rushing to make an anniversary dinner in my kitchen before my wife gets home in 45 minutes, but I completely forgot to thaw the rock-hard frozen steak!",
+    "on_hand_items": [
+      "Aluminum foil",
+      "Two heavy metal frying pans",
+      "Ziplock bags",
+      "Warm tap water"
+    ],
+    "clue_cards": [
+      {
+        "title": "Metal Magic",
+        "insight": "Heavy metal items are great at soaking up cold and passing room temperature warmth into food quickly."
+      },
+      {
+        "title": "Water Weight",
+        "insight": "Water transfers warmth to food much faster than just leaving it sitting out in the open air."
+      },
+      {
+        "title": "Flat and Thin",
+        "insight": "The more surface area of the meat that touches something warm, the faster the whole thing thaws."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Pan Sandwich",
+        "description": "Put the steak in a ziplock bag and sandwich it between the bottoms of the two heavy metal frying pans. The heavy metal will rapidly draw the cold out of the meat."
+      },
+      {
+        "title": "Solution 2: The Warm Bath",
+        "description": "Place the steak in a tightly sealed ziplock bag and submerge it in a large pot or bowl filled with warm tap water, changing the water every five minutes to keep it warm."
+      },
+      {
+        "title": "Solution 3: The Foil Wrap",
+        "description": "Wrap the frozen steak tightly in a couple layers of aluminum foil and set it flat inside one of the frying pans. The foil helps pull the room's warmth directly into the meat faster than leaving it bare on a plate."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "adults",
+    "character": "Emma",
+    "setting": "Bedroom Packing",
+    "title": "The Jammed Zipper Delay",
+    "complaint": "Hi! I'm Emma. I'm standing in my bedroom with exactly ten minutes before my ride to the airport arrives, but the zipper on my overstuffed carry-on bag is completely jammed with a thick sweater stuck in the teeth.",
+    "on_hand_items": [
+      "Bar of soap",
+      "Tweezers",
+      "Safety pins",
+      "Heavy jacket"
+    ],
+    "clue_cards": [
+      {
+        "title": "Reduce the Tension",
+        "insight": "Zippers refuse to budge if they are pulled too tight. Finding a way to release the pressure on the track is your best first step."
+      },
+      {
+        "title": "Slick it Up",
+        "insight": "Metal teeth sometimes need a slippery coating to glide past caught fabric without ripping it."
+      },
+      {
+        "title": "Precision Pulling",
+        "insight": "Yanking on the zipper tab might snap it off entirely. It is much safer to pull the trapped fabric out instead of forcing the metal."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Soap Slide",
+        "description": "Rub the bar of soap generously over the zipper teeth and the stuck part of the sweater. The soap adds just enough slip to let you gently wiggle the zipper backward and pull the fabric free."
+      },
+      {
+        "title": "Solution 2: Wear the Problem",
+        "description": "Force the sweater out of the bag completely and just wear it under your heavy jacket to the airport. With the bulky item removed, the bag will easily zip shut without any strain."
+      },
+      {
+        "title": "Solution 3: Tweezer Rescue",
+        "description": "Sit on the suitcase to flatten it, removing all upward pressure from the zipper. Then, use the tweezers to carefully pinch and pull the sweater fibers out from between the metal teeth one by one."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Time Crunch",
+    "category": "Time Crunch",
+    "mode": "adults",
+    "character": "Lucas",
+    "setting": "Apartment Entryway",
+    "title": "The Jammed Portfolio",
+    "complaint": "Hi! I'm Lucas. I'm running out the door for a massive job interview and my ride is waiting downstairs, but the zipper on my leather bag holding my laptop and presentation notes is completely jammed on a piece of the inner lining!",
+    "on_hand_items": [
+      "Graphite pencil",
+      "Lip balm",
+      "Bar of soap",
+      "Rubber band"
+    ],
+    "clue_cards": [
+      {
+        "title": "Slick Strategy",
+        "insight": "When a zipper is stuck, adding something slippery to the teeth can help it glide smoothly over the snag."
+      },
+      {
+        "title": "Pencil Power",
+        "insight": "The dark lead inside a regular pencil is naturally slick and can act as a dry coating to unstick metal parts."
+      },
+      {
+        "title": "Get a Grip",
+        "insight": "If your fingers are slipping from pulling too hard, wrapping something rubbery around the zipper pull can give you extra pulling power."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Color heavily over the zipper teeth right where it is stuck with the graphite pencil. The pencil dust will coat the metal, letting you easily slide the zipper back and free the fabric."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Rub a generous amount of lip balm or the bar of soap directly onto the snagged fabric and the zipper teeth to grease it up, then gently wiggle the zipper until it pops free."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Wrap the rubber band tightly around the metal zipper tab to give your fingers maximum grip. This allows you to pull the zipper firmly backward while pushing the snagged fabric out of the way without slipping."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "kids",
+    "character": "Mia",
+    "setting": "School cafeteria lunch table",
+    "title": "The Spinach Secret",
+    "complaint": "Hi! I'm Mia. I am sitting at the crowded lunch table with all my friends, but my best friend Leo has a huge piece of green spinach stuck in his front teeth and I don't want to embarrass him by pointing it out in front of everyone!",
+    "on_hand_items": [
+      "Sticky notes",
+      "Pencil",
+      "Small pocket mirror",
+      "Empty juice box",
+      "Paper napkin"
+    ],
+    "clue_cards": [
+      {
+        "title": "Private Messages",
+        "insight": "If you need to tell a friend something that might make them blush, it is always kindest to do it secretly so the rest of the group doesn't know."
+      },
+      {
+        "title": "Show, Don't Tell",
+        "insight": "Sometimes you don't even need to use words. Letting someone see the problem for themselves saves them from feeling put on the spot."
+      },
+      {
+        "title": "A Quick Excuse",
+        "insight": "You can use an everyday task or chore as an excuse to pull your friend away from the big group for a quick private chat."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Use the pencil to write a quick, kind warning on a sticky note and pass it to Leo secretly under the table so nobody else sees."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Hand Leo the small pocket mirror and playfully ask him to look at his reflection, letting him discover the spinach himself so he can secretly wipe it away with a napkin."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Ask Leo to walk with you to the trash can to help throw away your empty juice box, using the trip to quietly whisper the secret to him while you are away from the crowded table."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "kids",
+    "character": "Benjamin",
+    "setting": "Leo's Surprise Birthday Party",
+    "title": "The Secret Spoiler",
+    "complaint": "Hi! I'm Benjamin. I am at my friend Leo's surprise birthday party waiting for him to arrive, but I just accidentally yelled out what his surprise present is right in front of his little sister who is terrible at keeping secrets!",
+    "on_hand_items": [
+      "A big piece of cardboard",
+      "Colorful markers",
+      "A plate of cupcakes",
+      "Party hats"
+    ],
+    "clue_cards": [
+      {
+        "title": "The Power of Distraction",
+        "insight": "Sometimes the best way to make someone forget a secret is to give them something much more exciting to focus on right away."
+      },
+      {
+        "title": "Silly Decoys",
+        "insight": "If you change the story to make it sound like a joke or a silly guess, people might not believe it is the real surprise."
+      },
+      {
+        "title": "A Very Important Job",
+        "insight": "Giving a younger kid a special task makes them feel important and keeps their mind too busy to spill the beans."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Offer the little sister the plate of cupcakes immediately, telling her she can have the very first one if she promises to keep a brand new secret about which flavor is the best."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Grab the big piece of cardboard and colorful markers to quickly draw a bunch of fake, funny presents like a pet dinosaur or a spaceship, convincing the sister that your first idea was just another silly guess."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Put a party hat on the little sister's head and declare her the 'Official Party Greeter', giving her the very important job of watching the door so she is too busy looking for Leo to talk about the present."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "kids",
+    "character": "Amelia",
+    "setting": "Birthday Party",
+    "title": "The Duplicate Gift Dilemma",
+    "complaint": "Hi! I'm Amelia. I'm at my birthday party opening presents with all my friends. My best friend just gave me a toy I already have, and she looks really excited for me to open it!",
+    "on_hand_items": [
+      "Wrapping paper",
+      "A blank thank you card",
+      "A slice of birthday cake",
+      "The duplicate toy"
+    ],
+    "clue_cards": [
+      {
+        "title": "Focus on the Feelings",
+        "insight": "When someone gives you a gift, thanking them for thinking of you makes them feel good, even if the gift isn't brand new to you."
+      },
+      {
+        "title": "Delay the Details",
+        "insight": "You don't have to explain that you already own the toy right away in front of everyone. It's okay to just be happy in the moment."
+      },
+      {
+        "title": "Find the Fun",
+        "insight": "Think about why the gift is cool. Focusing on the fun parts shows your friend that you appreciate their good taste!"
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Amelia smiles, gives her friend a big hug, and says 'Thank you so much, this is such a cool toy!' She can use the blank thank you card later to write a nice note about how much she loves having her as a friend, without spoiling the party mood."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Amelia opens the wrapping paper, looks thrilled, and says, 'Wow, I love this! Now I have two of them, so we can both play with them together right now!' She uses the duplicate toy to create a fun, shared playtime for both of them."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Amelia gives a big smile, says 'Thank you, you always know what I like!' and then smoothly changes the subject by handing her friend a slice of birthday cake to celebrate, keeping everyone happy and avoiding any awkwardness."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "kids",
+    "character": "James",
+    "setting": "School Hallway",
+    "title": "The Zipper Dilemma",
+    "complaint": "Hi! I'm James. I'm standing in the school hallway with a big group of friends. I just noticed my friend Leo's zipper is down on his pants, and I want to tell him to fix it without embarrassing him in front of everyone!",
+    "on_hand_items": [
+      "Sticky note pad",
+      "Pencil",
+      "Jacket",
+      "Water bottle"
+    ],
+    "clue_cards": [
+      {
+        "title": "Keep It Private",
+        "insight": "When telling a friend something a little embarrassing, it is always best to do it quietly so others don't hear."
+      },
+      {
+        "title": "Silent Messages",
+        "insight": "You can use writing or secret signals to pass a message without making a single sound."
+      },
+      {
+        "title": "A Quick Excuse",
+        "insight": "Asking a friend for help with a simple everyday task is a great way to pull them away from a big crowd."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Drop your jacket on the floor right next to Leo. When you both bend down to pick it up, use that quick moment to whisper the secret to him."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Use your pencil and sticky note pad to write a short, secret message. Fold it in half and hand it to Leo like it is just a note about homework."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Hold out your water bottle and ask Leo to step away from the group for a second to help you open the tight lid, giving you the privacy to tell him."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "kids",
+    "character": "Harper",
+    "setting": "School Lunch Table",
+    "title": "The Jelly Dilemma",
+    "complaint": "Hi! I'm Harper. I'm sitting at a crowded school lunch table with all my classmates, but my best friend Leo has a huge blob of grape jelly on his nose and I want to tell him without embarrassing him in front of everyone!",
+    "on_hand_items": [
+      "Paper napkin",
+      "Small pocket mirror",
+      "Blank piece of paper",
+      "Pencil"
+    ],
+    "clue_cards": [
+      {
+        "title": "Think About Feelings",
+        "insight": "Put yourself in their shoes. Most people prefer a quiet warning over being called out loudly in front of a crowd."
+      },
+      {
+        "title": "Secret Signals",
+        "insight": "You do not always need to speak. Using your body or face to show them what is wrong is a great way to keep a secret."
+      },
+      {
+        "title": "Helpful Distractions",
+        "insight": "Giving someone a reason to check themselves without directly telling them they look messy saves them from feeling silly."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Secret Note",
+        "description": "Use the pencil to write a quick, nice message on the blank piece of paper saying 'Check your nose!' and slide it quietly across the table to Leo."
+      },
+      {
+        "title": "Solution 2: The Mirror Trick",
+        "description": "Hold up the small pocket mirror and ask Leo, 'Is there something on my face?' When he looks into the mirror, he will see his own reflection and notice the jelly."
+      },
+      {
+        "title": "Solution 3: The Copycat Wipe",
+        "description": "Catch Leo's eye, grab your paper napkin, and start wiping your own nose. Keep doing it until he copies you and wipes the jelly off his face without anyone else knowing."
       }
     ]
   },
@@ -219,42 +1086,214 @@
     "category_bubble": "Social Tact",
     "category": "Social Tact",
     "mode": "adults",
-    "character": "David",
-    "setting": "Suburban Apartment Hallway",
-    "title": "The Hallway Hostage",
-    "complaint": "Hi! I'm David. I just stepped out into my suburban apartment hallway to head to a first date, but my notorious over-sharing neighbor has me cornered by the stairs talking about his personal medical issues. I don't want to be rude and create bad blood, but I need to leave right now or I'll be late!",
+    "character": "Alexander",
+    "setting": "Upscale networking dinner",
+    "title": "The Talkative Trap",
+    "complaint": "Hi! I'm Alexander. I'm at an upscale networking dinner hosted by my boss, and I am trapped in a corner by a highly talkative client who keeps asking overly personal questions and won't let me get a word in edge-wise.",
     "on_hand_items": [
-      "Cell phone",
-      "Keys on a lanyard",
-      "Bag of trash",
-      "Smartwatch"
+      "Half-empty glass of water",
+      "Cloth napkin",
+      "Business card",
+      "Smartphone"
     ],
     "clue_cards": [
       {
-        "title": "The Digital Rescue",
-        "insight": "Technology can provide a perfect, blameless excuse to exit a conversation without hurting anyone's feelings."
+        "title": "The Prop Excuse",
+        "insight": "Holding a drink or food gives you a built-in, polite reason to step away for a refill or to discard an item."
       },
       {
-        "title": "Momentum is Key",
-        "insight": "If you keep your body moving toward a specific objective, people will naturally let you go."
+        "title": "The Professional Pivot",
+        "insight": "Offering a work-related item can firmly but politely steer an overly personal chat back into professional boundaries."
       },
       {
-        "title": "The Reset Button",
-        "insight": "A sudden physical distraction can break a talker's train of thought, giving you a polite window to speak."
+        "title": "The Phantom Notification",
+        "insight": "In a professional setting, a quick glance at a device provides a socially acceptable and urgent reason to excuse yourself without causing offense."
       }
     ],
     "potential_solutions": [
       {
-        "title": "Solution 1: The Fake Alarm",
-        "description": "Sneakily set a timer on your smartwatch for 10 seconds. When it rings, act surprised and say it's a calendar alert reminding you that your ride is here and you have to leave immediately."
+        "title": "Solution 1: The Refill Retreat",
+        "description": "Wait for the client to take a breath, raise your half-empty glass of water, and politely apologize. State that you are incredibly thirsty and must run to the bar for a quick refill, promising to catch up with them later."
       },
       {
-        "title": "Solution 2: The Trash Walk",
-        "description": "Hold up the bag of trash, apologize, and say you need to get it to the dumpster before it leaks. Keep walking down the stairs while you say goodbye, using the chore as your physical exit."
+        "title": "Solution 2: The Business Boundary",
+        "description": "Pull out your business card and hand it to the client, using the gesture to interrupt their flow. Tell them you would love to continue the conversation during business hours and use the natural pause in the interaction to shake hands and walk away."
       },
       {
-        "title": "Solution 3: The Clumsy Drop",
-        "description": "Drop your keys loudly on the hallway floor. The noise will naturally interrupt his story. As you pick them up, use the break in conversation to smile, say you are running late, and firmly wish him a good day as you walk past."
+        "title": "Solution 3: The Urgent Update",
+        "description": "Subtly tap your smartphone screen so it lights up, glance at it with a concerned expression, and apologize to the client. Explain that you just received an urgent message from your boss across the room and need to excuse yourself to handle it immediately."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "adults",
+    "character": "Evelyn",
+    "setting": "Corporate Holiday Dinner",
+    "title": "The Loose-Lipped Spouse",
+    "complaint": "Hi! I'm Evelyn. I am at my firm's annual holiday dinner party, and my manager's spouse just cornered me to complain loudly about my manager's deeply personal habits. I need to politely escape or change the subject gracefully before my manager walks back over here and assumes I'm participating in the gossip.",
+    "on_hand_items": [
+      "A half-full glass of water",
+      "A cell phone on silent",
+      "A plate of bite-sized appetizers",
+      "A white cloth napkin"
+    ],
+    "clue_cards": [
+      {
+        "title": "The Distraction Maneuver",
+        "insight": "A sudden, mild physical mishap can instantly reset a conversation's focus without causing offense."
+      },
+      {
+        "title": "The Bridging Technique",
+        "insight": "Offering someone food naturally pauses their talking and provides an easy pivot to a neutral subject."
+      },
+      {
+        "title": "The Polite Excuse",
+        "insight": "Checking a device and claiming a sudden obligation is a universally accepted exit strategy at professional events."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Thrust the plate of appetizers toward the spouse, enthusiastically asking for their opinion on the catering. This forces them to stop talking, take a bite, and shifts the conversation to the safe topic of food."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Use your cloth napkin to 'accidentally' tip over your glass of water onto your own shoes. The harmless spill creates an immediate, polite reason to excuse yourself to the restroom, cutting the conversation short."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Pull out your cell phone, stare at the blank screen with wide eyes, and apologize profusely. Claim you just received an urgent family text that requires you to step into the hallway immediately."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "adults",
+    "character": "Daniel",
+    "setting": "Dinner Party",
+    "title": "The Over-Sharing Friend",
+    "complaint": "Hi! I'm Daniel. I'm hosting a dinner party to introduce my new boss to my social circle, but my oldest buddy just started loudly telling a highly embarrassing and inappropriate story about my past.",
+    "on_hand_items": [
+      "A bottle of red wine",
+      "A platter of hot appetizers",
+      "A smartphone",
+      "A loud kitchen timer"
+    ],
+    "clue_cards": [
+      {
+        "title": "The Favor Pivot",
+        "insight": "Asking a talkative person for an urgent favor makes them feel important while instantly shutting down their current monologue."
+      },
+      {
+        "title": "Sensory Override",
+        "insight": "Introducing a sudden noise or bringing out food can naturally break the flow of an awkward conversation."
+      },
+      {
+        "title": "Strategic Clumsiness",
+        "insight": "A small, harmless accident creates an immediate distraction that forces everyone to shift their attention to a new, safe topic."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Urgent Assistant",
+        "description": "Interrupt politely and hand your friend your smartphone, urgently asking him to step into the hallway to help you look up a wine pairing because you 'really value his taste', physically removing him from the boss."
+      },
+      {
+        "title": "Solution 2: The Appetizer Interruption",
+        "description": "Twist the kitchen timer so it goes off in a few seconds. When it rings loudly, talk over the story to cheerfully announce the hot appetizers are ready, passing the platter directly to your boss to reset the conversation."
+      },
+      {
+        "title": "Solution 3: The Harmless Spill",
+        "description": "Deliberately but safely spill a small splash of the red wine on your own sleeve. Feign surprise and ask your buddy to come help you find a towel in the kitchen, cutting off his story immediately."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "adults",
+    "character": "Abigail",
+    "setting": "Dinner Party",
+    "title": "The Over-Sharer",
+    "complaint": "Hi! I'm Abigail. I'm hosting a small dinner party to introduce my new partner to my friends, but one of my oldest friends has cornered my partner and won't stop bringing up highly embarrassing stories from my past.",
+    "on_hand_items": [
+      "Tray of hot appetizers",
+      "Empty wine glasses",
+      "A trivia card game",
+      "Smartphone"
+    ],
+    "clue_cards": [
+      {
+        "title": "The Graceful Pivot",
+        "insight": "Interrupting with a polite, hospitable gesture breaks a monologue without causing a scene."
+      },
+      {
+        "title": "The Physical Excuse",
+        "insight": "Asking someone for their help with a quick chore is a polite way to pull them out of an awkward conversation."
+      },
+      {
+        "title": "The Group Reset",
+        "insight": "Introducing a new, shared activity naturally forces everyone to change the topic."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Appetizer Interruption",
+        "description": "Walk over with the tray of hot appetizers, offer one to the talkative friend to pause their story, and ask your partner to help you gather the empty wine glasses from the kitchen."
+      },
+      {
+        "title": "Solution 2: The Game Night Shift",
+        "description": "Bring out the trivia card game to the living room and announce to the whole group that it is time to play, naturally forcing the friend to stop their embarrassing stories and focus on the game."
+      },
+      {
+        "title": "Solution 3: The Text Rescue",
+        "description": "Discreetly use your smartphone to text your partner, giving them a polite excuse to check their screen, apologize to the friend, and step away to handle a made-up urgent issue."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Social Tact",
+    "category": "Social Tact",
+    "mode": "adults",
+    "character": "Henry",
+    "setting": "Neighborhood Backyard Barbecue",
+    "title": "The Cornered Guests",
+    "complaint": "Hi! I'm Henry. I'm hosting a casual backyard barbecue for my neighbors, but my neighbor Greg has cornered a new couple by the fence and won't stop loudly complaining about his recent divorce.",
+    "on_hand_items": [
+      "Tray of hot appetizers",
+      "Pitcher of margaritas",
+      "Set of bocce balls",
+      "Stack of paper napkins"
+    ],
+    "clue_cards": [
+      {
+        "title": "The Polite Rescue",
+        "insight": "If someone is trapped in an awkward conversation, giving them an urgent but simple 'helper' task allows them a guilt-free exit."
+      },
+      {
+        "title": "Breaking the Circle",
+        "insight": "Entering the physical space of a conversation with an offering forces the speaker to pause and breaks their conversational momentum."
+      },
+      {
+        "title": "Pivot to Action",
+        "insight": "When words become too heavy for a party, shifting the focus to a physical activity completely changes the social dynamic."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Host's Errand",
+        "description": "Walk over with the pitcher of margaritas, pour drinks for the new couple, and politely ask if they could do you a huge favor and help you carry a heavy cooler out from the kitchen, instantly rescuing them from Greg."
+      },
+      {
+        "title": "Solution 2: The Appetizer Interruption",
+        "description": "Step directly into the middle of their circle with the tray of hot appetizers and the paper napkins. Ask Greg to hold the tray for a moment while you hand out napkins to the couple, completely breaking his train of thought."
+      },
+      {
+        "title": "Solution 3: The Champion's Challenge",
+        "description": "Bring the bocce balls over to the group, interrupt with a big smile, and loudly announce to the couple that Greg is the neighborhood bocce champion. Hand him the balls and insist he teach them how to play right now."
       }
     ]
   },
@@ -262,42 +1301,215 @@
     "category_bubble": "Mystery Clue",
     "category": "Mystery Clue",
     "mode": "kids",
-    "character": "Toby",
-    "setting": "Elementary School Lunchroom",
-    "title": "The Tiny Secret Message",
-    "complaint": "Hi! I'm Toby. I'm sitting in the elementary school lunchroom, and my best friend just slipped a secret spy message onto my tray. The only problem is, the letters are drawn so tiny I can't read them at all, and I don't have a magnifying glass!",
+    "character": "Ella",
+    "setting": "Backyard Treehouse",
+    "title": "The Blank Paper Puzzle",
+    "complaint": "Hi! I'm Ella. I am in my backyard treehouse trying to read a secret club message from my best friend, but the paper she gave me just looks completely blank!",
     "on_hand_items": [
-      "Clear plastic water bottle",
-      "Drinking straw",
-      "Shiny metal spoon",
-      "Small cup of water"
+      "Desk lamp with a warm lightbulb",
+      "Grape juice box",
+      "Cotton swabs",
+      "Magnifying glass"
     ],
     "clue_cards": [
       {
-        "title": "Curved Water",
-        "insight": "Water inside a curved shape bends the light passing through it. This trick can make things on the other side look much bigger than they really are!"
+        "title": "Heat It Up",
+        "insight": "Some secret inks are made from lemon juice, which turns brown and shows up when you carefully warm the paper."
       },
       {
-        "title": "Tiny Puddles",
-        "insight": "A single drop of water naturally forms a round, curved bubble on top. This shape acts exactly like a tiny glass lens."
+        "title": "Color Magic",
+        "insight": "If the secret message was written with baking soda water, painting over it with a dark, fruity juice will make the words pop out."
       },
       {
-        "title": "Funhouse Spoon",
-        "insight": "Have you ever looked at your face in a shiny spoon? The curved metal acts like a funhouse mirror and changes how big or small things look when you hold it close."
+        "title": "Look For Dents",
+        "insight": "Sometimes a secret isn't ink at all! If someone presses really hard with a pen on the page above it, it leaves tiny grooves you can spot with a light and a close look."
       }
     ],
     "potential_solutions": [
       {
-        "title": "Solution 1: The Water Bottle Magnifier",
-        "description": "Fill the clear plastic water bottle to the top with water. Lay it on its side and hold it just above the secret message. The curved bottle full of water will act like a giant magnifying glass, blowing up the tiny letters so you can read them!"
+        "title": "Solution 1: The Warm Light",
+        "description": "Hold the blank paper carefully near the warm lightbulb of the desk lamp. The heat from the bulb will slowly make the hidden ink turn brown so you can read the secret message."
       },
       {
-        "title": "Solution 2: The Water Drop Lens",
-        "description": "Dip your drinking straw into the cup of water, cover the top hole with your finger to trap some water, and carefully let one big drop fall directly over a tiny word. The round water drop will magnify the writing underneath it!"
+        "title": "Solution 2: The Juice Paint",
+        "description": "Dip a cotton swab into the grape juice box and gently paint it all over the blank paper. The dark juice will mix with the secret ink and reveal the hidden words."
       },
       {
-        "title": "Solution 3: The Spoon Scoop",
-        "description": "Hold the bowl of the shiny metal spoon very close to the tiny text. If you tilt it toward the lunchroom lights just right, the curved metal will reflect a zoomed-in, magnified version of the letters."
+        "title": "Solution 3: The Shadow Search",
+        "description": "Lay the paper flat, point the desk lamp so it shines sideways across the page, and use the magnifying glass to look for hidden scratch marks and shadows where the pen pressed down."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "kids",
+    "character": "Sebastian",
+    "setting": "Grandpa's Dusty Attic",
+    "title": "The Secret of the Blank Page",
+    "complaint": "Hi! I'm Sebastian. I'm searching through my grandpa's dusty attic and I found a blank piece of paper inside an old treasure box! I know there is a secret message written on it with invisible ink, but I can't figure out how to make the words show up.",
+    "on_hand_items": [
+      "Flashlight",
+      "Grape juice box",
+      "Cotton swabs",
+      "Small desk lamp with a warm bulb"
+    ],
+    "clue_cards": [
+      {
+        "title": "Heat it Up",
+        "insight": "Some invisible inks are made from lemon juice and turn dark when they get a little warm."
+      },
+      {
+        "title": "Color Reveal",
+        "insight": "Certain secret messages show up if you wipe a dark-colored liquid over them to stain the paper."
+      },
+      {
+        "title": "Backlight Trick",
+        "insight": "Shining a bright light right behind the paper might let you see the thick spots where the hidden letters are."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Hold the paper carefully near the warm desk lamp so the heat makes the invisible ink change color and reveal the secret words."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Dip a cotton swab into the grape juice and gently paint it over the paper so the hidden letters stand out against the purple juice."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Turn on the flashlight, hold it pointing up, and lay the paper over the bright light to see the shadow of the words shining through."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "kids",
+    "character": "Scarlett",
+    "setting": "Grandpa's Dusty Attic",
+    "title": "The Invisible Treasure Map",
+    "complaint": "Hi! I'm Scarlett. I'm exploring my grandpa's dusty attic, and I found a blank piece of paper that says 'Secret Map' on the back, but I can't figure out how to make the hidden message show up!",
+    "on_hand_items": [
+      "Desk lamp with a warm lightbulb",
+      "Grape juice box",
+      "Cotton swabs",
+      "Pencil",
+      "Sketch pad"
+    ],
+    "clue_cards": [
+      {
+        "title": "Warm It Up",
+        "insight": "Some secret inks appear when they get nice and warm. A bright light bulb can act like a little heater!"
+      },
+      {
+        "title": "Fruity Paint",
+        "insight": "Did you know some dark juices can stick to invisible ink? A little dab of fruit juice might reveal the secret."
+      },
+      {
+        "title": "Bumpy Letters",
+        "insight": "Sometimes pressing gently with a pencil over a blank page can show the bumps of a message written underneath."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Hold the blank map carefully near the warm desk lamp. The heat from the lightbulb will warm up the paper and make the invisible ink slowly turn dark so you can read the secret path!"
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Dip a cotton swab into the grape juice and gently paint it all over the blank paper. The dark juice will stick to the secret ink and change its color to reveal the hidden map."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Place a thin sheet of paper from the sketch pad on top of the secret map. Gently shade over it with the side of your pencil to make the bumpy outline of the hidden drawing appear like magic."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "kids",
+    "character": "Jack",
+    "setting": "Art Desk in Bedroom",
+    "title": "The Blank Spy Note",
+    "complaint": "Hi! I'm Jack. I'm sitting at my art desk with a secret spy note from my best friend, but the piece of paper looks completely blank white and I can't read the hidden message!",
+    "on_hand_items": [
+      "Watercolor paint set",
+      "Flashlight",
+      "Pencil",
+      "Glass of water"
+    ],
+    "clue_cards": [
+      {
+        "title": "Wax Magic",
+        "insight": "Your friend might have used a white crayon to write the note. Wax pushes water away!"
+      },
+      {
+        "title": "Shadows and Light",
+        "insight": "If you shine a bright light from the side, hidden bumps on paper might cast tiny shadows."
+      },
+      {
+        "title": "Shading Trick",
+        "insight": "Rubbing something dark over the paper can make invisible wax letters stand out."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Paint Reveal",
+        "description": "Mix some water and watercolor paint, then brush it all over the paper. The paint will soak into the paper but slide right off the hidden crayon wax, showing the secret words!"
+      },
+      {
+        "title": "Solution 2: Side Lighting",
+        "description": "Turn off the room lights and lay the flashlight flat on the desk. Shine the beam across the paper to make the shiny crayon letters catch the light so you can read them."
+      },
+      {
+        "title": "Solution 3: Pencil Rubbing",
+        "description": "Hold the pencil sideways and gently scribble back and forth over the whole paper. The pencil marks will color the rough paper but skip over the smooth wax, revealing the message."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "kids",
+    "character": "Grace",
+    "setting": "Backyard Treehouse",
+    "title": "The Deep Dark Tree Hole",
+    "complaint": "Hi! I'm Grace. I am in my backyard treehouse looking for a hidden treasure, but my brother hid the final paper clue at the bottom of a deep, dark hole in the tree trunk and my hands are too big to reach it!",
+    "on_hand_items": [
+      "A small pocket mirror",
+      "A long wooden stick",
+      "A piece of sticky chewing gum",
+      "A jump rope"
+    ],
+    "clue_cards": [
+      {
+        "title": "Bouncing Light",
+        "insight": "If a space is too dark to see inside, you can use something shiny to bounce sunlight into the shadows."
+      },
+      {
+        "title": "Sticky Grabber",
+        "insight": "When your fingers are too big to fit into a tiny space, a long tool with a sticky end can pick things up for you."
+      },
+      {
+        "title": "Fishing for Clues",
+        "insight": "A long string or rope can be dropped into a deep hole to scoop or pull things up to the top."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Sticky Stick Grabber",
+        "description": "Chew the piece of gum until it is sticky, then press it onto the end of the long wooden stick. Poke the stick into the hole, press the gum against the paper clue, and pull it right out!"
+      },
+      {
+        "title": "Solution 2: Sunlight Mirror",
+        "description": "Hold the small pocket mirror outside the hole to catch the sunlight. Tilt the mirror to shine the light into the hole so you can see exactly where the clue is, then use the stick to slide the paper up the side."
+      },
+      {
+        "title": "Solution 3: Jump Rope Scoop",
+        "description": "Make a small loop at the end of the jump rope. Drop the looped end down into the hole, wiggle it until the paper clue gets caught inside the loop, and pull it up like you are fishing."
       }
     ]
   },
@@ -305,42 +1517,215 @@
     "category_bubble": "Mystery Clue",
     "category": "Mystery Clue",
     "mode": "adults",
-    "character": "Hannah",
-    "setting": "Kitchen Countertop at Night",
-    "title": "The Midnight Pickle Problem",
-    "complaint": "Hi! I'm Hannah. I'm at my kitchen countertop in the middle of the night. I have a huge craving for these pickles, but the lid on this glass jar is stuck tight and my hands are too slippery from washing dishes to get a good grip!",
+    "character": "Owen",
+    "setting": "Late Grandfather's Dusty Study",
+    "title": "The Blank Page",
+    "complaint": "Hi! I'm Owen. I'm sorting through my late grandfather's dusty study looking for his safe code, but all I found is a seemingly blank piece of thick paper with a faint smell of lemon.",
     "on_hand_items": [
-      "Rubber dish gloves",
-      "Butter knife",
-      "Roll of duct tape",
-      "Dry dish towel"
+      "Old desk lamp with a hot bulb",
+      "Soft lead pencil",
+      "Pocket lighter",
+      "Magnifying glass"
     ],
     "clue_cards": [
       {
-        "title": "Traction Action",
-        "insight": "Your bare hands are slipping, so you need a material that naturally grabs onto smooth metal to stop the sliding."
+        "title": "Scent of a Secret",
+        "insight": "That faint lemon smell means the paper might have been written on with citrus juice, which acts like invisible ink and turns brown when it gets warm."
       },
       {
-        "title": "Pop the Pressure",
-        "insight": "Jars are hard to open because of the tight vacuum seal inside. Finding a way to let a tiny bit of air in will make twisting it effortless."
+        "title": "Surface Indentations",
+        "insight": "If someone wrote heavily on a notebook page resting directly on top of this one, the pressure would leave invisible grooves pressed into this paper."
       },
       {
-        "title": "Sticky Leverage",
-        "insight": "If you can't grab the lid itself, you might be able to attach something strong to it to create a makeshift handle."
+        "title": "Shadow Play",
+        "insight": "Shining a bright light across the paper at a very flat, low angle can make hidden dents, creases, or watermarks cast tiny, readable shadows."
       }
     ],
     "potential_solutions": [
       {
-        "title": "Solution 1: The Glove Grip",
-        "description": "Put on the rubber dish gloves. The rubber material provides excellent traction against the smooth metal lid, letting you twist it right off without your hands slipping."
+        "title": "Solution 1: Heat Reveal",
+        "description": "Hold the thick paper carefully over the old desk lamp's hot bulb to warm it up. The heat will cause the hidden lemon juice ink to slowly turn brown and reveal the secret code."
       },
       {
-        "title": "Solution 2: Break the Seal",
-        "description": "Take the butter knife and gently pry the flat tip under the bottom rim of the lid. Wiggle it slightly until you hear a small 'pop'. This breaks the vacuum seal, allowing you to easily twist the lid off with the dish towel."
+        "title": "Solution 2: Pencil Shading",
+        "description": "Take the soft lead pencil and lightly shade back and forth across the entire blank page. The graphite will catch on the flat paper but skip over the indentations, leaving the hidden message in white."
       },
       {
-        "title": "Solution 3: Duct Tape Handle",
-        "description": "Tear off a piece of duct tape. Stick half of it smoothly around the side and top of the lid, and fold the other half onto itself to make a sturdy pull-tab. Pull the tab in the direction the lid opens to force it to turn."
+        "title": "Solution 3: Raking Light",
+        "description": "Remove the shade from the desk lamp and hold the bare bulb right against the edge of the desk so the light washes completely flat across the paper, highlighting the shadows of any indented text while you look through the magnifying glass."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "adults",
+    "character": "Theodore",
+    "setting": "Dimly Lit Study",
+    "title": "The Blank Notepad",
+    "complaint": "Hi! I'm Theodore. I'm in my grandfather's dimly lit study looking for the code to his hidden wall safe, but the only clue I have is a notepad with the top page ripped off, leaving only faint, unreadable indentations on the next sheet.",
+    "on_hand_items": [
+      "Soft lead pencil",
+      "Small desk lamp",
+      "Camera phone",
+      "Compact mirror"
+    ],
+    "clue_cards": [
+      {
+        "title": "Shadow Play",
+        "insight": "Changing the angle of the light can make the shallow dips and valleys on the paper cast shadows, making the hidden words stand out."
+      },
+      {
+        "title": "Lead Rubbing",
+        "insight": "Lightly rubbing something dark over the paper will coat the flat surface while completely skipping over the deeper indentations."
+      },
+      {
+        "title": "Digital Contrast",
+        "insight": "Your phone screen can reveal things your eyes might miss if you play around with how dark or bright a picture is."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Hold the soft lead pencil almost completely flat against the paper and gently shade over the page. The flat surface will turn gray from the lead, leaving the indented letters perfectly white and easy to read."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Turn off the main room lights and place the small desk lamp right on the table. Point the light so it shines directly across the paper from a very low, side angle to make the indented letters cast shadows you can read."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Use your camera phone to take a close-up photo of the blank page. Open the picture settings and turn the contrast all the way up while lowering the brightness until the hidden lines pop out on your screen."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "adults",
+    "character": "Camila",
+    "setting": "Dimly Lit Coffee Shop",
+    "title": "The Indented Secret",
+    "complaint": "Hi! I'm Camila. I'm sitting in the back booth of my favorite dimly lit coffee shop, looking at a weird vintage journal I just bought. I know there's a secret message pressed into this blank page from the missing page above it, but the indentations are too faint to read and I don't have a pencil to shade over them.",
+    "on_hand_items": [
+      "Smartphone with flashlight",
+      "Dark red lipstick",
+      "Paper receipt",
+      "Compact mirror",
+      "Empty coffee mug"
+    ],
+    "clue_cards": [
+      {
+        "title": "Angle the Light",
+        "insight": "Lighting from the side makes bumps and dips cast shadows, making them much easier to see."
+      },
+      {
+        "title": "Makeshift Shading",
+        "insight": "If you don't have a pencil, a light smudge of makeup can make raised or lowered areas stand out."
+      },
+      {
+        "title": "Bounce the Beam",
+        "insight": "A mirror can redirect light into dark spots or change how shadows fall."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Sideways Shadows",
+        "description": "Turn on your phone's flashlight and lay the phone flat on the table. Point the light sideways across the journal page to make the faint indentations cast shadows, revealing the words."
+      },
+      {
+        "title": "Solution 2: Lipstick Rubbing",
+        "description": "Rub a little bit of the dark red lipstick onto the flat paper receipt, then gently wipe the receipt across the journal page so the color catches only on the flat surface, leaving the indented letters blank and readable."
+      },
+      {
+        "title": "Solution 3: Mirror Spotlight",
+        "description": "Prop up the compact mirror against the empty coffee mug to catch the faint overhead lighting, bouncing a concentrated beam onto the page at a sharp angle to highlight the grooves."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "adults",
+    "character": "Wyatt",
+    "setting": "Antique Bookstore",
+    "title": "The Blank Page",
+    "complaint": "Hi! I'm Wyatt. I'm sorting through my late grandfather's dusty antique bookstore late at night, and I just found a sealed envelope taped under the floorboards. The problem is, the letter inside is completely blank, and I know he wouldn't hide empty paper!",
+    "on_hand_items": [
+      "Desk lamp with a warm bulb",
+      "Graphite pencil",
+      "Spray bottle of water",
+      "Glass paperweight"
+    ],
+    "clue_cards": [
+      {
+        "title": "Pressure Points",
+        "insight": "When someone writes heavily on a notepad, the page underneath often keeps the deep dents of the pen strokes."
+      },
+      {
+        "title": "Warm It Up",
+        "insight": "Old-fashioned secret messages were sometimes written with everyday liquids like lemon juice, which turn dark when gently heated."
+      },
+      {
+        "title": "Water Marks",
+        "insight": "Dampening paper can change how light passes through it, exposing hidden stamps or oil-based marks."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Pencil Shading",
+        "description": "Use the side of the graphite pencil to lightly shade over the blank page. The graphite will catch on the flat surface but skip over any indented letters left from a previous page, revealing the message."
+      },
+      {
+        "title": "Solution 2: Lightbulb Heat",
+        "description": "Hold the blank letter close to the hot bulb of the desk lamp. Keep it moving so the paper doesn't burn, and watch to see if heat-sensitive secret ink slowly turns brown and becomes readable."
+      },
+      {
+        "title": "Solution 3: Water Reveal",
+        "description": "Lightly mist the paper with the spray bottle and press it flat onto the glass paperweight. Hold the glass up to the desk lamp to see if the wet paper exposes a hidden watermark or wax message."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Mystery Clue",
+    "category": "Mystery Clue",
+    "mode": "adults",
+    "character": "Penelope",
+    "setting": "Dusty Attic Estate Sale",
+    "title": "The Indented Secret",
+    "complaint": "Hi! I'm Penelope. I'm sorting through a dusty attic at an estate sale, and I just found a blank piece of paper tucked inside an antique locket with faint indentations of a secret message that I can't quite read!",
+    "on_hand_items": [
+      "Small flashlight",
+      "Wooden pencil",
+      "Reading glasses",
+      "Smooth silver coin"
+    ],
+    "clue_cards": [
+      {
+        "title": "Casting Shadows",
+        "insight": "Light coming from a very low, sideways angle can make deep scratches or dents stand out as dark shadows."
+      },
+      {
+        "title": "Graphite Reveal",
+        "insight": "The side of a pencil tip will shade flat areas but skip right over dips and grooves."
+      },
+      {
+        "title": "Up Close",
+        "insight": "Curved glass can make tiny details look much larger if you hold it at just the right distance."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Sideways Light",
+        "description": "Lay the paper flat on a table, turn off the room lights, and shine the flashlight flat across the surface of the paper. The indentations will cast tiny shadows, making the words pop out."
+      },
+      {
+        "title": "Solution 2: Pencil Rubbing",
+        "description": "Place the paper on a hard surface and use the side of the wooden pencil tip to gently shade over the page. The flat paper will turn dark, leaving the indented letters white and easy to read."
+      },
+      {
+        "title": "Solution 3: Magnified Tracing",
+        "description": "Put on the reading glasses to make the paper look closer and larger. Hold the smooth silver coin tightly against the paper to flatten out the wrinkles, and slowly follow the bumps to read the message letter by letter."
       }
     ]
   },
@@ -348,43 +1733,216 @@
     "category_bubble": "Tool Hack",
     "category": "Tool Hack",
     "mode": "kids",
-    "character": "Oliver",
-    "setting": "Classroom Art Desk",
-    "title": "The Compass Crisis",
-    "complaint": "Hi! I'm Oliver. I'm at the classroom art desk working on my solar system poster, but I have a big problem. I need to draw a perfect giant circle for Jupiter, and the only drawing compass we have is completely broken!",
+    "character": "Matthew",
+    "setting": "Driveway Scooter Repair",
+    "title": "The Loose Scooter",
+    "complaint": "Hi! I'm Matthew. I'm in my driveway getting ready to ride my kick scooter, but the handlebar has a really loose screw and I don't have a screwdriver to fix it!",
     "on_hand_items": [
-      "Ball of yarn",
-      "Pushpins",
-      "Paperclips",
-      "Pencils",
-      "A large eraser"
+      "A thick silver coin",
+      "A rubber band",
+      "A metal butter knife",
+      "A roll of duct tape"
     ],
     "clue_cards": [
       {
-        "title": "Center Point",
-        "insight": "Think about how a real compass works. It has one sharp point that stays perfectly still in the middle, and a pencil that swings around it."
+        "title": "Pocket Change",
+        "insight": "Look for something thin, hard, and metal that can perfectly fit inside the little slot on top of the screw."
       },
       {
-        "title": "Measuring Distance",
-        "insight": "If you connect your center point to your pencil with something that doesn't stretch, you can keep the pencil the exact same distance away all the way around the circle."
+        "title": "Kitchen Helpers",
+        "insight": "Some everyday eating tools have dull, flat edges that are shaped exactly like the tip of a real screwdriver."
       },
       {
-        "title": "Spinning Tricks",
-        "insight": "Instead of moving the pencil around the paper, sometimes it's easier to keep your hand totally still and move the paper instead!"
+        "title": "Sticky Grip",
+        "insight": "If your hacked tool keeps sliding out of the screw, something stretchy and rubbery can help you grab onto the metal better."
       }
     ],
     "potential_solutions": [
       {
-        "title": "Solution 1: Yarn and Pin Compass",
-        "description": "Tie one end of the yarn to a pushpin and the other end to your pencil. Stick the pushpin into the middle of your paper (maybe put the big eraser underneath so you don't scratch the desk), pull the yarn tight, and draw your perfect circle!"
+        "title": "Solution 1: The Coin Turn",
+        "description": "Push the thick silver coin down into the slot of the loose screw, pinch the coin tightly with your fingers, and turn it to tighten the handlebar."
       },
       {
-        "title": "Solution 2: Paperclip Spinner",
-        "description": "If you need to draw smaller planets, stick a pushpin through one loop of a paperclip into the paper. Put your pencil tip inside the other loop of the paperclip and slide it around the pin to make a perfect little circle."
+        "title": "Solution 2: The Butter Knife Twist",
+        "description": "Carefully slide the flat, dull edge of the metal butter knife into the screw slot and use the long handle to twist it just like a normal tool."
       },
       {
-        "title": "Solution 3: The Knuckle Pivot",
-        "description": "Hold your pencil normally, but press the knuckle of your pinky finger firmly onto the center of the paper. Keep your drawing hand completely frozen, and use your other hand to slowly spin the paper in a full circle underneath your pencil!"
+        "title": "Solution 3: The Rubber Band Grip",
+        "description": "Lay the rubber band flat over the screw head, then push the coin or butter knife down on top of it. The rubber fills the gaps so your tool won't slip out while you turn!"
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "kids",
+    "character": "Riley",
+    "setting": "Backyard Sandbox",
+    "title": "The Broken Shovel",
+    "complaint": "Hi! I'm Riley. I'm building a giant sandcastle in my backyard sandbox, but my plastic shovel just snapped right when I needed to dig the moat!",
+    "on_hand_items": [
+      "A sturdy plastic frisbee",
+      "A large plastic drinking cup",
+      "A flat piece of wood",
+      "A thick gardening glove"
+    ],
+    "clue_cards": [
+      {
+        "title": "Look for a Scoop",
+        "insight": "Shovels are great because they hold things. What else in your pile is shaped like a deep bowl that can hold sand?"
+      },
+      {
+        "title": "Think Like a Bulldozer",
+        "insight": "You don't always have to pick sand up to move it. Sometimes you can just push it out of the way!"
+      },
+      {
+        "title": "Wide and Flat",
+        "insight": "If you need to move a lot of sand at once, a wide edge might work even better than a tiny shovel."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Cup Scoop",
+        "description": "Use the large plastic drinking cup to scoop out the sand for the moat. It holds plenty of sand and won't snap!"
+      },
+      {
+        "title": "Solution 2: Bulldozer Board",
+        "description": "Hold the flat piece of wood with your hands and push the sand out of the way, scraping out a path for the moat just like a bulldozer."
+      },
+      {
+        "title": "Solution 3: Frisbee Shovel",
+        "description": "Dig into the sand using the hard edge of the plastic frisbee. You can use it like a giant, round shovel to move big piles of sand very quickly."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "kids",
+    "character": "Luke",
+    "setting": "Backyard Spaceship Fort",
+    "title": "The Stubborn Spaceship Nail",
+    "complaint": "Hi! I'm Luke. I am building an awesome spaceship fort in my backyard, but I hammered a nail in the wrong spot and my hammer doesn't have a claw to pull it out!",
+    "on_hand_items": [
+      "Metal spoon",
+      "Thick rubber band",
+      "Small block of wood",
+      "Pair of pliers"
+    ],
+    "clue_cards": [
+      {
+        "title": "Grab and Roll",
+        "insight": "Pliers are great for grabbing, but pulling straight up is super hard. Try rolling them backward instead!"
+      },
+      {
+        "title": "Build a Bridge",
+        "insight": "Putting a block of wood right next to the nail gives you a sturdy spot to push your tool against."
+      },
+      {
+        "title": "Kitchen Crowbar",
+        "insight": "The curved bowl of a metal spoon can act just like a seesaw to lift things up."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Pinch the nail tight with the pliers, set the block of wood right under the pliers, and push down on the handles to pry the nail up like a seesaw."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Slide the metal spoon under the nail head so the curved bowl rests on the wood, and press down on the handle to pop the nail out."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Wrap the thick rubber band tightly around the nail head to make it extra sticky, then use the pliers to grip the rubber band and pull the nail free without slipping."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "kids",
+    "character": "Layla",
+    "setting": "Living Room",
+    "title": "The Couch Cave Rescue",
+    "complaint": "Hi! I'm Layla. I'm playing in the living room with my favorite bouncy ball, but it rolled way under the heavy couch and my arm is too short to reach it!",
+    "on_hand_items": [
+      "A broom",
+      "Double-sided sticky tape",
+      "A long cardboard wrapping paper tube",
+      "A flashlight",
+      "A piece of string"
+    ],
+    "clue_cards": [
+      {
+        "title": "Reach Extender",
+        "insight": "If your arm is too short, look for something long and straight to act like a giant finger."
+      },
+      {
+        "title": "Sticky Trap",
+        "insight": "Think about how you can make the ball stick to your tool so you can pull it out instead of just pushing it around."
+      },
+      {
+        "title": "Tube Tunnel",
+        "insight": "A hollow tube can be a great way to trap a round object so it doesn't roll away from you."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Sticky Broom Rescue",
+        "description": "Put a piece of double-sided sticky tape on the flat end of the broom handle. Shine the flashlight under the couch so you can see, press the taped end against the ball, and carefully pull it out."
+      },
+      {
+        "title": "Solution 2: Cardboard Tube Scoop",
+        "description": "Slide the long cardboard tube under the couch and place it right over the ball to trap it. Then, use the broom handle to push the ball all the way through the tube until it pops out on your side."
+      },
+      {
+        "title": "Solution 3: The String Sweep",
+        "description": "Tie the string to the broom handle. Push the broom behind the ball, let the string fall down, and use the string and broom together like a big fence to drag the ball forward."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "kids",
+    "character": "Asher",
+    "setting": "Living Room Cardboard Fort",
+    "title": "The Spaceship Window",
+    "complaint": "Hi! I'm Asher. I am building a giant cardboard spaceship in my living room, but I need to draw a perfect circle for the window and I don't have a drawing compass!",
+    "on_hand_items": [
+      "Shoelace",
+      "Pencil",
+      "Pushpin",
+      "Wooden ruler",
+      "Chewing gum"
+    ],
+    "clue_cards": [
+      {
+        "title": "Spinning String",
+        "insight": "A piece of string tied to a center spot can help you draw a curve if you keep it pulled super tight."
+      },
+      {
+        "title": "Pin it Down",
+        "insight": "You can use something sharp and pointy to hold the exact center of your circle in place while you draw."
+      },
+      {
+        "title": "Ruler Pivot",
+        "insight": "A flat stick or ruler can be spun in a circle if you pin down one end of it."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Tie one end of the shoelace to the pencil and pin the other end to the cardboard with the pushpin. Keep the shoelace tight and spin the pencil around to draw a perfect circle."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Hold one end of the wooden ruler down in the center of the cardboard with the pushpin. Rest your pencil against the other end of the ruler and slide it around in a circle."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Stick one end of the shoelace to the center of the cardboard using the chewing gum so it stays put. Wrap the other end around the pencil, pull it tight, and trace your window."
       }
     ]
   },
@@ -392,43 +1950,217 @@
     "category_bubble": "Tool Hack",
     "category": "Tool Hack",
     "mode": "adults",
-    "character": "Devon",
-    "setting": "Home Video Recording Desk",
-    "title": "The Top-Down Dilemma",
-    "complaint": "Hi! I'm Devon. I'm at my home video recording desk ready to shoot an unboxing video, but my overhead camera mount just snapped! I need a quick way to hold my phone facing straight down over the desk so I can film my hands without dropping the phone into the shot.",
+    "character": "Nora",
+    "setting": "Garage workbench",
+    "title": "The Stubborn Stripped Screw",
+    "complaint": "Hi! I'm Nora. I'm trying to finish building this wooden bookshelf in my garage, but I just completely stripped the head of the last crucial screw and my screwdriver has nothing to grip to back it out.",
     "on_hand_items": [
-      "Adjustable desk lamp",
-      "Rubber bands",
-      "Heavy textbooks",
-      "Wire coat hanger",
+      "A wide rubber band",
+      "A tube of super glue",
+      "A steel hammer",
+      "A flathead screwdriver",
+      "A roll of duct tape"
+    ],
+    "clue_cards": [
+      {
+        "title": "Adding Friction",
+        "insight": "When metal slips against metal, placing a grippy, flexible material in between can help the tool catch the worn edges."
+      },
+      {
+        "title": "Creating a New Shape",
+        "insight": "If the original cross shape is ruined, you might be able to force a single straight line into the soft metal of the screw head."
+      },
+      {
+        "title": "Making it Permanent",
+        "insight": "If turning doesn't work, bonding the tool directly to the stuck hardware can give you the solid leverage you need to twist it out."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Lay the wide rubber band flat across the stripped screw head, push your flathead screwdriver firmly into it, and slowly turn. The rubber fills the gaps and provides enough grip to back the screw out."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Place the flathead screwdriver vertically on the ruined screw head and gently tap the back of the screwdriver handle with the hammer. This will dent a new, straight groove into the soft metal, giving the flathead enough bite to turn it."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Put a generous drop of super glue on the tip of the flathead screwdriver, press it firmly into the ruined screw head, and hold it steady until it completely dries. Once bonded, use the attached screwdriver as a handle to twist the screw out."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "adults",
+    "character": "Carter",
+    "setting": "Bedroom during an apartment move",
+    "title": "The Stubborn Screw",
+    "complaint": "Hi! I'm Carter. I'm trying to disassemble my bed frame to move out of my apartment today, but the last screw is completely stripped and my screwdriver just spins in place.",
+    "on_hand_items": [
+      "Wide rubber band",
+      "Super glue",
+      "Phillips screwdriver",
+      "Steel wool",
+      "Moving boxes"
+    ],
+    "clue_cards": [
+      {
+        "title": "Fill the Gap",
+        "insight": "The stripped hole is too smooth and wide for the metal tool. You need a flexible material to fill the empty space and grab the worn edges."
+      },
+      {
+        "title": "Make it Stick",
+        "insight": "If the tool keeps slipping, find a way to temporarily fuse your screwdriver directly to the broken hardware."
+      },
+      {
+        "title": "Rough it Up",
+        "insight": "Adding something rough and metallic into the hole might give the screwdriver the bite it needs to turn."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Rubber Band Grip",
+        "description": "Place the wide rubber band flat over the stripped screw head. Push your screwdriver firmly into the rubber band and turn slowly so the rubber fills the gaps and gives you the grip you need to back the screw out."
+      },
+      {
+        "title": "Super Glue Method",
+        "description": "Put a single drop of super glue into the stripped center of the screw. Stick your screwdriver in, wait a few minutes for it to dry and harden completely, and then carefully twist it out."
+      },
+      {
+        "title": "Steel Wool Trick",
+        "description": "Tear off a tiny piece of steel wool and pack it tightly into the damaged screw head. Push the screwdriver into the steel wool to give the metal tip something rough to bite into while you turn."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "adults",
+    "character": "Zoey",
+    "setting": "Kitchen DIY project",
+    "title": "The Stubborn Screw",
+    "complaint": "Hi! I'm Zoey. I'm trying to replace the old handles on my kitchen cabinets, but one of the screws is completely stripped and my screwdriver just spins in place.",
+    "on_hand_items": [
+      "Wide rubber band",
+      "Super glue",
+      "Flathead screwdriver",
+      "Hammer"
+    ],
+    "clue_cards": [
+      {
+        "title": "Fill the Gap",
+        "insight": "The screwdriver needs extra material to catch the worn-out edges of the ruined screw head. Something stretchy and grippy might help."
+      },
+      {
+        "title": "Change the Shape",
+        "insight": "If the original hole shape is ruined, you might be able to wedge a completely different tool firmly into the metal to force it to turn."
+      },
+      {
+        "title": "Make it Permanent",
+        "insight": "If turning the screw normally fails, try attaching a tool directly to the screw head so they become one single object."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Rubber Band Grip",
+        "description": "Place the wide rubber band flat over the stripped screw head. Press your screwdriver firmly into the rubber band and twist to grab the metal and turn the screw."
+      },
+      {
+        "title": "Solution 2: The Flathead Wedge",
+        "description": "Use the hammer to gently tap the flathead screwdriver directly into the ruined screw hole until it wedges tightly into the metal, then twist it out."
+      },
+      {
+        "title": "Solution 3: The Glue Handle",
+        "description": "Put a drop of super glue on the tip of the screwdriver, stick it into the screw head, and let it dry completely. Once they are stuck together, just turn the screwdriver to pull the screw out."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "adults",
+    "character": "Julian",
+    "setting": "Living Room Furniture Assembly",
+    "title": "The Snapped Hex Key",
+    "complaint": "Hi! I'm Julian. I'm putting together this massive flat-pack bookcase in my new living room, but the cheap hex key they provided just snapped in half before I could tighten the last, most important bolt!",
+    "on_hand_items": [
+      "Flathead screwdriver",
+      "Thick rubber band",
+      "Pair of pliers",
+      "Broken hex key pieces",
       "Duct tape"
     ],
     "clue_cards": [
       {
-        "title": "Look Up",
-        "insight": "Find an object on your desk that is already tall and designed to bend or point downward."
+        "title": "Clue 1: Gap Filler",
+        "insight": "If a tool is slightly the wrong shape, a flexible material can fill the empty space and create friction."
       },
       {
-        "title": "Secure the Lens",
-        "insight": "You need a way to grip the phone tightly without permanently ruining its case or blocking the camera lens. Elastic items work perfectly."
+        "title": "Clue 2: Finding Leverage",
+        "insight": "A tool doesn't need its original handle to work if you can find another way to grip the shaft tightly."
       },
       {
-        "title": "Build a Bridge",
-        "insight": "You can create a makeshift boom arm by wedging a long, sturdy object under something really heavy."
+        "title": "Clue 3: The Wedge Method",
+        "insight": "Adding layers to a slightly smaller tool can help it wedge perfectly into a bigger slot."
       }
     ],
     "potential_solutions": [
       {
-        "title": "Solution 1: The Lamp Mount",
-        "description": "Use the rubber bands to strap your phone securely to the head of the adjustable desk lamp. Bend the lamp's neck so the phone camera points straight down at your hands."
+        "title": "Solution 1: Rubber Band Grip",
+        "description": "Place the thick rubber band flat over the bolt head, then press the flathead screwdriver into it. The rubber will push into the corners of the hex shape, giving you enough grip to turn and tighten the bolt."
       },
       {
-        "title": "Solution 2: The Hanger Boom Arm",
-        "description": "Bend the wire coat hanger into a long, flat shape. Tape your phone to one end, and slide the other end under a tall stack of heavy textbooks to hold it steady over your workspace."
+        "title": "Solution 2: Pliers on the Broken Shaft",
+        "description": "Take the longest remaining piece of the broken hex key and insert it into the bolt. Since you lost the bent handle for leverage, clamp the pair of pliers tightly around the exposed metal shaft and turn it to finish the job."
       },
       {
-        "title": "Solution 3: The Book Ledge",
-        "description": "Build a tall tower out of the heavy textbooks. Tape your phone firmly to the cover of the top book so the camera sticks out past the edge, looking straight down at the desk below."
+        "title": "Solution 3: Tape Wedge",
+        "description": "Wrap a small strip of duct tape tightly around the tip of the flathead screwdriver. This adds just enough bulk so that when you push it into the hex hole, it wedges in firmly, allowing you to twist the bolt."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Tool Hack",
+    "category": "Tool Hack",
+    "mode": "adults",
+    "character": "Gracie",
+    "setting": "Living Room",
+    "title": "The Stubborn Screw",
+    "complaint": "Hi! I'm Gracie. I'm trying to finish assembling this wooden bookshelf in my living room, but I've completely stripped the top of the last screw and my screwdriver just spins in circles without catching.",
+    "on_hand_items": [
+      "Wide rubber band",
+      "Steel wool",
+      "Flathead screwdriver",
+      "Pair of pliers"
+    ],
+    "clue_cards": [
+      {
+        "title": "Fill the Gap",
+        "insight": "When a screw is stripped, the tool needs extra material to grab onto. Something squishy or textured can fill that empty space."
+      },
+      {
+        "title": "Grab the Outside",
+        "insight": "If the inside of the screw is totally ruined, look at the outside edges. You might be able to pinch and turn it from the outside instead."
+      },
+      {
+        "title": "Change the Texture",
+        "insight": "Adding something gritty or rough into the hole can give the metal tip of your tool something to bite into."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Rubber Band Trick",
+        "description": "Place the wide rubber band flat over the stripped screw head, then push your screwdriver hard into the rubber band. The rubber fills the gaps and gives you enough grip to turn the screw."
+      },
+      {
+        "title": "Solution 2: Steel Wool Stuffing",
+        "description": "Tear off a tiny piece of steel wool and pack it into the damaged screw head. Push the flathead screwdriver into the steel wool to catch the metal edges and twist."
+      },
+      {
+        "title": "Solution 3: The Pliers Twist",
+        "description": "If the screw head is sticking out even a little bit from the wood, ignore the screwdriver entirely. Clamp the pliers tightly onto the outside rim of the screw head and slowly twist it out."
       }
     ]
   },
@@ -436,42 +2168,216 @@
     "category_bubble": "Idea Lab",
     "category": "Idea Lab",
     "mode": "kids",
-    "character": "Zoe",
-    "setting": "Playroom Lego Workshop",
-    "title": "The Stuck Lego Dilemma",
-    "complaint": "Hi! I'm Zoe. I'm in my Playroom Lego Workshop trying to build a giant spaceship, but two of my flat, thin Lego plates are stuck together super tight! I can't pull them apart with my fingers, and my thumbs are getting sore. I really need the bottom piece for my spaceship's wing!",
+    "character": "Grayson",
+    "setting": "Bedroom Invention Lab",
+    "title": "The Flying Marble Mystery",
+    "complaint": "Hi! I'm Grayson. I'm building the ultimate marble run in my bedroom, but my favorite glass marble keeps flying right off the track at the sharpest corner!",
     "on_hand_items": [
-      "A thick, chunky Lego brick",
-      "A plastic butter knife",
-      "A rubber jar opener pad",
-      "A bowl of warm soapy water"
+      "A roll of masking tape",
+      "A few thick rubber bands",
+      "An empty cardboard paper towel tube",
+      "A handful of cotton balls"
     ],
     "clue_cards": [
       {
-        "title": "Build a Handle",
-        "insight": "Thin pieces are hard to grab. Is there a way to make the top piece taller so your hand has more to hold onto?"
+        "title": "Slow It Down",
+        "insight": "If the marble is rolling too fast, it will jump off the track. Finding a way to slow it down before the corner might help."
       },
       {
-        "title": "Wedge It Open",
-        "insight": "If pulling doesn't work, maybe you can slide something safe and flat right into the tiny crack between the two pieces to pop them loose."
+        "title": "Build a Guardrail",
+        "insight": "Roads have guardrails to keep cars safe on tight turns. You can build a tiny wall to keep the marble from going over the edge."
       },
       {
-        "title": "Get a Better Grip",
-        "insight": "Your fingers might just be slipping off the shiny plastic. What can you wrap around the pieces to make them less slippery?"
+        "title": "Make a Tunnel",
+        "insight": "A marble can't fly up and out if there is a roof over its head!"
       }
     ],
     "potential_solutions": [
       {
-        "title": "Solution 1: The Brick Handle",
-        "description": "Snap the thick, chunky Lego brick right on top of the stuck thin plates. Now you can grab the big chunky brick like a handle and easily pull the top piece off!"
+        "title": "Solution 1: Direct Action",
+        "description": "Tape a thick rubber band around the outside edge of the sharp corner to act like a bouncy guardrail that catches the marble."
       },
       {
-        "title": "Solution 2: The Gentle Pop",
-        "description": "Carefully slide the edge of the plastic butter knife into the tiny seam between the two stuck Lego plates. Give it a gentle twist, and they will pop right apart without hurting your fingers."
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Cut the empty cardboard tube in half and tape it over the sharp corner to make a covered tunnel so the marble stays trapped safely inside."
       },
       {
-        "title": "Solution 3: The Super Grip",
-        "description": "Wrap the rubber jar opener pad around the stuck Lego pieces. The rubber will stop your fingers from sliding, giving you the super grip you need to pull them apart."
+        "title": "Solution 3: Lateral Swap",
+        "description": "Tape a few cotton balls to the track right before the corner. The marble will bump into them gently, slowing down just enough to make the turn without flying off."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "kids",
+    "character": "Jayden",
+    "setting": "Backyard Cardboard Fort",
+    "title": "The Tumbling Tower",
+    "complaint": "Hi! I'm Jayden. I'm in my backyard cardboard fort trying to build the tallest cereal box tower ever, but the wind keeps knocking my boxes over before I can stack them high!",
+    "on_hand_items": [
+      "A bag of heavy marbles",
+      "A roll of masking tape",
+      "Some long wooden rulers",
+      "A ball of yarn"
+    ],
+    "clue_cards": [
+      {
+        "title": "Weight Matters",
+        "insight": "Empty boxes are very light and catch the wind easily. Putting something inside the bottom boxes could help them stay put on the ground."
+      },
+      {
+        "title": "Strong Bones",
+        "insight": "Tall buildings often have stiff poles on the outside to keep them from bending in the breeze. You have something straight and wooden that could work just like that."
+      },
+      {
+        "title": "Tie It Down",
+        "insight": "Think about how a camping tent stays up during a windy day. They use strings pulled tight and attached to the ground."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Marble Bases",
+        "description": "Open the boxes at the very bottom of the tower and drop the heavy marbles inside. This makes the base super heavy so the wind can't easily push the tower over while you stack the rest."
+      },
+      {
+        "title": "Solution 2: Ruler Braces",
+        "description": "Use the masking tape to attach the long wooden rulers to the outside edges of the cereal boxes as you stack them. The stiff rulers will hold the boxes straight and stop them from folding in the wind."
+      },
+      {
+        "title": "Solution 3: Yarn Anchors",
+        "description": "Tape one end of the yarn to the higher boxes of your tower, and tape the other end tightly to the floor of your fort. This acts like tent strings holding your tower steady from all sides."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "kids",
+    "character": "Stella",
+    "setting": "Backyard Treehouse",
+    "title": "The Flying Marble Mystery",
+    "complaint": "Hi! I'm Stella. I am building a giant marble run in my backyard treehouse, but every time the marble hits the big cardboard curve, it flies right off the track into the grass!",
+    "on_hand_items": [
+      "Modeling clay",
+      "Cardboard tubes",
+      "Rubber bands",
+      "Popsicle sticks",
+      "Masking tape"
+    ],
+    "clue_cards": [
+      {
+        "title": "Bumper Power",
+        "insight": "Sometimes things need a soft wall to bounce off of instead of just rolling over an open edge."
+      },
+      {
+        "title": "Slow It Down",
+        "insight": "If a toy is moving too fast, adding a bumpy surface can help slow it down before it reaches a sharp turn."
+      },
+      {
+        "title": "Banking the Turn",
+        "insight": "Think about toy car race tracks! Tilting the track inward on corners helps keep things from flying out."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Clay Bumper",
+        "description": "Stick a big lump of modeling clay on the outside edge of the curve. It acts like a soft wall to catch the fast marble and gently bump it back onto the track."
+      },
+      {
+        "title": "Solution 2: Rubber Band Speed Bumps",
+        "description": "Wrap a few rubber bands around the cardboard tube right before the curve. This creates little bumps that safely slow the marble down before it turns."
+      },
+      {
+        "title": "Solution 3: Tilted Track",
+        "description": "Use popsicle sticks and masking tape to prop up the outside edge of the cardboard curve so it leans inward, keeping the marble safely inside just like a real race track."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "kids",
+    "character": "Gabriel",
+    "setting": "Backyard Treehouse",
+    "title": "The Flying Marble Mystery",
+    "complaint": "Hi! I'm Gabriel. I'm building a giant marble run in my backyard treehouse, but every time the marble hits the big bottom curve, it flies right off the track and gets lost in the grass!",
+    "on_hand_items": [
+      "Paper towel tubes",
+      "Rubber bands",
+      "A plastic cup",
+      "Sticky tape",
+      "Craft sticks"
+    ],
+    "clue_cards": [
+      {
+        "title": "Wall It Up",
+        "insight": "If things are flying off the edge, they might need a tall barrier or a wall to bounce off safely."
+      },
+      {
+        "title": "Catch and Release",
+        "insight": "Sometimes, instead of a sharp turn, you need to catch the rolling object first before dropping it onto a new path."
+      },
+      {
+        "title": "Slow It Down",
+        "insight": "If an object is going too fast, making the path a little bumpy can help slow it down so it stays on track."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Bumper Wall",
+        "description": "Use the sticky tape to attach craft sticks around the outside edge of the big curve. This makes a tall wall that keeps the marble on the track as it goes around the bend."
+      },
+      {
+        "title": "Solution 2: The Cup Catch",
+        "description": "Remove the sharp curve and tape the plastic cup at the end of the track instead. Poke a small hole in the bottom of the cup so the marble falls in, stops for a second, and drops straight down into the next tube."
+      },
+      {
+        "title": "Solution 3: The Rubber Band Brakes",
+        "description": "Wrap a few rubber bands around the paper towel tubes right before the curve. This makes tiny bumps that act like brakes to slow the marble down just enough so it doesn't fly away!"
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "kids",
+    "character": "Isaac",
+    "setting": "Backyard Treehouse",
+    "title": "The Windy Door Disaster",
+    "complaint": "Hi! I'm Isaac. I am working in my backyard treehouse lab, but the strong wind keeps blowing my cardboard secret door wide open!",
+    "on_hand_items": [
+      "A long jump rope",
+      "A heavy bucket of toy blocks",
+      "Some large rubber bands",
+      "A push broom"
+    ],
+    "clue_cards": [
+      {
+        "title": "Stretch and Snap",
+        "insight": "Stretchy things want to shrink back to their normal size, which can help pull things shut."
+      },
+      {
+        "title": "Heavy Helpers",
+        "insight": "A heavy object can act like a strong anchor to hold something in place if you tie them together."
+      },
+      {
+        "title": "Wedge It In",
+        "insight": "Sometimes a long, stiff object can be jammed into a tight spot to stop something from moving."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Stretchy Door Closer",
+        "description": "Loop the large rubber bands together to make a stretchy chain. Attach one end to the door and the other to the wall inside, so it constantly pulls the door shut on its own."
+      },
+      {
+        "title": "Solution 2: Bucket Anchor",
+        "description": "Tie the jump rope to the door handle, toss the rope over a sturdy roof beam, and tie the heavy bucket of blocks to the other end. The weight of the bucket will pull the door closed."
+      },
+      {
+        "title": "Solution 3: Broom Jam",
+        "description": "Stick the handle of the push broom under the door knob and press the brush part firmly against the floor to securely wedge the door shut from the inside."
       }
     ]
   },
@@ -479,42 +2385,216 @@
     "category_bubble": "Idea Lab",
     "category": "Idea Lab",
     "mode": "adults",
-    "character": "Carlos",
-    "setting": "High-Rise Apartment Complex",
-    "title": "The Slamming Balcony Door",
-    "complaint": "Hi! I'm Carlos. I live on the 25th floor of a high-rise apartment complex and the view is amazing. But whenever I open my balcony door to get a nice breeze, the strong wind instantly slams the heavy door shut, shaking the walls and scaring my cat!",
+    "character": "Willow",
+    "setting": "Home Office Desk",
+    "title": "The Overhead Angle",
+    "complaint": "Hi! I'm Willow. I am at my home office desk trying to film a top-down craft video, but I do not have an overhead tripod and my phone keeps falling over when I try to prop it up.",
     "on_hand_items": [
-      "Heavy potted plant",
-      "Bungee cords",
-      "Yoga mat",
-      "Thick cookbook"
+      "Tall desk lamp with a bendable neck",
+      "Rubber bands",
+      "Stack of heavy books",
+      "Wire coat hanger"
     ],
     "clue_cards": [
       {
-        "title": "Clue 1: Heavy Duty",
-        "insight": "A standard little doorstop won't work against strong high-rise winds. You need something with a lot of weight to block the door's path."
+        "title": "Heavy Anchors",
+        "insight": "Heavy everyday objects can easily hold down a makeshift stand so it does not tip over while you work."
       },
       {
-        "title": "Clue 2: Tie It Back",
-        "insight": "If you can't block the door from the floor, think about how you can attach it to the outside railing so it physically can't swing shut."
+        "title": "Stretch and Secure",
+        "insight": "Rubber bands are perfect for strapping your phone tightly to another object without slipping or scratching the screen."
       },
       {
-        "title": "Clue 3: Grip and Squeeze",
-        "insight": "Rubber materials are great for creating grip. Stuffing something thick and grippy under the door might hold it in place and muffle any noise."
+        "title": "Bendable Frames",
+        "insight": "A wire coat hanger is easy to bend by hand to create a custom shelf, loop, or hook for holding small devices."
       }
     ],
     "potential_solutions": [
       {
         "title": "Solution 1: Direct Action",
-        "description": "Slide the heavy potted plant right up against the open door. The sheer weight of the pot will act as a massive, immovable doorstop against the wind."
+        "description": "Use the rubber bands to strap your phone securely to the head of the desk lamp, then bend the lamp's neck so the phone's camera points straight down at the desk."
       },
       {
         "title": "Solution 2: Environmental Adaptation",
-        "description": "Hook one end of a bungee cord around the balcony door handle and stretch the other end to hook onto the metal balcony railing, holding the door firmly open."
+        "description": "Bend the wire coat hanger into a long shape, slide one end under the stack of heavy books to lock it flat on the desk, and use rubber bands to tie your phone to the other end hanging over your workspace."
       },
       {
         "title": "Solution 3: Lateral Swap",
-        "description": "Roll up the yoga mat tightly and wedge it under the gap of the open door. The thick, grippy rubber will grab the floor and hold the door in place, while also acting as a soft bumper."
+        "description": "Bend the coat hanger into a tight cradle for the phone, secure the phone inside with rubber bands so it will not slip out, and hang the hook directly over the bent neck of the desk lamp."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "adults",
+    "character": "Character_57",
+    "setting": "Home Office DIY Studio",
+    "title": "The Broken Camera Rig",
+    "complaint": "Hi! I'm Character_57. I'm setting up a makeshift overhead camera rig in my home office to film a product pitch video, but the plastic mount on my cheap tripod just snapped, and my smartphone keeps sliding out of place every time I try to angle it straight down over the desk.",
+    "on_hand_items": [
+      "A stack of heavy hardcover books",
+      "A wire coat hanger",
+      "A roll of duct tape",
+      "A desk lamp with an adjustable neck"
+    ],
+    "clue_cards": [
+      {
+        "title": "Weight and Balance",
+        "insight": "You can use heavy, flat objects to anchor something that needs to stick out over an edge without it tipping over."
+      },
+      {
+        "title": "Bendable Support",
+        "insight": "Thick metal wire can be bent into a custom shape to cradle an object securely without blocking the camera lens."
+      },
+      {
+        "title": "Repurposing Structures",
+        "insight": "Look for things in the room that already have adjustable arms; they can hold other objects if you secure them tightly."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Book Edge Mount",
+        "description": "Place the smartphone flat on top of the tallest stack of hardcover books near the desk edge, letting just the camera lens peek over the side. Place another heavy book on top of the phone's back half to pin it down securely."
+      },
+      {
+        "title": "Solution 2: The Lamp Arm Swap",
+        "description": "Unplug the desk lamp and use the duct tape to strap the smartphone safely to the back of the lamp head. Use the lamp's adjustable neck to bend and aim the phone camera exactly where you need it over the desk."
+      },
+      {
+        "title": "Solution 3: The Wire Cradle",
+        "description": "Bend the wire coat hanger into a tight U-shape that grips the sides of the phone, tape the hook end firmly to the broken tripod stand, and bend the wire to hold the phone at a downward angle."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "adults",
+    "character": "Character_57",
+    "setting": "Messy Home Craft Desk",
+    "title": "The Top-Down Tumble",
+    "complaint": "Hi! I'm Character_57. I'm working at my messy desk trying to film a top-down video of my new craft project, but my phone keeps slipping and falling flat every time I try to balance it on my stack of books.",
+    "on_hand_items": [
+      "Stack of heavy hardcover books",
+      "Wire coat hanger",
+      "Roll of duct tape",
+      "Heavy ceramic coffee mug",
+      "Handful of rubber bands"
+    ],
+    "clue_cards": [
+      {
+        "title": "Clue 1: Get a Grip",
+        "insight": "Rubber clings tightly to smooth surfaces. Adding something rubbery to the edges of your phone can stop it from sliding off the books."
+      },
+      {
+        "title": "Clue 2: Bend and Shape",
+        "insight": "Thick wire can be bent into custom shapes. A simple hook or cradle shape can hold flat objects securely in the air."
+      },
+      {
+        "title": "Clue 3: Heavy Anchors",
+        "insight": "Heavy objects are great for holding down lighter structures. Sticking your support to a heavy weight will keep it from tipping forward."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: The Rubber Band Sandwich",
+        "description": "Wrap a few rubber bands around the top and bottom edges of your phone. Place the phone between the two top books in your stack, letting the camera peek out. The rubber bands will grip the book covers and stop the phone from sliding out."
+      },
+      {
+        "title": "Solution 2: The Wire Cradle",
+        "description": "Bend the wire coat hanger into a long loop to cradle the phone. Stick the hook end of the hanger inside the heavy ceramic mug and secure it firmly with duct tape to anchor the base, pointing the wire loop out over your work area."
+      },
+      {
+        "title": "Solution 3: The Book Overhang",
+        "description": "Slide the top hardcover book so it hangs halfway off the edge of the stack, directly over your craft space. Place the heavy ceramic mug on the back half of the book to hold it down, then simply use duct tape to stick your phone to the underside of the overhanging book."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "adults",
+    "character": "Character_57",
+    "setting": "Garage Workshop",
+    "title": "The Clamp Catastrophe",
+    "complaint": "Hi! I'm Character_57. I'm in my garage workshop trying to finish a custom birdhouse. The problem is my only wood clamp just snapped, and I need something to hold these two freshly glued pieces of wood tightly together while they dry!",
+    "on_hand_items": [
+      "Heavy paint cans",
+      "Thick rubber bands",
+      "Duct tape",
+      "Long piece of string"
+    ],
+    "clue_cards": [
+      {
+        "title": "Gravity's Grip",
+        "insight": "When you can't squeeze things from the sides, try pressing them from the top down using everyday heavy objects."
+      },
+      {
+        "title": "Elastic Energy",
+        "insight": "Stretchable items naturally want to shrink back to their original size, which creates a constant squeezing force."
+      },
+      {
+        "title": "The Binding Method",
+        "insight": "Wrapping something tightly in a spiral pattern can lock two loose pieces firmly into one solid shape."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Weight",
+        "description": "Lay the glued wood flat on the workbench and stack the heavy paint cans right on top of the joint to press the pieces together while they dry."
+      },
+      {
+        "title": "Solution 2: Rubber Band Squeeze",
+        "description": "Stretch the thick rubber bands around both pieces of wood. The bands will constantly pull inward, acting just like a clamp."
+      },
+      {
+        "title": "Solution 3: Tape Wrap",
+        "description": "Wrap the duct tape tightly around the two pieces of wood. Pull the tape as hard as you can while wrapping to make sure the joint is pulled closed."
+      }
+    ]
+  },
+  {
+    "category_bubble": "Idea Lab",
+    "category": "Idea Lab",
+    "mode": "adults",
+    "character": "Character_57",
+    "setting": "Messy Home Office",
+    "title": "The Whiteboard Wipeout",
+    "complaint": "Hi! I'm Character_57. I'm in my home office trying to finalize a huge pitch for my startup, but I accidentally wrote my entire presentation on the whiteboard using a permanent marker!",
+    "on_hand_items": [
+      "Dry-erase marker",
+      "Hand sanitizer",
+      "Coffee filters",
+      "Hairspray",
+      "Rubber bands"
+    ],
+    "clue_cards": [
+      {
+        "title": "Like Dissolves Like",
+        "insight": "Permanent marker ink needs a strong liquid like alcohol to break it apart and make it wet again."
+      },
+      {
+        "title": "The Ink Erase Trick",
+        "insight": "Dry-erase markers actually have liquid ingredients in them that keep their own ink from sticking permanently to the board."
+      },
+      {
+        "title": "Gentle Scrubbing",
+        "insight": "You need something soft but slightly textured to wipe up the ink without scratching the smooth surface of the whiteboard."
+      }
+    ],
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Action",
+        "description": "Trace over the permanent marker lines with the dry-erase marker. The wet liquid in the dry-erase marker will mix with the permanent ink, letting you wipe it all away easily with a coffee filter."
+      },
+      {
+        "title": "Solution 2: Environmental Adaptation",
+        "description": "Squirt a generous amount of hand sanitizer onto a coffee filter and scrub the board. The alcohol in the sanitizer will melt away the permanent ink right off the surface."
+      },
+      {
+        "title": "Solution 3: Lateral Swap",
+        "description": "Spray a small amount of hairspray directly over the permanent marker text. The strong ingredients in the hairspray will break down the ink so you can quickly wipe it clean before it dries."
       }
     ]
   }
