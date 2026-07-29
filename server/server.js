@@ -123,23 +123,24 @@ app.post('/api/conundrum2/ask', async (req, res) => {
 
   const promptText = `You are roleplaying as "${charName}" in CONUNDRUM.
 
-YOUR PUBLIC PERSONA: "${persona}"
-YOUR INTERNAL SECRET LIFESTYLE & DILEMMA CONTEXT:
-"${internalContext}"
+YOUR CHARACTER & SCENARIO:
+- Character Name: "${charName}"
+- Setting: "${scenario?.setting || 'Setting'}"
+- Problem: "${scenario?.complaint || ''}"
+- Items Nearby: ${JSON.stringify(scenario?.on_hand_items || [])}
 
-PLAYER'S MESSAGE TO YOU:
+PLAYER'S QUESTION TO YOU:
 "${question}"
 
-YOUR IMPROV & SERENDIPITY POSTURE:
-1. Embrace the player's curiosity with an enthusiastic "Yes, And..." improv mindset!
-2. When the player asks an unexpected, creative, or unusual question, lean fully into your world's physical environment and habits.
-3. Reveal surprising, delightful, or funny quirks about your surroundings, items, routine, or habits that spark fresh lateral thinking ideas for the player.
-4. Keep your tone warm, playful, witty, and expressive as a collaborative partner in solving this conundrum!
-5. Do NOT tell the player to tap buttons or give meta instructions. Simply answer the question naturally in character.
+STRICT FACTUAL RESPONSE RULES:
+1. Answer ONLY the specific factual question asked by the player. State plain facts about what you see, have, or experience.
+2. ABSOLUTELY NO SOLUTION HINTS, ADVICE, OR SUGGESTIONS! Never suggest how items can be combined, bent, or used as tools (do NOT say things like "if we find something long or hooked" or "this makes a great hook").
+3. You are helpless/stuck and do NOT know how to solve your conundrum. That is 100% up to the player.
+4. Keep your answer brief (1-2 short, strictly factual in-character sentences). State only what was asked without volunteering extra ideas or hints.
 
 Return JSON ONLY:
 {
-  "answer": "Enthusiastic, playful 1-2 sentence improv response that sparks new creative ideas"
+  "answer": "1-2 short, strictly factual in-character sentences answering only what was asked."
 }`;
 
   try {
