@@ -16,27 +16,9 @@ class AudioEffects {
     }
   }
 
-  // 1. Soft tactile button tap sound
+  // 1. Primary Button Click (Uses Bubble Pop as preferred by Kevin)
   playClick() {
-    try {
-      this.init();
-      if (!this.ctx) return;
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(600, this.ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(300, this.ctx.currentTime + 0.05);
-
-      gain.gain.setValueAtTime(0.15, this.ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.05);
-
-      osc.connect(gain);
-      gain.connect(this.ctx.destination);
-
-      osc.start();
-      osc.stop(this.ctx.currentTime + 0.05);
-    } catch (e) {}
+    this.playPop();
   }
 
   // 2. High-pitched bubble pop sound
@@ -162,7 +144,60 @@ class AudioEffects {
     } catch (e) {}
   }
 
-  // 7. Dramatic Comical Cartoon Failure Sound (Descending Wah-Wah Slide)
+  // 7. Double Triumph Fanfare (2 Fanfare Chords in Rapid Succession for Conundrum Victory)
+  playDoubleTriumph() {
+    try {
+      this.init();
+      if (!this.ctx) return;
+
+      // Chord 1: C4 + E4 + G4 + C5
+      const notes1 = [261.63, 329.63, 392.00, 523.25];
+      notes1.forEach((freq) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        const startTime = this.ctx.currentTime;
+
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(freq, startTime);
+
+        gain.gain.setValueAtTime(0.18, startTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.3);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(startTime);
+        osc.stop(startTime + 0.3);
+      });
+
+      // Chord 2: F4 + A4 + C5 + F5 (160ms later for triumphant double burst!)
+      const notes2 = [349.23, 440.00, 523.25, 698.46];
+      notes2.forEach((freq) => {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        const startTime = this.ctx.currentTime + 0.16;
+
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(freq, startTime);
+
+        gain.gain.setValueAtTime(0.22, startTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.5);
+
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+
+        osc.start(startTime);
+        osc.stop(startTime + 0.5);
+      });
+    } catch (e) {}
+  }
+
+  // 8. Single Badge Award
+  playBadge() {
+    this.playDoubleTriumph();
+  }
+
+  // 9. Dramatic Comical Cartoon Failure Sound (Descending Wah-Wah Slide)
   playFailure() {
     try {
       this.init();
@@ -196,7 +231,7 @@ class AudioEffects {
     } catch (e) {}
   }
 
-  // 8. Magical Sparkle Unlock (C5 -> E5 -> G5 -> C6 -> E6 Sparkle)
+  // 10. Magical Sparkle Unlock
   playUnlock() {
     try {
       this.init();
@@ -223,34 +258,7 @@ class AudioEffects {
     } catch (e) {}
   }
 
-  // 9. Fanfare Badge Award (Triumph Chord)
-  playBadge() {
-    try {
-      this.init();
-      if (!this.ctx) return;
-
-      const notes = [261.63, 329.63, 392.00, 523.25]; // C4, E4, G4, C5
-      notes.forEach((freq) => {
-        const osc = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        const startTime = this.ctx.currentTime;
-
-        osc.type = "triangle";
-        osc.frequency.setValueAtTime(freq, startTime);
-
-        gain.gain.setValueAtTime(0.18, startTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.6);
-
-        osc.connect(gain);
-        gain.connect(this.ctx.destination);
-
-        osc.start(startTime);
-        osc.stop(startTime + 0.6);
-      });
-    } catch (e) {}
-  }
-
-  // 10. Woodblock Clock Tick
+  // 11. Woodblock Clock Tick
   playTick() {
     try {
       this.init();
@@ -273,7 +281,7 @@ class AudioEffects {
     } catch (e) {}
   }
 
-  // 11. Gentle Time Up Gong
+  // 12. Gentle Time Up Gong
   playTimeUp() {
     try {
       this.init();

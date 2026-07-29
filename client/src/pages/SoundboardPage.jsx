@@ -7,18 +7,10 @@ export default function SoundboardPage() {
   const sounds = [
     {
       id: 'click',
-      name: '👆 Soft Button Click',
+      name: '🫧 Primary Click / Bubble Pop',
       category: 'UI Interaction',
-      description: '50ms sine wave pitch drop (600Hz → 300Hz). Soft, pleasant tactile feedback.',
+      description: '40ms upward frequency sweep (400Hz → 1200Hz). Used for all button clicks & option selections.',
       play: () => soundEffects.playClick(),
-      color: 'bg-sky-500 hover:bg-sky-600',
-    },
-    {
-      id: 'pop',
-      name: '🫧 Bubble Pop',
-      category: 'UI Interaction',
-      description: '40ms upward frequency sweep (400Hz → 1200Hz). Playful choice selection.',
-      play: () => soundEffects.playPop(),
       color: 'bg-cyan-500 hover:bg-cyan-600',
     },
     {
@@ -33,7 +25,7 @@ export default function SoundboardPage() {
       id: 'send',
       name: '🚀 Message Send Whoosh',
       category: 'Q&A Chat',
-      description: '80ms upward pitch pop (350Hz → 900Hz). Sent player question.',
+      description: '80ms upward pitch pop (350Hz → 900Hz). Plays when player sends a question.',
       play: () => soundEffects.playMessageSend(),
       color: 'bg-purple-500 hover:bg-purple-600',
     },
@@ -41,7 +33,7 @@ export default function SoundboardPage() {
       id: 'receive',
       name: '🔔 Message Receive Ding',
       category: 'Q&A Chat',
-      description: 'Double-ding chime (F5 → A5). Character reply received.',
+      description: 'Double-ding chime (F5 → A5). Plays when AI character responds.',
       play: () => soundEffects.playMessageReceive(),
       color: 'bg-fuchsia-500 hover:bg-fuchsia-600',
     },
@@ -49,9 +41,17 @@ export default function SoundboardPage() {
       id: 'success',
       name: '✨ Success Chime',
       category: 'Game Feedback',
-      description: 'Major triad arpeggio (C5 → E5 → G5). Passing evaluation / puzzle solved.',
+      description: 'Major triad arpeggio (C5 → E5 → G5). Plays when unlocking clues or insights.',
       play: () => soundEffects.playSuccess(),
       color: 'bg-emerald-500 hover:bg-emerald-600',
+    },
+    {
+      id: 'doubleTriumph',
+      name: '🎺 Double Triumph Fanfare',
+      category: 'Game Victory',
+      description: '2 triumphant major fanfare chords in rapid succession (160ms burst). Plays when solving a conundrum!',
+      play: () => soundEffects.playDoubleTriumph(),
+      color: 'bg-yellow-500 hover:bg-yellow-600',
     },
     {
       id: 'failure',
@@ -68,14 +68,6 @@ export default function SoundboardPage() {
       description: '5-note ascending sparkle (C5 → E5 → G5 → C6 → E6). Secret unlocked.',
       play: () => soundEffects.playUnlock(),
       color: 'bg-amber-500 hover:bg-amber-600',
-    },
-    {
-      id: 'badge',
-      name: '🏆 Triumph Fanfare',
-      category: 'Unlocks & Badges',
-      description: 'Simultaneous major chord (C4 + E4 + G4 + C5). Badge earned.',
-      play: () => soundEffects.playBadge(),
-      color: 'bg-yellow-500 hover:bg-yellow-600',
     },
     {
       id: 'tick',
@@ -112,7 +104,7 @@ export default function SoundboardPage() {
             🎵 Conundrum Sound Sampler
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Click any button below to listen to the synthesized sound effects live in your browser before adding them to the game!
+            Click any button below to listen to the updated sound effects live in your browser!
           </p>
         </header>
 
