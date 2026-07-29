@@ -677,12 +677,12 @@ export default function ConundrumGame() {
                 </p>
               </div>
 
-              <div className="bg-white text-slate-950 p-5 rounded-3xl shadow-xl w-full text-left my-auto min-h-[160px] max-h-[240px] flex flex-col">
-                <Textarea
+              <div className="bg-white text-slate-950 p-5 rounded-3xl shadow-2xl w-full text-left my-auto min-h-[180px] max-h-[260px] flex flex-col border-2 border-amber-300">
+                <textarea
                   value={pitchText}
                   onChange={(e) => setPitchText(e.target.value)}
                   placeholder={`Describe your solution to ${scenario.character}'s conundrum...`}
-                  className="w-full h-full bg-transparent border-none p-1 text-xl sm:text-2xl font-extrabold text-slate-900 placeholder:text-slate-400 focus-visible:ring-0 select-text resize-none leading-snug"
+                  className="w-full h-full bg-transparent border-none outline-none focus:outline-none focus:ring-0 p-1 text-2xl sm:text-3xl font-black text-slate-900 placeholder:text-slate-400 placeholder:font-bold resize-none leading-snug tracking-tight select-text"
                 />
               </div>
 
