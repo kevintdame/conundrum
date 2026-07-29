@@ -73,8 +73,16 @@ app.post('/api/conundrum2/generate', async (req, res) => {
       bank = JSON.parse(fs.readFileSync(bankPath, 'utf8'));
     }
 
-    // Filter bank by mode & category
-    let matches = bank.filter(item => item.mode === reqMode && (!targetCategory || item.category === targetCategory));
+    // Filter bank by mode & category (matching category or category_bubble)
+    let matches = bank.filter(item => {
+      const modeMatch = !reqMode || (item.mode && item.mode.toLowerCase() === reqMode);
+      if (!modeMatch) return false;
+      if (!targetCategory) return true;
+      const targetLower = targetCategory.toLowerCase().trim();
+      const catLower = (item.category || "").toLowerCase().trim();
+      const bubbleLower = (item.category_bubble || "").toLowerCase().trim();
+      return catLower === targetLower || bubbleLower === targetLower || catLower.includes(targetLower) || targetLower.includes(catLower);
+    });
     
     // Fallback 1: match mode only
     if (matches.length === 0) {

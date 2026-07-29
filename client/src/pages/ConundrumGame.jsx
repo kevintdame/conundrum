@@ -9,29 +9,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { soundEffects } from "@/utils/audioEffects";
 import confetti from "canvas-confetti";
 
-// KIDS MODE CATEGORIES WITH CLEAN VIBRANT EMOJIS (NO GRAY BOXES)
-const KIDS_CATEGORIES = [
-  { label: "Food & Snacks", desc: "Ice Cream, Pizza, Lunchboxes, & Cartoons Cereal", emoji: "🍦", grad: "from-yellow-400 via-amber-400 to-orange-500", ring: "ring-yellow-300", glow: "rgba(250,204,21,0.5)" },
-  { label: "Pets & Animals", desc: "Dogs, Cats, Hamsters, & Chatty Parrots", emoji: "🐶", grad: "from-emerald-400 via-teal-500 to-cyan-600", ring: "ring-emerald-300", glow: "rgba(52,211,153,0.5)" },
-  { label: "Toys & Games", desc: "Video Games, Board Games, Lego, & Couch Forts", emoji: "🎮", grad: "from-fuchsia-500 via-purple-600 to-indigo-700", ring: "ring-fuchsia-300", glow: "rgba(217,70,239,0.5)" },
-  { label: "Arts & Crafts", desc: "Painting, Clay, Drawing, & Wild Costumes", emoji: "🎨", grad: "from-pink-400 via-rose-500 to-purple-600", ring: "ring-pink-300", glow: "rgba(244,114,182,0.5)" },
-  { label: "Outdoors & Playground", desc: "Treehouses, Bicycles, Recess, & Swings", emoji: "🌳", grad: "from-lime-400 via-green-500 to-emerald-600", ring: "ring-lime-300", glow: "rgba(163,230,53,0.5)" },
-  { label: "School & Cartoons", desc: "Backpacks, Pencils, & Saturday Cartoons", emoji: "🎒", grad: "from-cyan-400 via-sky-500 to-blue-600", ring: "ring-cyan-300", glow: "rgba(34,211,238,0.5)" },
-  { label: "Inventions & Gadgets", desc: "Kid Robots, Secret Devices, & Paper Airplanes", emoji: "🚀", grad: "from-orange-500 via-rose-500 to-red-600", ring: "ring-orange-300", glow: "rgba(249,115,22,0.5)" },
-  { label: "Music & Dancing", desc: "Instruments, Catchy Songs, & Funny Dance Moves", emoji: "🎵", grad: "from-violet-500 via-indigo-600 to-purple-800", ring: "ring-violet-300", glow: "rgba(139,92,246,0.5)" }
+// 6 CORE GAMEPLAY CATEGORIES (EPIC BUBBLES FOR KIDS & ADULTS)
+const CATEGORY_BUBBLES = [
+  { label: "Escape Room", desc: "Spatial Traps, Locked Hardware, & Breakout Mechanisms", emoji: "🚪", grad: "from-amber-500 via-orange-500 to-red-600", ring: "ring-amber-300", glow: "rgba(245,158,11,0.5)" },
+  { label: "Time Crunch", desc: "High-Stakes Emergency Saves Before Damage Occurs", emoji: "⏳", grad: "from-red-500 via-rose-500 to-pink-600", ring: "ring-rose-300", glow: "rgba(244,63,94,0.5)" },
+  { label: "Social Tact", desc: "Everyday Awkward Situations, Boundaries, & Diplomacy", emoji: "🤝", grad: "from-sky-400 via-blue-500 to-indigo-600", ring: "ring-sky-300", glow: "rgba(56,189,248,0.5)" },
+  { label: "Mystery Clue", desc: "Deducing Look-Alike Items Without Damaging Them", emoji: "🔍", grad: "from-purple-500 via-fuchsia-500 to-pink-500", ring: "ring-purple-300", glow: "rgba(168,85,247,0.5)" },
+  { label: "Tool Hack", desc: "Making Do & Repurposing When Tools are Missing", emoji: "🛠️", grad: "from-emerald-400 via-teal-500 to-cyan-600", ring: "ring-emerald-300", glow: "rgba(52,211,153,0.5)" },
+  { label: "Idea Lab", desc: "Inventing Products & Service Concepts for Daily Hassles", emoji: "💡", grad: "from-yellow-400 via-amber-400 to-orange-500", ring: "ring-yellow-300", glow: "rgba(250,204,21,0.5)" }
 ];
 
-// ADULTS MODE CATEGORIES WITH CLEAN VIBRANT EMOJIS (NO GRAY BOXES)
-const ADULTS_CATEGORIES = [
-  { label: "Food & Cooking", desc: "Chefs, Bakers, Food Trucks, & Kitchen Hacks", emoji: "🍞", grad: "from-yellow-400 via-amber-400 to-orange-500", ring: "ring-yellow-300", glow: "rgba(250,204,21,0.5)" },
-  { label: "Health & Wellness", desc: "Sleep Quality, Posture, & Ergonomics", emoji: "🩺", grad: "from-emerald-400 via-teal-500 to-cyan-600", ring: "ring-emerald-300", glow: "rgba(52,211,153,0.5)" },
-  { label: "Entertainment & Gaming", desc: "Music, Shows, Indie Discovery, & Games", emoji: "🎮", grad: "from-fuchsia-500 via-purple-600 to-indigo-700", ring: "ring-fuchsia-300", glow: "rgba(217,70,239,0.5)" },
-  { label: "Education & Learning", desc: "Languages, Public Speaking, & Skill Building", emoji: "📚", grad: "from-cyan-400 via-sky-500 to-blue-600", ring: "ring-cyan-300", glow: "rgba(34,211,238,0.5)" },
-  { label: "Finance & Budgeting", desc: "Savings, Expenses, & Smart Financial Habits", emoji: "💰", grad: "from-lime-400 via-green-500 to-emerald-600", ring: "ring-lime-300", glow: "rgba(163,230,53,0.5)" },
-  { label: "Travel & Mobility", desc: "Commutes, Transit, & Travel Packing", emoji: "✈️", grad: "from-violet-500 via-indigo-600 to-purple-800", ring: "ring-violet-300", glow: "rgba(139,92,246,0.5)" },
-  { label: "Environment & Plants", desc: "Community Gardens, Nature, & Sustainability", emoji: "🌱", grad: "from-pink-400 via-rose-500 to-purple-600", ring: "ring-pink-300", glow: "rgba(244,114,182,0.5)" },
-  { label: "Work & Productivity", desc: "Home Offices, Remote Calls, & Workflows", emoji: "⚡", grad: "from-orange-500 via-rose-500 to-red-600", ring: "ring-orange-300", glow: "rgba(249,115,22,0.5)" }
-];
+const KIDS_CATEGORIES = CATEGORY_BUBBLES;
+const ADULTS_CATEGORIES = CATEGORY_BUBBLES;
 
 // LARGER FOOTPRINT VECTOR JIGSAW PUZZLE PIECE WITH PERFECT 1-TO-1 INTERLOCKING SEAMS
 const JigsawGridPiece = ({ char, row, col }) => {
