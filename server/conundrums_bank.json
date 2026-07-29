@@ -705,5 +705,243 @@
       }
     ],
     "auditReason": "The scenario presents a highly relatable, instantly understandable real-world crafting dilemma that requires clever deductive reasoning, such as checking paint tube caps for fresh residue, to solve."
+  },
+  {
+    "mode": "adults",
+    "category": "Work & Productivity",
+    "pillar": "Physical",
+    "character": "Devon",
+    "characterType": "Grounded Role",
+    "setting": "Home Workshop",
+    "title": "The Precarious Prototype Production",
+    "complaint": "Hi! I'm Devon. I'm working in my home workshop trying to record an important top-down assembly tutorial for a client. The problem is my smartphone keeps slipping off the precarious stack of books I'm using as an overhead mount, and I need both hands free to build the prototype on my desk without knocking the whole camera setup over.",
+    "conundrumType": "Equipment Stabilization / Spatial Constraint",
+    "on_hand_items": [
+      "Wire coat hanger",
+      "Roll of duct tape",
+      "Heavy C-clamp",
+      "Broom handle"
+    ],
+    "customer_persona": "A stressed freelance maker who needs to deliver a professional instructional video but lacks specialized filming equipment.",
+    "customer_context": "Devon needs to film straight down onto a workbench to show a two-handed assembly process. The current book stack is blocking hand movement, casting weird shadows, and dropping the phone. Available items are strictly a wire coat hanger, a roll of duct tape, a heavy C-clamp, and a broom handle. No tripod, boom arms, or specialized camera mounts can be purchased.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical/Action Fix",
+        "description": "Create a makeshift boom arm. Use the heavy C-clamp to secure the broom handle horizontally to an upper shelf or vertically to the side of the workbench. Use the duct tape to securely strap the smartphone directly to the overhanging end of the broom handle, angling the camera straight down at the workspace."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Build an adjustable overhead wire cradle. Bend the wire coat hanger into a custom, spring-tensioned harness that grips the edges of the phone securely without blocking the screen or camera lens. Use the duct tape to attach the hanger's hook to the broom handle, and C-clamp the broom handle to the desk. This allows Devon to adjust the phone's angle by bending the wire rather than re-taping the phone."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Use the roll of duct tape structurally as a phone bracket. Wedge the phone snugly inside the cardboard core of the duct tape roll so the camera peeks out the bottom. Clamp the broom handle to the desk as a vertical pillar, and use strips of tape to secure the heavy, grippy tape roll to the top of the pole, suspending the phone perfectly flat above the desk."
+      }
+    ],
+    "auditReason": "The conundrum presents a well-defined physical challenge that requires creatively combining the provided on-hand items to build a functional overhead camera rig without violating any constraints."
+  },
+  {
+    "mode": "adults",
+    "category": "Food & Cooking",
+    "pillar": "Physical",
+    "character": "Noah",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Cherry Pit Predicament",
+    "complaint": "Hi! I'm Noah. I'm in my kitchen trying to finish a massive tart cherry pie for a bake sale in an hour, but my mechanical cherry pitter just snapped in half on the first pound.",
+    "conundrumType": "Tool Failure / Physical Extraction",
+    "on_hand_items": [
+      "Empty glass soda bottle",
+      "Sturdy metal chopstick",
+      "Standard dining fork",
+      "Thick rubber band"
+    ],
+    "customer_persona": "A stressed amateur baker who relies heavily on specialty kitchen gadgets and feels paralyzed when physical tools break.",
+    "customer_context": "Noah is trapped in his kitchen with a hard deadline and four pounds of fresh cherries left to pit. His hands are starting to cramp, and he absolutely cannot leave to buy a new tool. His countertop only has a few random items on it, and he must use them to remove the pits quickly without turning the cherries into complete mush.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical/Action Fix",
+        "description": "Place a cherry on the circular opening of the empty glass soda bottle, which acts as a perfect cradle. Use the sturdy metal chopstick to punch directly downward through the stem hole of the cherry. The pit will pop out and fall cleanly into the bottle, while the pitted cherry remains intact on top."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Create a makeshift pit-scooper by using the metal chopstick as a lever to carefully bend the two outer tines of the standard dining fork backward. Insert the remaining two middle tines into the top of the cherry and twist slightly to hook and extract the pit in one fluid motion."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Wrap the thick rubber band tightly around the bottom half-inch of the metal chopstick. This creates a high-friction, blunt tip. When you push this modified chopstick through the cherry on a cutting board, the rubber grips the slippery pit securely and forces it out the other side, preventing the metal stick from sliding off the pit and mashing the fruit."
+      }
+    ],
+    "auditReason": "The conundrum presents a practical, well-constrained physical puzzle that cleverly utilizes the on-hand bottle and chopstick for a classic kitchen hack without violating any rejection criteria."
+  },
+  {
+    "mode": "adults",
+    "category": "Travel & Mobility",
+    "pillar": "Physical",
+    "character": "Max",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Busted Duffel Dilemma",
+    "complaint": "Hi! I'm Max. I'm standing in a cramped hotel room trying to pack for my flight in an hour, but the main zipper on my overstuffed canvas duffel bag just burst open in the middle. The slider is jammed tight, and I can't physically squeeze the track together to fix it or keep the bag closed for the journey.",
+    "conundrumType": "Mechanical Failure and Tension Management",
+    "on_hand_items": [
+      "Wire clothes hanger",
+      "Lip balm",
+      "Spare shoelace",
+      "Metal nail clippers"
+    ],
+    "customer_persona": "A stressed business traveler who overpacks and is frantically trying to secure his belongings before rushing to the airport.",
+    "customer_context": "Max is checking out of a hotel. His main checked bag has suffered a catastrophic zipper failure due to overpacking. He has zero time to go buy a new bag. He can only use a wire clothes hanger from the closet, lip balm from his pocket, a spare shoelace from his dress shoes, and metal nail clippers from his toiletry bag to secure his luggage for the flight.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical/Action Fix",
+        "description": "Apply the lip balm heavily to the jammed zipper teeth to act as a lubricant. Use the lever arm of the metal nail clippers to gently pry the mouth of the zipper slider open just enough to free it, slide it back to the base, and then use the sturdy jaws of the clippers to crimp the slider tightly back together so it catches the teeth and zips properly."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Abandon the broken zipper entirely. Use the metal nail clippers to cut the wire clothes hanger into multiple small, sharp C-shaped rings. Puncture these wire hooks directly through the thick canvas on both sides of the separated zipper track, bending the ends over to create makeshift, heavy-duty staples that physically lock the bag shut."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Create a corset-style closure. Use the sharp point of the nail clippers' file attachment to punch a series of holes into the fabric parallel to both sides of the broken zipper. Thread the spare shoelace through these holes, lacing it up tightly from one end to the other to pull the tension off the zipper and bind the bag securely closed."
+      }
+    ],
+    "auditReason": "The conundrum presents a realistic physical challenge with a creative, non-trivial solution using the provided on-hand items, and avoids all rejection criteria."
+  },
+  {
+    "mode": "adults",
+    "category": "Health & Wellness",
+    "pillar": "Physical",
+    "character": "Kai",
+    "characterType": "Grounded Role",
+    "setting": "Small apartment living room with hardwood floors",
+    "title": "The Hardwood Hazard",
+    "complaint": "Hi! I'm Kai. I am in my tiny apartment trying to keep up with my new bodyweight fitness routine, but the bare hardwood floors are punishing my joints and I keep slipping every time I try to hold a stretch or plank.",
+    "conundrumType": "Environmental Friction & Joint Strain",
+    "on_hand_items": [
+      "Two large bath towels",
+      "Roll of grippy kitchen shelf liner",
+      "Two heavy hardcover books",
+      "Thick rubber bands"
+    ],
+    "customer_persona": "A remote worker trying to maintain physical fitness and joint health at home without buying expensive workout gear.",
+    "customer_context": "Kai wants to exercise safely but lacks a proper fitness mat, resulting in bruised knees and dangerous slips. The environment only contains bath towels, a roll of grippy shelf liner, heavy books, and rubber bands. No other fitness equipment or outside purchases can be used.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical/Action Fix",
+        "description": "Create a makeshift, non-slip exercise mat by laying strips of the grippy kitchen shelf liner directly on the hardwood floor, then placing the two large bath towels on top. Use the thick rubber bands to secure the edges of the towels together, providing joint cushioning without the risk of slipping during planks."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Adjust the physical angles to reduce joint strain. Wrap the heavy hardcover books in the grippy kitchen shelf liner to create stable, non-slip push-up grips or makeshift yoga blocks. This elevates the wrists, easing joint extension, while folded bath towels are used strictly to cushion the knees."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Instead of fighting the slippery floor, lean into it by swapping static holds for a low-impact friction workout. Place the bath towels under your feet to perform smooth, sliding lunges and pikes on the bare hardwood, while holding the heavy hardcover books in your hands for added weight resistance."
+      }
+    ],
+    "auditReason": "The puzzle presents a realistic physical challenge that can be cleverly solved using only the provided on-hand items to create a makeshift non-slip exercise mat, avoiding any critical rejection criteria."
+  },
+  {
+    "mode": "adults",
+    "category": "Home & Gardening",
+    "pillar": "Physical",
+    "character": "Eli",
+    "characterType": "Grounded Role",
+    "setting": "Raised Garden Bed",
+    "title": "The Snapped Stake",
+    "complaint": "Hi! I'm Eli. I'm working in my raised garden bed out back, and a thick wooden support stake just snapped off completely flush with the compacted soil. I need to pull the jagged stump out to put in a new support, but I can't get any grip on it, and I can't dig around it without destroying the delicate roots of my prize-winning heirloom tomatoes.",
+    "conundrumType": "Leverage and Extraction Friction",
+    "on_hand_items": [
+      "Heavy-duty metal corkscrew",
+      "Pair of vice-grip pliers",
+      "Leftover landscaping brick",
+      "Garden trowel"
+    ],
+    "customer_persona": "A dedicated home gardener who values his plants' root health over brute force and relies on clever mechanics to solve yard problems.",
+    "customer_context": "Eli is trying to replace a broken wooden plant support. The surrounding soil is hard-packed and filled with fragile tomato roots, rendering standard digging destructive and useless. He cannot leave to buy specialized extraction tools and must rely solely on the heavy-duty metal corkscrew, vice-grip pliers, landscaping brick, and garden trowel currently sitting on the edge of his planter.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical/Action Fix",
+        "description": "Drive the heavy-duty metal corkscrew deep into the dead center of the wooden stump to create an artificial, secure handle. Grasp the corkscrew's top wings tightly and pull straight up to extract the broken stake cleanly without disturbing the surrounding soil."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Screw the corkscrew into the top of the stump. Clamp the vice-grip pliers tightly onto the neck of the corkscrew. Place the landscaping brick right next to the stump, lay the handle of the garden trowel over the brick, and wedge the trowel's blade under the pliers. Push down on the trowel handle to use the brick as a fulcrum, mechanically levering the stump straight out of the compacted dirt."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Skip the corkscrew entirely and use the vice-grip pliers to bite directly and deeply into the exposed, jagged splinters of the flush wooden stump. Wedge the landscaping brick tightly against the side of the pliers. Roll the pliers backward over the top of the brick to pry the stump upward just enough to grab the exposed wood with your hands and pull it free."
+      }
+    ],
+    "auditReason": "The puzzle presents a clever, non-trivial physical challenge that can be solved using the provided on-hand items as a makeshift extraction tool and fulcrum without violating any constraints."
+  },
+  {
+    "mode": "kids",
+    "category": "Toys & Games",
+    "pillar": "Physical",
+    "character": "Ezra",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Golden Block Blockade",
+    "complaint": "Hi! I'm Ezra. I am in the middle of my playroom building a massive wooden block tower, but the crucial final piece—the golden pyramid block—fell and slid way under the heavy, low-to-the-ground storage cabinet, and my arm won't fit underneath to grab it!",
+    "conundrumType": "Physical Reach & Retrieval Obstacle",
+    "on_hand_items": [
+      "Cardboard wrapping paper tube",
+      "Jump rope",
+      "Sticky slap-hand toy",
+      "Plastic toy shovel"
+    ],
+    "customer_persona": "A creative, determined child who loves building epic structures but needs help solving physical barriers without getting frustrated.",
+    "customer_context": "Ezra is playing indoors on a smooth floor. The storage cabinet is far too heavy for him to lift or move. The golden block is pushed deeply underneath the center of the cabinet. He is strictly limited to using the four items scattered on the playroom floor to get his toy back.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical/Action Fix",
+        "description": "Stick the gooey end of the sticky slap-hand toy onto the end of the cardboard wrapping paper tube. Slide the tube under the cabinet to gently press the sticky hand against the golden pyramid block, adhering to it so you can pull it out."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Uncoil the jump rope and slide it on the floor so one end goes under the left side of the cabinet and the other goes under the right side. Grab both handles and pull the rope forward, using it as a flexible sweeper to drag the block out from under the front of the cabinet."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Wedge the handle of the plastic toy shovel securely into one end of the hollow cardboard wrapping paper tube to create an extra-long tool. Use the shovel blade at the end of the newly extended pole to hook behind the golden block and scoop it back toward you."
+      }
+    ],
+    "auditReason": "The conundrum presents a clear, engaging physical puzzle that requires creatively combining the provided on-hand items without violating any constraints."
+  },
+  {
+    "mode": "kids",
+    "category": "Food & Snacks",
+    "pillar": "Physical",
+    "character": "Maya",
+    "characterType": "Grounded Role",
+    "setting": "Everyday Setting",
+    "title": "The Peanut Butter Pit",
+    "complaint": "Hi! I'm Maya. I'm sitting at the kitchen island making an afternoon snack, but the peanut butter is at the very bottom of a tall, narrow jar and I can't reach it with my spoon without getting sticky peanut butter all over my knuckles!",
+    "conundrumType": "Reach & Extraction Friction",
+    "on_hand_items": [
+      "A short plastic spoon",
+      "A pair of wooden chopsticks",
+      "Two rubber bands",
+      "A roll of aluminum foil"
+    ],
+    "customer_persona": "A creative, snack-loving kid who hates getting sticky hands.",
+    "customer_context": "Maya is trying to make a sandwich but all the long metal butter knives are in the running dishwasher. She is strictly limited to the four random items left on the kitchen counter to get her peanut butter out.",
+    "potential_solutions": [
+      {
+        "title": "Solution 1: Direct Physical/Action Fix",
+        "description": "Securely tie the handle of the short plastic spoon to the end of a wooden chopstick using the two rubber bands, creating an extended super-spoon that easily reaches the bottom of the jar."
+      },
+      {
+        "title": "Solution 2: Environmental/Systemic Adaptation",
+        "description": "Fold a thick square of aluminum foil over the tips of the two wooden chopsticks to create a makeshift wide, flat scraper. Use this long, custom scraper to pull the peanut butter up the sides and out of the jar."
+      },
+      {
+        "title": "Solution 3: Lateral Resource Swap",
+        "description": "Wrap a sheet of aluminum foil around your hand and knuckles like a protective space gauntlet, allowing you to reach deep into the jar with the short plastic spoon without getting any peanut butter on your actual skin."
+      }
+    ],
+    "auditReason": "The puzzle presents a relatable physical challenge that requires a clever but logical combination of the provided on-hand items to create an extended utensil, successfully avoiding all rejection criteria."
   }
 ]
