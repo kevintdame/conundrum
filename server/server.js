@@ -183,25 +183,32 @@ app.post('/api/conundrum2/evaluate', async (req, res) => {
        - Write feedback in witty, clever, human-centered language.
        - "alternativeSolutions": Write 3 clever, practical alternative design thinking solution paths.`;
 
+  const obviousTrap = scenario?.obvious_trap || "";
+  const hiddenConstraint = scenario?.hidden_constraint || "";
+
   const promptText = `You are evaluating a player's proposed solution in CONUNDRUM.
 
 Character: "${charName}"
 Problem: "${complaint}"
+Obvious Trap Idea: "${obviousTrap}"
+Hidden Constraint Gotcha: "${hiddenConstraint}"
 ${modeInstruction}
 
 PLAYER'S PROPOSED SOLUTION PITCH:
 "${solutionText}"
 
+MANDATORY OBVIOUS TRAP & HIDDEN CONSTRAINT CHECK:
+- If the player's proposed solution relies on the obvious trap ("${obviousTrap}") or succumbs to the hidden constraint ("${hiddenConstraint}"), IT MUST FAIL (passed: false, plausibility: false)!
+- In your character feedback, explain clearly why that obvious approach failed due to the hidden constraint ("${hiddenConstraint}") and encourage them to probe further!
+
 SYSTEMIC EVALUATION PRINCIPLE — HUMAN-CENTERED PRAGMATISM:
-- Evaluate the solution with an empathic, practical mindset.
-- If a solution represents a plausible, real-world human attempt that reduces or addresses the core problem (whether simple or creative), IT MUST PASS (passed: true).
-- Before marking any solution as failed, ask yourself: "Is this a reasonable approach an everyday person or child would try?" If yes, mark passed: true!
-- DO NOT reject solutions with nitpicky micro-physics objections. Reserve passed: false ONLY for solutions that are harmful, nonsensical, or completely ignore the character's problem.
+- If the solution avoids the obvious trap and represents a plausible, creative human attempt that addresses the core problem, IT MUST PASS (passed: true).
+- DO NOT reject valid solutions with nitpicky micro-physics objections.
 
 EVALUATE AGAINST THESE 3 PASS/FAIL CRITERIA:
 1. Need Fulfilled: Does it solve or help reduce the character's primary pain point?
 2. Empathy Preserved: Does it respect the motivations and feelings of all involved parties/animals without using cruel or force-based measures?
-3. Plausibility: Is it logically sound within a creative/everyday context?
+3. Plausibility: Is it logically sound and does it avoid the hidden constraint gotcha?
 
 IF ALL 3 CRITERIA PASS (passed: true):
 - Pick a Badge from: "The Minimalist", "The Lateral Thinker", "The Architect", "The Behavioral Specialist", "The Community Hero".
