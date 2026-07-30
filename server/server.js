@@ -137,10 +137,11 @@ STRICT FACTUAL RESPONSE RULES:
 2. ABSOLUTELY NO SOLUTION HINTS, ADVICE, OR SUGGESTIONS! Never suggest how items can be combined, bent, or used as tools (do NOT say things like "if we find something long or hooked" or "this makes a great hook").
 3. You are helpless/stuck and do NOT know how to solve your conundrum. That is 100% up to the player.
 4. Keep your answer brief (1-2 short, strictly factual in-character sentences). State only what was asked without volunteering extra ideas or hints.
+5. CRITICAL IDEA SUGGESTION REDIRECTION RULE: If the player proposes a solution idea, advice, or suggestion in the chat (e.g., "Use a magnet", "You should try X", "Why don't you do Y?"), DO NOT evaluate or attempt it in chat. Instead, reply politely: "If you are ready to solve my conundrum, tap the 'Done with Questions' button at the bottom and tell me your solution!"
 
 Return JSON ONLY:
 {
-  "answer": "1-2 short, strictly factual in-character sentences answering only what was asked."
+  "answer": "1-2 short, strictly factual in-character sentences answering only what was asked (or redirecting to the Done with Questions button if an idea was proposed)."
 }`;
 
   try {
@@ -175,16 +176,20 @@ app.post('/api/conundrum2/evaluate', async (req, res) => {
   const complaint = scenario?.complaint || "";
   const isKidsMode = mode === "kids" || scenario?.mode === "kids";
 
+  const obviousTrap = scenario?.obvious_trap || "";
+  const hiddenConstraint = scenario?.hidden_constraint || "";
+
+  // Pre-determined solutions from scenario dossier (using ONLY on-hand items in the room)
+  const preDeterminedSolutions = (scenario?.potential_solutions || []).map(s => 
+    typeof s === 'string' ? s : `${s.title}: ${s.description}`
+  );
+
   const modeInstruction = isKidsMode
     ? `KIDS MODE ENFORCEMENT (Ages 8-12):
        - Write feedback in enthusiastic, simple, 4th-grade level English.
-       - "alternativeSolutions": Write 3 short, super simple, clever 1-sentence fixes using 4th-grade words!`
+       - ABSOLUTELY NO technical, adult, or corporate jargon.`
     : `ADULTS MODE ENFORCEMENT (Ages 13+):
-       - Write feedback in witty, clever, human-centered language.
-       - "alternativeSolutions": Write 3 clever, practical alternative design thinking solution paths.`;
-
-  const obviousTrap = scenario?.obvious_trap || "";
-  const hiddenConstraint = scenario?.hidden_constraint || "";
+       - Write feedback in witty, clever, human-centered language.`;
 
   const promptText = `You are evaluating a player's proposed solution in CONUNDRUM.
 
@@ -212,12 +217,10 @@ EVALUATE AGAINST THESE 3 PASS/FAIL CRITERIA:
 
 IF ALL 3 CRITERIA PASS (passed: true):
 - Pick a Badge from: "The Minimalist", "The Lateral Thinker", "The Architect", "The Behavioral Specialist", "The Community Hero".
-- Generate 3 clever alternative solution paths strictly adhering to the Mode Enforcement above.
-- Write a warm 1-2 sentence character thank-you response.
+- Write a warm 1-2 sentence character thank-you response celebrating their idea.
 
 IF ANY CRITERION FAILS (passed: false):
 - Explain gently in character voice WHICH criterion was violated and invite them to tweak their solution.
-- Generate 3 clever alternative solution paths strictly adhering to the Mode Enforcement above.
 
 Return JSON ONLY:
 {
@@ -227,13 +230,8 @@ Return JSON ONLY:
     "empathyPreserved": true,
     "plausibility": true
   },
-  "feedback": "Warm in-character response celebrating their idea!",
-  "badge": "Badge Name",
-  "alternativeSolutions": [
-    "Simple solution path 1",
-    "Simple solution path 2",
-    "Simple solution path 3"
-  ]
+  "feedback": "Warm in-character response celebrating their idea or explaining why the trap failed!",
+  "badge": "Badge Name"
 }`;
 
   try {
@@ -273,16 +271,18 @@ Return JSON ONLY:
         passed: true,
         criteriaResults: { needFulfilled: true, empathyPreserved: true, plausibility: true },
         feedback: `That's a creative attempt to help ${charName}! Thanks for your quick thinking!`,
-        badge: "The Lateral Thinker",
-        alternativeSolutions: [
-          "Try tackling the immediate cause first.",
-          "Use available items to create a quick barrier or tool.",
-          "Check if a simple adjustment solves the main hassle."
-        ]
+        badge: "The Lateral Thinker"
       };
     }
 
-    return res.json(parsed);
+    return res.json({
+      ...parsed,
+      alternativeSolutions: preDeterminedSolutions.length > 0 ? preDeterminedSolutions : [
+        "Focus on the available on-hand items in the room.",
+        "Combine two basic items to bypass the physical constraint.",
+        "Look for a lateral alternative before acting."
+      ]
+    });
   } catch (err) {
     console.error("[CONUNDRUM EVALUATION ERROR]:", err.message);
     return res.json({
@@ -290,10 +290,10 @@ Return JSON ONLY:
       criteriaResults: { needFulfilled: true, empathyPreserved: true, plausibility: true },
       feedback: `Great creative effort! Every idea brings us closer to solving the conundrum!`,
       badge: "The Creative Innovator",
-      alternativeSolutions: [
-        "Focus on the simplest available items in the room.",
-        "Look for a fast, direct fix before over-complicating.",
-        "Combine two items to create a makeshift tool."
+      alternativeSolutions: preDeterminedSolutions.length > 0 ? preDeterminedSolutions : [
+        "Focus on the available on-hand items in the room.",
+        "Combine two basic items to bypass the physical constraint.",
+        "Look for a lateral alternative before acting."
       ]
     });
   }
