@@ -739,7 +739,7 @@ export default function ConundrumGame() {
                 </div>
               )}
 
-              <div className="bg-white text-slate-950 p-6 rounded-3xl shadow-xl text-xl sm:text-2xl font-extrabold leading-relaxed w-full text-left my-auto min-h-[140px] max-h-[260px] overflow-y-auto">
+              <div className="bg-white text-slate-950 p-6 rounded-3xl shadow-xl text-xl sm:text-2xl font-extrabold leading-relaxed w-full text-left my-auto min-h-[180px] flex-1 flex items-center">
                 {evaluationResult.feedback}
               </div>
 
